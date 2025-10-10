@@ -1,0 +1,11 @@
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_BLL\obj\Debug\qlpt_BLL.csproj.AssemblyReference.cache
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_BLL\obj\Debug\qlpt_BLL.csproj.CoreCompileInputs.cache
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_BLL\bin\Debug\qlpt_BLL.dll
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_BLL\bin\Debug\qlpt_BLL.pdb
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_BLL\bin\Debug\qlpt_DAL.dll
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_BLL\bin\Debug\qlpt_DTO.dll
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_BLL\bin\Debug\qlpt_DAL.pdb
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_BLL\bin\Debug\qlpt_DTO.pdb
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_BLL\obj\Debug\qlpt_BLL.csproj.Up2Date
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_BLL\obj\Debug\qlpt_BLL.dll
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_BLL\obj\Debug\qlpt_BLL.pdb

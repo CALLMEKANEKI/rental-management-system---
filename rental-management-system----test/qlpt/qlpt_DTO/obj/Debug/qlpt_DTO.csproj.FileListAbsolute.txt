@@ -1,0 +1,6 @@
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DTO\obj\Debug\qlpt_DTO.csproj.AssemblyReference.cache
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DTO\obj\Debug\qlpt_DTO.csproj.CoreCompileInputs.cache
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DTO\bin\Debug\qlpt_DTO.dll
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DTO\bin\Debug\qlpt_DTO.pdb
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DTO\obj\Debug\qlpt_DTO.dll
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DTO\obj\Debug\qlpt_DTO.pdb
