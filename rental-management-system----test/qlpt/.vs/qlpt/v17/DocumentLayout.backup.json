@@ -3,44 +3,27 @@
   "WorkspaceRootPath": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/ANHGIANGDEPTRAI/quanlyphongtro/True/SqlTable/dbo.chutro.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt\\form\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|solutionrelative:qlpt\\form\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt\\form\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|solutionrelative:qlpt\\form\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt_dal\\dal\\chutrodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|solutionrelative:qlpt_dal\\dal\\chutrodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\form\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|solutionrelative:qlpt\\form\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt\\form\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|solutionrelative:qlpt\\form\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt\\form\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|solutionrelative:qlpt\\form\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt_dal\\dal\\lephidal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|solutionrelative:qlpt_dal\\dal\\lephidal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27B4ED80-A1D2-4DE3-8101-6BD9DA2EFFBF}|qlpt_BLL\\qlpt_BLL.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt_bll\\bll\\hoadonbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27B4ED80-A1D2-4DE3-8101-6BD9DA2EFFBF}|qlpt_BLL\\qlpt_BLL.csproj|solutionrelative:qlpt_bll\\bll\\hoadonbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt_dal\\dal\\hoadondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|solutionrelative:qlpt_dal\\dal\\hoadondal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12034761-DAA0-4B28-95BB-EBBD5A36899A}|qlpt_DTO\\qlpt_DTO.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt_dto\\model\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12034761-DAA0-4B28-95BB-EBBD5A36899A}|qlpt_DTO\\qlpt_DTO.csproj|solutionrelative:qlpt_dto\\model\\hoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_dal\\dal\\hopdongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|solutionrelative:qlpt_dal\\dal\\hopdongdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12034761-DAA0-4B28-95BB-EBBD5A36899A}|qlpt_DTO\\qlpt_DTO.csproj|C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_dto\\viewmodel\\hoadonviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12034761-DAA0-4B28-95BB-EBBD5A36899A}|qlpt_DTO\\qlpt_DTO.csproj|solutionrelative:qlpt_dto\\viewmodel\\hoadonviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{27B4ED80-A1D2-4DE3-8101-6BD9DA2EFFBF}|qlpt_BLL\\qlpt_BLL.csproj|C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_bll\\bll\\hopdongbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{27B4ED80-A1D2-4DE3-8101-6BD9DA2EFFBF}|qlpt_BLL\\qlpt_BLL.csproj|solutionrelative:qlpt_bll\\bll\\hopdongbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt_dal\\dal\\connectdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|solutionrelative:qlpt_dal\\dal\\connectdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,11 +33,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "main.cs [Design]",
               "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\main.cs",
               "RelativeDocumentMoniker": "qlpt\\Form\\main.cs",
@@ -66,124 +49,69 @@
               "EditorCaption": " [Design]"
             },
             {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "dbo.chutro [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/ANHGIANGDEPTRAI/quanlyphongtro/True/SqlTable/dbo.chutro.sql",
+              "ToolTip": "dbo.chutro [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-10-11T10:23:22.73Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "main.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\main.cs",
-              "RelativeDocumentMoniker": "qlpt\\Form\\main.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\main.cs",
-              "RelativeToolTip": "qlpt\\Form\\main.cs",
-              "ViewState": "AgIAAPAAAAAAAAAAAAA7wAUBAAA5AAAAAAAAAA==",
+              "Title": "SignUp.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\SignUp.cs",
+              "RelativeDocumentMoniker": "qlpt\\Form\\SignUp.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\SignUp.cs*",
+              "RelativeToolTip": "qlpt\\Form\\SignUp.cs*",
+              "ViewState": "AgIAABMAAAAAAAAAAADgvyIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T14:21:37.41Z",
+              "WhenOpened": "2025-10-11T10:21:47.467Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "main.Designer.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\main.Designer.cs",
-              "RelativeDocumentMoniker": "qlpt\\Form\\main.Designer.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\main.Designer.cs",
-              "RelativeToolTip": "qlpt\\Form\\main.Designer.cs",
-              "ViewState": "AgIAAAoBAAAAAAAAAAAtwA0BAAAAAAAAAAAAAA==",
+              "Title": "SignUp.cs [Design]",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\SignUp.cs",
+              "RelativeDocumentMoniker": "qlpt\\Form\\SignUp.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\SignUp.cs [Design]*",
+              "RelativeToolTip": "qlpt\\Form\\SignUp.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:58:19.667Z",
+              "WhenOpened": "2025-10-11T10:21:45.697Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ConnectDAL.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\ConnectDAL.cs",
+              "RelativeDocumentMoniker": "qlpt_DAL\\DAL\\ConnectDAL.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\ConnectDAL.cs",
+              "RelativeToolTip": "qlpt_DAL\\DAL\\ConnectDAL.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAowDUAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-11T09:45:18.963Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "LePhiDAL.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\LePhiDAL.cs",
-              "RelativeDocumentMoniker": "qlpt_DAL\\DAL\\LePhiDAL.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\LePhiDAL.cs",
-              "RelativeToolTip": "qlpt_DAL\\DAL\\LePhiDAL.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAYwEEAAABGAAAAAAAAAA==",
+              "Title": "ChuTroDAL.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\ChuTroDAL.cs",
+              "RelativeDocumentMoniker": "qlpt_DAL\\DAL\\ChuTroDAL.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\ChuTroDAL.cs",
+              "RelativeToolTip": "qlpt_DAL\\DAL\\ChuTroDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:43:45.949Z",
+              "WhenOpened": "2025-10-11T09:34:22.338Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "HoaDonDAL.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\HoaDonDAL.cs",
-              "RelativeDocumentMoniker": "qlpt_DAL\\DAL\\HoaDonDAL.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\HoaDonDAL.cs",
-              "RelativeToolTip": "qlpt_DAL\\DAL\\HoaDonDAL.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAgwI0AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:43:32.906Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HoaDon.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DTO\\Model\\HoaDon.cs",
-              "RelativeDocumentMoniker": "qlpt_DTO\\Model\\HoaDon.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DTO\\Model\\HoaDon.cs",
-              "RelativeToolTip": "qlpt_DTO\\Model\\HoaDon.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:43:28.725Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "HoaDonBLL.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_BLL\\BLL\\HoaDonBLL.cs",
-              "RelativeDocumentMoniker": "qlpt_BLL\\BLL\\HoaDonBLL.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_BLL\\BLL\\HoaDonBLL.cs",
-              "RelativeToolTip": "qlpt_BLL\\BLL\\HoaDonBLL.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAQwKcAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:38:36.202Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "HoaDonViewModel.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DTO\\ViewModel\\HoaDonViewModel.cs",
-              "RelativeDocumentMoniker": "qlpt_DTO\\ViewModel\\HoaDonViewModel.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DTO\\ViewModel\\HoaDonViewModel.cs",
-              "RelativeToolTip": "qlpt_DTO\\ViewModel\\HoaDonViewModel.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAiwA4AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:26:26.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "HopDongDAL.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\HopDongDAL.cs",
-              "RelativeDocumentMoniker": "qlpt_DAL\\DAL\\HopDongDAL.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\HopDongDAL.cs",
-              "RelativeToolTip": "qlpt_DAL\\DAL\\HopDongDAL.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:18:40.927Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "HopDongBLL.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_BLL\\BLL\\HopDongBLL.cs",
-              "RelativeDocumentMoniker": "qlpt_BLL\\BLL\\HopDongBLL.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_BLL\\BLL\\HopDongBLL.cs",
-              "RelativeToolTip": "qlpt_BLL\\BLL\\HopDongBLL.cs",
-              "ViewState": "AgIAAFYAAAAAAAAAAAA3wHQAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-10T16:18:38.947Z"
             }
           ]
         },

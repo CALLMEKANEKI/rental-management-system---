@@ -47,7 +47,6 @@
     <Compile Include="BLL\HopDongBLL.cs" />
     <Compile Include="BLL\NguoiThueBLL.cs" />
     <Compile Include="BLL\PhongTroBLL.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

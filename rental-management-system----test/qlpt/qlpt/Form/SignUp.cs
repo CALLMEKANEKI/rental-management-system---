@@ -23,10 +23,10 @@ namespace qlpt
         {
             ChuTro chuTro = new ChuTro
             {
-                Id_ChuTro = int.Parse(txtID.Text),
                 HoTen = txtNameAd.Text,
                 Sdt = txtPhoneNumberAd.Text,
                 Email = txtEmailAd.Text,
+                DiaChi = txtAddressAd.Text,
                 TaiKhoan = txtUserName.Text,
                 MatKhau = txtPass.Text
             };
@@ -45,6 +45,11 @@ namespace qlpt
             {
                 MessageBox.Show("Tài khoản đã tồn tại !!!");
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

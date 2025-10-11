@@ -79,6 +79,34 @@ namespace qlpt_DAL.DAL
             return listDien;
         }
 
+        //3.Update: cập nhật bản ghi điện
+        public bool UpdateDien(Dien objDien)
+        {
+            string query = "UPDATE dien SET id_dien = @id_dien, ngaytao = @ngaytao, chiso_dau = @chiso_dau, chiso_cuoi = @chiso_cuoi" +
+                           "thanhtien_dien = @thanhtien_dien WHERE id_dien = @id_dien";
+
+            using (SqlConnection conn = connectDB.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@id_dien", objDien.Id_Dien);
+                cmd.Parameters.AddWithValue("@ngaytao", objDien.NgayTao);
+                cmd.Parameters.AddWithValue("@chiso_dau", objDien.ChiSo_Dau);
+                cmd.Parameters.AddWithValue("@chiso_cuoi", objDien.ChiSo_Cuoi);
+                cmd.Parameters.AddWithValue("@thanhtien_dien", objDien.ThanhTien_Dien);
+                try
+                {
+                    conn.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine("SQL Error (UpdateDien): " + ex.Message);
+                    return false;
+                }
+            }
+        }
+
+
         //4.Delete: Xóa bản ghi dien
         public bool DeleteDien(int iddien)
         {

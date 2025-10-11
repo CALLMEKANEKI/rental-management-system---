@@ -39,6 +39,7 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.lblTilte = new System.Windows.Forms.Label();
+            this.btnSighUp = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +55,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnSighUp);
             this.panel1.Controls.Add(this.btnSignIn);
             this.panel1.Controls.Add(this.cobRole);
             this.panel1.Controls.Add(this.lblRole);
@@ -84,8 +86,7 @@
             this.cobRole.FormattingEnabled = true;
             this.cobRole.Items.AddRange(new object[] {
             "Chủ trọ",
-            "Người thuê",
-            "Admin"});
+            "Người thuê"});
             this.cobRole.Location = new System.Drawing.Point(199, 175);
             this.cobRole.Name = "cobRole";
             this.cobRole.Size = new System.Drawing.Size(179, 39);
@@ -161,6 +162,17 @@
             this.lblTilte.TabIndex = 8;
             this.lblTilte.Text = "Đăng nhập";
             // 
+            // btnSighUp
+            // 
+            this.btnSighUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSighUp.Location = new System.Drawing.Point(199, 246);
+            this.btnSighUp.Name = "btnSighUp";
+            this.btnSighUp.Size = new System.Drawing.Size(140, 50);
+            this.btnSighUp.TabIndex = 13;
+            this.btnSighUp.Text = "Đăng ký";
+            this.btnSighUp.UseVisualStyleBackColor = true;
+            this.btnSighUp.Click += new System.EventHandler(this.btnSighUp_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -190,6 +202,7 @@
         private System.Windows.Forms.ComboBox cobRole;
         private System.Windows.Forms.Label lblRole;
         private System.Windows.Forms.Button btnSignIn;
+        private System.Windows.Forms.Button btnSighUp;
     }
 }
 

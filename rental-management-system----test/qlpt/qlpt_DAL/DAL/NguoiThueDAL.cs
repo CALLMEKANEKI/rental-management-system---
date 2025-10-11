@@ -13,7 +13,39 @@ namespace qlpt_DAL.DAL
     {
         private ConnectDAL connectDB = new ConnectDAL();
 
-        // 1. READ: Hàm Đăng nhập (Login)
+        //1. Create: Thêm người thuê mới
+        public int InsertNguoiThue(NguoiThue objNguoiThue)
+        {
+            string query = "INSERT INTO nguoithue (id_phong, hoten, cccd, sdt, email, taikhoan, matkhau) " +
+                            "OUTPUT INSERTED.id_nguoithue" +
+                           "VALUES (@id_phong, @hoten, @cccd, @sdt, @email, @taikhoan, @matkhau);";
+
+            using (SqlConnection conn = connectDB.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                // Tham số hóa dữ liệu. Sử dụng DBNull.Value cho các trường có thể NULL
+                cmd.Parameters.AddWithValue("@id_phong", objNguoiThue.Id_Phong);
+                cmd.Parameters.AddWithValue("@hoten", objNguoiThue.HoTen);
+                cmd.Parameters.AddWithValue("@cccd", objNguoiThue.Cccd);
+                cmd.Parameters.AddWithValue("@sdt", objNguoiThue.Sdt);
+                cmd.Parameters.AddWithValue("@email", objNguoiThue.Email);
+
+                try
+                {
+                    conn.Open();
+                    // Lấy ID tự tăng vừa được tạo
+                    object result = cmd.ExecuteScalar();
+                    return result != null && result != DBNull.Value ? Convert.ToInt32(result) : -1;
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine("SQL Error (InsertNguoiThue): " + ex.Message);
+                    return -1;
+                }
+            }
+        }
+
+        // 2. READ: Hàm Đăng nhập (Login)
         public NguoiThue Login(string taiKhoan, string matKhau)
         {
             NguoiThue objNguoiThue = null;
@@ -62,40 +94,33 @@ namespace qlpt_DAL.DAL
             return objNguoiThue;
         }
 
-        //2. Create: Thêm người thuê mới
-        public int InsertNguoiThue(NguoiThue objNguoiThue)
+        //2.2.Read: Kiểm tra tài khoản có tồn tại hay chưa
+        public bool IsTaiKhoanDaTonTai(string taiKhoan)
         {
-            string query = "INSERT INTO nguoithue (id_phong, hoten, cccd, sdt, email, taikhoan, matkhau) " +
-                           "VALUES (@id_phong, @hoten, @cccd, @sdt, @email, @taikhoan, @matkhau); SELECT SCOPE_IDENTITY();";
+            string query = "SELECT COUNT(*) FROM nguoithue WHERE taikhoan = @taikhoan";
 
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                // Tham số hóa dữ liệu. Sử dụng DBNull.Value cho các trường có thể NULL
-                cmd.Parameters.AddWithValue("@id_phong", objNguoiThue.Id_Phong);
-                cmd.Parameters.AddWithValue("@hoten", objNguoiThue.HoTen);
-                cmd.Parameters.AddWithValue("@cccd", objNguoiThue.Cccd);
-                cmd.Parameters.AddWithValue("@sdt", objNguoiThue.Sdt);
-                cmd.Parameters.AddWithValue("@email", objNguoiThue.Email);
-                cmd.Parameters.AddWithValue("@taikhoan", (object)objNguoiThue.TaiKhoan ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@matkhau", (object)objNguoiThue.MatKhau ?? DBNull.Value);
-
+                cmd.Parameters.AddWithValue("@taikhoan", taiKhoan);
                 try
                 {
                     conn.Open();
-                    // Lấy ID tự tăng vừa được tạo
-                    object result = cmd.ExecuteScalar();
-                    return result != null && result != DBNull.Value ? Convert.ToInt32(result) : -1;
+                    int count = Convert.ToInt32(cmd.ExecuteScalar());
+                    // Nếu count > 0, nghĩa là tài khoản đã tồn tại
+                    return count > 0;
                 }
                 catch (SqlException ex)
                 {
-                    Console.WriteLine("SQL Error (InsertNguoiThue): " + ex.Message);
-                    return -1;
+                    Console.WriteLine("SQL Error (IsTaiKhoanDaTonTai): " + ex.Message);
+                    // Giả định là đã tồn tại nếu có lỗi CSDL
+                    return true;
                 }
             }
         }
 
-        //3. READ: Lấy danh sách Người Thuê theo ID Phòng
+
+        //2.3. READ: Lấy danh sách Người Thuê theo ID Phòng
         public List<NguoiThue> GetNguoiThueByPhong(int idPhong)
         {
             List<NguoiThue> list = new List<NguoiThue>();
@@ -133,61 +158,7 @@ namespace qlpt_DAL.DAL
             return list;
         }
 
-        //4. UPDATE: cập nhật thông tin người thuê
-        public bool UpdateNguoiThue(NguoiThue objNguoiThue)
-        {
-            string query = "UPDATE nguoithue SET id_phong = @id_phong, hoten = @hoten, cccd = @cccd, " +
-                           "sdt = @sdt, email = @email, taikhoan = @taikhoan, matkhau = @matkhau WHERE id_nguoithue = @id_nguoithue";
-
-            using (SqlConnection conn = connectDB.GetConnection())
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
-                cmd.Parameters.AddWithValue("@id_phong", objNguoiThue.Id_Phong);
-                cmd.Parameters.AddWithValue("@hoten", objNguoiThue.HoTen);
-                cmd.Parameters.AddWithValue("@cccd", objNguoiThue.Cccd);
-                cmd.Parameters.AddWithValue("@sdt", objNguoiThue.Sdt);
-                cmd.Parameters.AddWithValue("@email", objNguoiThue.Email);
-                cmd.Parameters.AddWithValue("@taikhoan", (object)objNguoiThue.TaiKhoan ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@matkhau", (object)objNguoiThue.MatKhau ?? DBNull.Value);
-                cmd.Parameters.AddWithValue("@id_nguoithue", objNguoiThue.Id_NguoiThue);
-
-                try
-                {
-                    conn.Open();
-                    return cmd.ExecuteNonQuery() > 0;
-                }
-                catch (SqlException ex)
-                {
-                    Console.WriteLine("SQL Error (UpdateNguoiThue): " + ex.Message);
-                    return false;
-                }
-            }
-        }
-
-        //5. DELETE: Xóa Người Thuê
-        public bool DeleteNguoiThue(int idNguoiThue)
-        {
-            // Lưu ý: Nếu người thuê này còn hợp đồng hoặc hóa đơn chưa thanh toán, lệnh này sẽ thất bại (lỗi khóa ngoại).
-            string query = "DELETE FROM nguoithue WHERE id_nguoithue = @id_nguoithue";
-
-            using (SqlConnection conn = connectDB.GetConnection())
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
-                cmd.Parameters.AddWithValue("@id_nguoithue", idNguoiThue);
-
-                try
-                {
-                    conn.Open();
-                    return cmd.ExecuteNonQuery() > 0;
-                }
-                catch (SqlException ex)
-                {
-                    Console.WriteLine("SQL Error (DeleteNguoiThue): " + ex.Message);
-                    return false;
-                }
-            }
-        }
-
+        //2.4.Read: Lấy tất cả người thuê
         public List<NguoiThue> GetAllNguoiThue()
         {
             List<NguoiThue> listNguoiThue = new List<NguoiThue>();
@@ -226,5 +197,85 @@ namespace qlpt_DAL.DAL
             }
             return listNguoiThue;
         }
+
+        //3. UPDATE: cập nhật thông tin người thuê
+        public bool UpdateNguoiThue(NguoiThue objNguoiThue)
+        {
+            string query = "UPDATE nguoithue SET id_phong = @id_phong, hoten = @hoten, cccd = @cccd, " +
+                           "sdt = @sdt, email = @email, taikhoan = @taikhoan, matkhau = @matkhau WHERE id_nguoithue = @id_nguoithue";
+
+            using (SqlConnection conn = connectDB.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@id_phong", objNguoiThue.Id_Phong);
+                cmd.Parameters.AddWithValue("@hoten", objNguoiThue.HoTen);
+                cmd.Parameters.AddWithValue("@cccd", objNguoiThue.Cccd);
+                cmd.Parameters.AddWithValue("@sdt", objNguoiThue.Sdt);
+                cmd.Parameters.AddWithValue("@email", objNguoiThue.Email);
+                cmd.Parameters.AddWithValue("@taikhoan", (object)objNguoiThue.TaiKhoan ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@matkhau", (object)objNguoiThue.MatKhau ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@id_nguoithue", objNguoiThue.Id_NguoiThue);
+
+                try
+                {
+                    conn.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine("SQL Error (UpdateNguoiThue): " + ex.Message);
+                    return false;
+                }
+            }
+        }
+
+        //3.2.Update: Cập nhật mật khẩu
+        public bool UpdateMatKhau(NguoiThue objNguoiThue, string NewPass)
+        {
+            string query = "UPDATE nguoithue SET matkhau = @NewPass WHERE id_nguoithue = @id_nguoithue";
+
+            using (SqlConnection conn = connectDB.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@NewPass", objNguoiThue.MatKhau);
+                cmd.Parameters.AddWithValue("@id_nguoithue", objNguoiThue.Id_NguoiThue);
+                try
+                {
+                    conn.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine("SQL Error (UpdateMatKhauChuTro): " + ex.Message);
+                    return false;
+                }
+            }
+        }
+
+        //4. DELETE: Xóa Người Thuê
+        public bool DeleteNguoiThue(int idNguoiThue)
+        {
+            // Lưu ý: Nếu người thuê này còn hợp đồng hoặc hóa đơn chưa thanh toán, lệnh này sẽ thất bại (lỗi khóa ngoại).
+            string query = "DELETE FROM nguoithue WHERE id_nguoithue = @id_nguoithue";
+
+            using (SqlConnection conn = connectDB.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@id_nguoithue", idNguoiThue);
+
+                try
+                {
+                    conn.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine("SQL Error (DeleteNguoiThue): " + ex.Message);
+                    return false;
+                }
+            }
+        }
+
+        
     }
 }

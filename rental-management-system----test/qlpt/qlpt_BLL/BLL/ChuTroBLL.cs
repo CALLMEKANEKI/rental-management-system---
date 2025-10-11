@@ -16,6 +16,26 @@ namespace qlpt_BLL.BLL
     {
         private ChuTroDAL ChuTroDAL = new ChuTroDAL();
 
+
+        // 1. Đăng ký (CREATE)
+        public int SignUp(ChuTro objChuTro)
+        {
+            // BLL Validation: Kiểm tra dữ liệu đầu vào
+            if (string.IsNullOrEmpty(objChuTro.TaiKhoan) || string.IsNullOrEmpty(objChuTro.MatKhau) || string.IsNullOrEmpty(objChuTro.Sdt) || string.IsNullOrEmpty(objChuTro.Email) || string.IsNullOrEmpty(objChuTro.DiaChi) || string.IsNullOrEmpty(objChuTro.HoTen) || string.IsNullOrEmpty((objChuTro.Id_ChuTro).ToString()))
+            {
+                return -2;
+            }
+
+            // BLL Logic:kiểm tra xem tên tài khoản đã tồn tại chưa
+            if (ChuTroDAL.IsTaiKhoanDaTonTai(objChuTro.TaiKhoan))
+                return -3;
+
+            //BLL Logic: Mã hóa mật khẩu (HASHING) trước khi lưu vào DAL
+            //objChuTro.MatKhau = HashPassword(objChuTro.MatKhau);
+
+            return ChuTroDAL.InsertChuTro(objChuTro);
+        }
+        //2.Đâng nhập (READ)
         public ChuTro login(string TaiKhoan, string MatKhau)
         {
             // BLL Validation: Kiểm tra dữ liệu đầu vào (đặt trong hàm)
@@ -32,25 +52,7 @@ namespace qlpt_BLL.BLL
             return Convert.ToBase64String(System.Security.Cryptography.SHA256.Create().ComputeHash(System.Text.Encoding.UTF8.GetBytes(password)));
         }
 
-        // 1. Đăng ký (CREATE)
-        public int SignUp(ChuTro objChuTro)
-        {
-            // BLL Validation: Kiểm tra dữ liệu đầu vào
-            if (string.IsNullOrEmpty(objChuTro.TaiKhoan) || string.IsNullOrEmpty(objChuTro.MatKhau) || string.IsNullOrEmpty(objChuTro.Sdt) || string.IsNullOrEmpty(objChuTro.Email) || string.IsNullOrEmpty(objChuTro.DiaChi) || string.IsNullOrEmpty(objChuTro.HoTen))
-            {
-                return -2; 
-            }
-
-            // BLL Logic:kiểm tra xem tên tài khoản đã tồn tại chưa
-            if (ChuTroDAL.IsTaiKhoanDaTonTai(objChuTro.TaiKhoan)) 
-                return -3;
-
-            //BLL Logic: Mã hóa mật khẩu (HASHING) trước khi lưu vào DAL
-            objChuTro.MatKhau = HashPassword(objChuTro.MatKhau); 
-
-            return ChuTroDAL.InsertChuTro(objChuTro);
-        }
-
+        //Lấy đối tượng chủ trọ theo id
         public ChuTro GetChuTroById(int idChuTro)
         {
             if (idChuTro <= 0)
@@ -59,6 +61,33 @@ namespace qlpt_BLL.BLL
             // Giả định bạn có hàm GetChuTroById trong DAL
             return ChuTroDAL.GetChuTroById(idChuTro);
         }
+
+        //3.1. Cập nhật thông tin chủ trọ (UPDATE)
+        public bool CapNhatThongTin(ChuTro objChuTro)
+        {
+            // Có thể thêm logic kiểm tra dữ liệu hoặc quyền ở đây
+            return ChuTroDAL.UpdateChuTro(objChuTro);
+        }
+
+        //3.2. Cập nhật mật khẩu (UPDATE)
+        public bool CapNhatMatKhau( ChuTro chutro, string matKhauMoi)
+        {
+            if (string.IsNullOrWhiteSpace(matKhauMoi)) return false;
+
+            // 1. Xử lý logic: Mã hóa mật khẩu mới
+            //string matKhauDaHash = HashPassword(matKhauMoi);
+
+            // 2. Gọi DAL (Cần thêm hàm UpdateMatKhau vào ChuTroDAL)
+            // Cần thêm hàm: public bool UpdateMatKhau(int idChuTro, string matKhauHash)
+            return ChuTroDAL.UpdateMatKhau(chutro, matKhauMoi);
+        }
+
+        //4. Xóa tài khoản (DELETE)
+        public bool XoaTaiKhoan(int idChuTro)
+        {
+            return ChuTroDAL.DeleteChuTro(idChuTro);
+        }
+
 
     }
 }

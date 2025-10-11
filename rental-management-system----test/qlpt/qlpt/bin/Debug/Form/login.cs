@@ -28,26 +28,15 @@ namespace qlpt
             string pass = txtPass.Text;
             string role = cobRole.Text;
 
-            if (role == "Chủ trọ" || role == "Admin")
+            if (role == "Chủ trọ")
             {
                 ChuTro user = chuTroBLL.login(username, pass);
                 if (user != null)
                 {
-                    if (role == "Chủ trọ")
-                    {
                         main Main = new main(user.Id_ChuTro);
                         Main.Show();
                         this.Hide();
                         MessageBox.Show("Đăng nhập thành công !!! Chào mừng người dùng " + username);
-                    }
-                    else if (role == "Admin")
-                    {
-                        SignUp signUp = new SignUp();
-                        signUp.Show();
-                        this.Hide();
-                        MessageBox.Show("Chào mừng "+username+" trở lại !!!");
-                        //check(true);
-                    }                        
                 }
                 else
                 {
@@ -75,6 +64,13 @@ namespace qlpt
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSighUp_Click(object sender, EventArgs e)
+        {
+            SignUp signUp = new SignUp();
+            this.Hide();
+            signUp.Show();
         }
     }
 }

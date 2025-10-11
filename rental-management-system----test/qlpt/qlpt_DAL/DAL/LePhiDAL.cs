@@ -77,6 +77,33 @@ namespace qlpt_DAL.DAL
             return listLePhi;
         }
 
+        //3.Update: cập nhật bản ghi lệ phí
+        public bool UpdateLePhi(LePhi objLePhi)
+        {
+            string query = "UPDATE nuoc SET id_lephi = @id_lephi, ngaytao = @ngaytao, tienphong = @tienphong, tiendv = @tiendv" +
+                           "thanhtien_lephi = @thanhtien_lephi WHERE id_lephi = @id_lephi";
+
+            using (SqlConnection conn = connectDB.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@id_lephi", objLePhi.Id_LePhi);
+                cmd.Parameters.AddWithValue("@ngaytao", objLePhi.NgayTao);
+                cmd.Parameters.AddWithValue("@tienphong", objLePhi.TienPhong);
+                cmd.Parameters.AddWithValue("@tiendv", objLePhi.TienDv);
+                cmd.Parameters.AddWithValue("@thanhtien_lephi", objLePhi.ThanhTien_LePhi);
+                try
+                {
+                    conn.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine("SQL Error (UpdateNuoc): " + ex.Message);
+                    return false;
+                }
+            }
+        }
+
         //4.Delete: Xóa bản ghi lệ phí
         public bool DeleteLePhi(int idLePhi)
         {

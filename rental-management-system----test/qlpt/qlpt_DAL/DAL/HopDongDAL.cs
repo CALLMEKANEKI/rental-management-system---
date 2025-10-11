@@ -10,12 +10,12 @@ namespace qlpt_DAL.DAL
         private ConnectDAL connectDB = new ConnectDAL();
 
         // 1. CREATE: Tạo Hợp Đồng Mới (và lấy ID vừa tạo)
-        public int CreateHopDong(HopDong objHopDong)
+        public int InsertHopDong(HopDong objHopDong)
         {
             // LƯU Ý: id_hopdong là tự tăng 
             string query = "INSERT INTO hopdong (id_phong, id_chutro, id_nguoithue, ngaybatdau, ngayketthuc, tiencoc) " +
-                           "VALUES (@id_phong, @id_chutro, @id_nguoithue, @ngaybatdau, @ngayketthuc, @tiencoc); " +
-                           "SELECT SCOPE_IDENTITY();";
+                             "OUTPUT INSERTED.id_hopdong" +
+                           "VALUES (@id_phong, @id_chutro, @id_nguoithue, @ngaybatdau, @ngayketthuc, @tiencoc);"; 
 
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -42,7 +42,7 @@ namespace qlpt_DAL.DAL
             }
         }
 
-        // 2. READ: Lấy Hợp Đồng đang có hiệu lực theo ID Phòng
+        //2.1. READ: Lấy Hợp Đồng đang có hiệu lực theo ID Phòng
         public HopDong GetHopDongHienTaiByPhongId(int idPhong)
         {
             HopDong objHopDong = null;
@@ -81,33 +81,7 @@ namespace qlpt_DAL.DAL
             return objHopDong;
         }
 
-        // 3. UPDATE: Cập nhật Ngày kết thúc Hợp đồng (Chấm dứt HĐ)
-        public bool shutdownHopDong(int idHopDong, DateTime ngayKetThucThucTe)
-        {
-            // Cập nhật ngày kết thúc thực tế cho hợp đồng
-            string query = "UPDATE hopdong SET ngayketthuc = @ngayketthuc WHERE id_hopdong = @id_hopdong";
-
-            using (SqlConnection conn = connectDB.GetConnection())
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
-                cmd.Parameters.AddWithValue("@ngayketthuc", ngayKetThucThucTe);
-                cmd.Parameters.AddWithValue("@id_hopdong", idHopDong);
-
-                try
-                {
-                    conn.Open();
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    return rowsAffected > 0;
-                }
-                catch (SqlException ex)
-                {
-                    Console.WriteLine("SQL Error (KetThucHopDong): " + ex.Message);
-                    return false;
-                }
-            }
-        }
-
-        //Read: lấy tất cả hợp đồng
+        //2.2.Read: lấy tất cả hợp đồng
         public List<HopDong> GetAllHopDong()
         {
             List<HopDong> listHopDong = new List<HopDong>();
@@ -143,5 +117,59 @@ namespace qlpt_DAL.DAL
             }
             return listHopDong;
         }
+
+        //3:Update: Cật nhập hợp đồng
+        public bool UpdateHopDong(HopDong objHopDong)
+        {
+            string query = "UPDATE hopdong SET id_hopdong = @id_hopdong, id_phong = @id_phong, id_chutro = @id_chutro, " +
+                           "id_nguoithue = @id_nguoithue, ngaybatdau = @ngaybatdau, ngayketthuc = @ngayketthuc, tiencoc = @tiencoc WHERE id_hopdong = @id_hopdong";
+
+            using (SqlConnection conn = connectDB.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@id_hopdong", objHopDong.Id_HopDong);
+                cmd.Parameters.AddWithValue("@id_phong", objHopDong.Id_Phong);
+                cmd.Parameters.AddWithValue("@id_chutro", objHopDong.Id_ChuTro);
+                cmd.Parameters.AddWithValue("@id_nguoithue", objHopDong.Id_NguoiThue);
+                cmd.Parameters.AddWithValue("@ngaybatdau", objHopDong.NgayBatDau);
+                cmd.Parameters.AddWithValue("@ngayketthuc", objHopDong.NgayKetThuc);
+                cmd.Parameters.AddWithValue("@tiencoc", objHopDong.TienCoc);
+
+                try
+                {
+                    conn.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine("SQL Error (UpdateHopDong): " + ex.Message);
+                    return false;
+                }
+            }
+        }
+
+        // 4. Delete: Cập nhật Ngày kết thúc Hợp đồng (Chấm dứt HĐ)
+        public bool DeleteHopDong(int idHopDong)
+        {
+            // Cập nhật ngày kết thúc thực tế cho hợp đồng
+            string query = "DELETE FROM hopdong WHERE id_hopdong = @id_hopdong";
+
+            using (SqlConnection conn = connectDB.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@id_hopdong", idHopDong);
+                try
+                {
+                    conn.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine("SQL Error (KetThucHopDong): " + ex.Message);
+                    return false;
+                }
+            }
+        }     
     }
 }

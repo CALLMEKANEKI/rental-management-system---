@@ -18,8 +18,8 @@ namespace qlpt_DAL.DAL
         {
             // Sử dụng SCOPE_IDENTITY() để lấy ID tự tăng
             string query = "INSERT INTO phongtro (id_chutro, tenphong, giaphong, tinhtrang) " +
-                           "VALUES (@id_chutro, @tenphong, @giaphong, @tinhtrang); " +
-                           "SELECT SCOPE_IDENTITY();";
+                            "OUTPUT INSERTED.id_phong" +
+                           "VALUES (@id_chutro, @tenphong, @giaphong, @tinhtrang);";
 
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -79,6 +79,42 @@ namespace qlpt_DAL.DAL
             }
             return listPhong;
         }
+        
+        //2.2. Lấy phòng theo id
+        public PhongTro GetPhongById(int idPhong)
+        {
+            PhongTro objPhong = null;
+            string query = "SELECT id_phong, id_chutro, tenphong, giaphong, tinhtrang FROM phongtro WHERE id_phong = @id_phong";
+
+            using (SqlConnection conn = connectDB.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@id_phong", idPhong);
+                try
+                {
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            objPhong = new PhongTro
+                            {
+                                Id_Phong = reader.GetInt32(reader.GetOrdinal("id_phong")),
+                                Id_ChuTro = reader.GetInt32(reader.GetOrdinal("id_chutro")),
+                                TenPhong = reader.GetString(reader.GetOrdinal("tenphong")),
+                                GiaPhong = reader.GetDecimal(reader.GetOrdinal("giaphong")),
+                                TinhTrang = reader.GetString(reader.GetOrdinal("tinhtrang"))
+                            };
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("SQL Error (GetPhongById): " + ex.Message);
+                }
+            }
+            return objPhong;
+        }
 
         // 3. UPDATE: Cập nhật Phòng trọ
         public bool UpdatePhong(PhongTro objPhong)
@@ -132,42 +168,6 @@ namespace qlpt_DAL.DAL
                     return false;
                 }
             }
-        }
-
-        //5. Lấy phòng theo id
-        public PhongTro GetPhongById(int idPhong)
-        {
-            PhongTro objPhong = null;
-            string query = "SELECT id_phong, id_chutro, tenphong, giaphong, tinhtrang FROM phongtro WHERE id_phong = @id_phong";
-
-            using (SqlConnection conn = connectDB.GetConnection())
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
-                cmd.Parameters.AddWithValue("@id_phong", idPhong);
-                try
-                {
-                    conn.Open();
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            objPhong = new PhongTro
-                            {
-                                Id_Phong = reader.GetInt32(reader.GetOrdinal("id_phong")),
-                                Id_ChuTro = reader.GetInt32(reader.GetOrdinal("id_chutro")),
-                                TenPhong = reader.GetString(reader.GetOrdinal("tenphong")),
-                                GiaPhong = reader.GetDecimal(reader.GetOrdinal("giaphong")),
-                                TinhTrang = reader.GetString(reader.GetOrdinal("tinhtrang"))
-                            };
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("SQL Error (GetPhongById): " + ex.Message);
-                }
-            }
-            return objPhong;
-        }
+        }        
     }
 }

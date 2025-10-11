@@ -42,7 +42,7 @@ namespace qlpt_BLL.BLL
             }
 
             // B4: Gọi DAL tạo Hợp đồng
-            int newIdHopDong = hopDongDAL.CreateHopDong(objHopDong);
+            int newIdHopDong = hopDongDAL.InsertHopDong(objHopDong);
 
             if (newIdHopDong > 0)
             {
@@ -53,34 +53,6 @@ namespace qlpt_BLL.BLL
             }
 
             return newIdHopDong;
-        }
-
-        // 2. Chấm dứt Hợp đồng và Cập nhật trạng thái phòng (UPDATE)
-        public bool ChuyenPhong(int idHopDong, int idPhong, DateTime ngayKetThucThucTe)
-        {
-            // BLL Validation: Ngày kết thúc không được sau ngày hiện tại
-            if (ngayKetThucThucTe > DateTime.Today)
-            {
-                return false; // Lỗi: Ngày kết thúc không hợp lệ
-            }
-
-            // B1: Gọi DAL cập nhật Ngày kết thúc HĐ thực tế
-            bool success = hopDongDAL.shutdownHopDong(idHopDong, ngayKetThucThucTe);
-
-            if (success)
-            {
-                // B2: THAO TÁC NGHIỆP VỤ QUAN TRỌNG: 
-                // CẬP NHẬT trạng thái phòng thành "Trống" sau khi chấm dứt HĐ
-                PhongTro objPhong = phongTroDAL.GetPhongById(idPhong);
-                if (objPhong != null)
-                {
-                    objPhong.TinhTrang = "Trống";
-                    phongTroDAL.UpdatePhong(objPhong);
-                }
-                return true;
-            }
-
-            return false;
         }
 
         // 3. Lấy Hợp Đồng đang có hiệu lực theo ID Phòng (READ)

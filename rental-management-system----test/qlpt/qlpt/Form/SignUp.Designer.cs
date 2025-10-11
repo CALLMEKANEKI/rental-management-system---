@@ -30,13 +30,6 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnSignUp = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.lblTilte = new System.Windows.Forms.Label();
-            this.labelUserName = new System.Windows.Forms.Label();
-            this.lblPass = new System.Windows.Forms.Label();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtPass = new System.Windows.Forms.TextBox();
             this.txtAddressAd = new System.Windows.Forms.TextBox();
             this.lblAddressAd = new System.Windows.Forms.Label();
             this.txtEmailAd = new System.Windows.Forms.TextBox();
@@ -45,8 +38,13 @@
             this.lblPhoneNumberAd = new System.Windows.Forms.Label();
             this.txtNameAd = new System.Windows.Forms.TextBox();
             this.lblNameAd = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.labelID = new System.Windows.Forms.Label();
+            this.labelUserName = new System.Windows.Forms.Label();
+            this.lblPass = new System.Windows.Forms.Label();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.btnSignUp = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.lblTilte = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,8 +60,6 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtID);
-            this.panel1.Controls.Add(this.labelID);
             this.panel1.Controls.Add(this.txtAddressAd);
             this.panel1.Controls.Add(this.lblAddressAd);
             this.panel1.Controls.Add(this.txtEmailAd);
@@ -80,39 +76,84 @@
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Location = new System.Drawing.Point(3, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(970, 364);
+            this.panel1.Size = new System.Drawing.Size(970, 299);
             this.panel1.TabIndex = 9;
             // 
-            // btnSignUp
+            // txtAddressAd
             // 
-            this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignUp.Location = new System.Drawing.Point(654, 286);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(140, 50);
-            this.btnSignUp.TabIndex = 10;
-            this.btnSignUp.Text = "Đăng ký";
-            this.btnSignUp.UseVisualStyleBackColor = true;
-            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
+            this.txtAddressAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddressAd.Location = new System.Drawing.Point(157, 96);
+            this.txtAddressAd.Multiline = true;
+            this.txtAddressAd.Name = "txtAddressAd";
+            this.txtAddressAd.Size = new System.Drawing.Size(291, 32);
+            this.txtAddressAd.TabIndex = 26;
             // 
-            // btnClose
+            // lblAddressAd
             // 
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(840, 286);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(106, 50);
-            this.btnClose.TabIndex = 6;
-            this.btnClose.Text = "Thoát";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.lblAddressAd.AutoSize = true;
+            this.lblAddressAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddressAd.Location = new System.Drawing.Point(17, 96);
+            this.lblAddressAd.Name = "lblAddressAd";
+            this.lblAddressAd.Size = new System.Drawing.Size(101, 32);
+            this.lblAddressAd.TabIndex = 25;
+            this.lblAddressAd.Text = "Địa chỉ";
             // 
-            // lblTilte
+            // txtEmailAd
             // 
-            this.lblTilte.AutoSize = true;
-            this.lblTilte.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTilte.Location = new System.Drawing.Point(345, 15);
-            this.lblTilte.Name = "lblTilte";
-            this.lblTilte.Size = new System.Drawing.Size(257, 32);
-            this.lblTilte.TabIndex = 8;
-            this.lblTilte.Text = "Đăng ký tài khoản";
+            this.txtEmailAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailAd.Location = new System.Drawing.Point(157, 236);
+            this.txtEmailAd.Multiline = true;
+            this.txtEmailAd.Name = "txtEmailAd";
+            this.txtEmailAd.Size = new System.Drawing.Size(291, 32);
+            this.txtEmailAd.TabIndex = 24;
+            // 
+            // lblEmailAd
+            // 
+            this.lblEmailAd.AutoSize = true;
+            this.lblEmailAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailAd.Location = new System.Drawing.Point(17, 236);
+            this.lblEmailAd.Name = "lblEmailAd";
+            this.lblEmailAd.Size = new System.Drawing.Size(86, 32);
+            this.lblEmailAd.TabIndex = 23;
+            this.lblEmailAd.Text = "Email";
+            // 
+            // txtPhoneNumberAd
+            // 
+            this.txtPhoneNumberAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumberAd.Location = new System.Drawing.Point(157, 166);
+            this.txtPhoneNumberAd.Multiline = true;
+            this.txtPhoneNumberAd.Name = "txtPhoneNumberAd";
+            this.txtPhoneNumberAd.Size = new System.Drawing.Size(291, 32);
+            this.txtPhoneNumberAd.TabIndex = 22;
+            // 
+            // lblPhoneNumberAd
+            // 
+            this.lblPhoneNumberAd.AutoSize = true;
+            this.lblPhoneNumberAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumberAd.Location = new System.Drawing.Point(17, 166);
+            this.lblPhoneNumberAd.Name = "lblPhoneNumberAd";
+            this.lblPhoneNumberAd.Size = new System.Drawing.Size(57, 32);
+            this.lblPhoneNumberAd.TabIndex = 21;
+            this.lblPhoneNumberAd.Text = "Sdt";
+            // 
+            // txtNameAd
+            // 
+            this.txtNameAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameAd.Location = new System.Drawing.Point(157, 26);
+            this.txtNameAd.Multiline = true;
+            this.txtNameAd.Name = "txtNameAd";
+            this.txtNameAd.Size = new System.Drawing.Size(291, 32);
+            this.txtNameAd.TabIndex = 20;
+            // 
+            // lblNameAd
+            // 
+            this.lblNameAd.AutoSize = true;
+            this.lblNameAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameAd.Location = new System.Drawing.Point(17, 26);
+            this.lblNameAd.Name = "lblNameAd";
+            this.lblNameAd.Size = new System.Drawing.Size(97, 32);
+            this.lblNameAd.TabIndex = 19;
+            this.lblNameAd.Text = "Họ tên";
             // 
             // labelUserName
             // 
@@ -153,106 +194,43 @@
             this.txtPass.Size = new System.Drawing.Size(278, 42);
             this.txtPass.TabIndex = 18;
             // 
-            // txtAddressAd
+            // btnSignUp
             // 
-            this.txtAddressAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddressAd.Location = new System.Drawing.Point(154, 164);
-            this.txtAddressAd.Multiline = true;
-            this.txtAddressAd.Name = "txtAddressAd";
-            this.txtAddressAd.Size = new System.Drawing.Size(291, 32);
-            this.txtAddressAd.TabIndex = 26;
+            this.btnSignUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignUp.Location = new System.Drawing.Point(654, 232);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(140, 50);
+            this.btnSignUp.TabIndex = 10;
+            this.btnSignUp.Text = "Đăng ký";
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
-            // lblAddressAd
+            // btnClose
             // 
-            this.lblAddressAd.AutoSize = true;
-            this.lblAddressAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddressAd.Location = new System.Drawing.Point(14, 164);
-            this.lblAddressAd.Name = "lblAddressAd";
-            this.lblAddressAd.Size = new System.Drawing.Size(101, 32);
-            this.lblAddressAd.TabIndex = 25;
-            this.lblAddressAd.Text = "Địa chỉ";
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(840, 232);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(106, 50);
+            this.btnClose.TabIndex = 6;
+            this.btnClose.Text = "Thoát";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // txtEmailAd
+            // lblTilte
             // 
-            this.txtEmailAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailAd.Location = new System.Drawing.Point(154, 304);
-            this.txtEmailAd.Multiline = true;
-            this.txtEmailAd.Name = "txtEmailAd";
-            this.txtEmailAd.Size = new System.Drawing.Size(291, 32);
-            this.txtEmailAd.TabIndex = 24;
-            // 
-            // lblEmailAd
-            // 
-            this.lblEmailAd.AutoSize = true;
-            this.lblEmailAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailAd.Location = new System.Drawing.Point(14, 304);
-            this.lblEmailAd.Name = "lblEmailAd";
-            this.lblEmailAd.Size = new System.Drawing.Size(86, 32);
-            this.lblEmailAd.TabIndex = 23;
-            this.lblEmailAd.Text = "Email";
-            // 
-            // txtPhoneNumberAd
-            // 
-            this.txtPhoneNumberAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumberAd.Location = new System.Drawing.Point(154, 234);
-            this.txtPhoneNumberAd.Multiline = true;
-            this.txtPhoneNumberAd.Name = "txtPhoneNumberAd";
-            this.txtPhoneNumberAd.Size = new System.Drawing.Size(291, 32);
-            this.txtPhoneNumberAd.TabIndex = 22;
-            // 
-            // lblPhoneNumberAd
-            // 
-            this.lblPhoneNumberAd.AutoSize = true;
-            this.lblPhoneNumberAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumberAd.Location = new System.Drawing.Point(14, 234);
-            this.lblPhoneNumberAd.Name = "lblPhoneNumberAd";
-            this.lblPhoneNumberAd.Size = new System.Drawing.Size(57, 32);
-            this.lblPhoneNumberAd.TabIndex = 21;
-            this.lblPhoneNumberAd.Text = "Sdt";
-            // 
-            // txtNameAd
-            // 
-            this.txtNameAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameAd.Location = new System.Drawing.Point(154, 94);
-            this.txtNameAd.Multiline = true;
-            this.txtNameAd.Name = "txtNameAd";
-            this.txtNameAd.Size = new System.Drawing.Size(291, 32);
-            this.txtNameAd.TabIndex = 20;
-            // 
-            // lblNameAd
-            // 
-            this.lblNameAd.AutoSize = true;
-            this.lblNameAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNameAd.Location = new System.Drawing.Point(14, 94);
-            this.lblNameAd.Name = "lblNameAd";
-            this.lblNameAd.Size = new System.Drawing.Size(97, 32);
-            this.lblNameAd.TabIndex = 19;
-            this.lblNameAd.Text = "Họ tên";
-            // 
-            // txtID
-            // 
-            this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(154, 23);
-            this.txtID.Multiline = true;
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(291, 32);
-            this.txtID.TabIndex = 28;
-            // 
-            // labelID
-            // 
-            this.labelID.AutoSize = true;
-            this.labelID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelID.Location = new System.Drawing.Point(14, 23);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(134, 32);
-            this.labelID.TabIndex = 27;
-            this.labelID.Text = "ID chủ trọ";
+            this.lblTilte.AutoSize = true;
+            this.lblTilte.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTilte.Location = new System.Drawing.Point(345, 15);
+            this.lblTilte.Name = "lblTilte";
+            this.lblTilte.Size = new System.Drawing.Size(257, 32);
+            this.lblTilte.TabIndex = 8;
+            this.lblTilte.Text = "Đăng ký tài khoản";
             // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(994, 429);
+            this.ClientSize = new System.Drawing.Size(979, 363);
             this.Controls.Add(this.panel2);
             this.Name = "SignUp";
             this.Text = "SignUp";
@@ -283,7 +261,5 @@
         private System.Windows.Forms.Label lblPhoneNumberAd;
         private System.Windows.Forms.TextBox txtNameAd;
         private System.Windows.Forms.Label lblNameAd;
-        private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label labelID;
     }
 }

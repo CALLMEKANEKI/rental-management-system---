@@ -76,6 +76,33 @@ namespace qlpt_DAL.DAL
             return listNuoc;
         }
 
+        //3.Update: cập nhật bản ghi nuoc
+        public bool UpdateNuoc(Nuoc objNuoc)
+        {
+            string query = "UPDATE nuoc SET id_nuoc = @id_nuoc, ngaytao = @ngaytao, chiso_dau = @chiso_dau, chiso_cuoi = @chiso_cuoi" +
+                           "thanhtien_nuoc = @thanhtien_nuoc WHERE id_nuoc = @id_nuoc";
+
+            using (SqlConnection conn = connectDB.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                cmd.Parameters.AddWithValue("@id_nuoc", objNuoc.Id_Nuoc);
+                cmd.Parameters.AddWithValue("@ngaytao", objNuoc.NgayTao);
+                cmd.Parameters.AddWithValue("@chiso_dau", objNuoc.ChiSo_Dau);
+                cmd.Parameters.AddWithValue("@chiso_cuoi", objNuoc.ChiSo_Cuoi);
+                cmd.Parameters.AddWithValue("@thanhtien_nuoc", objNuoc.ThanhTien_Nuoc);
+                try
+                {
+                    conn.Open();
+                    return cmd.ExecuteNonQuery() > 0;
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine("SQL Error (UpdateNuoc): " + ex.Message);
+                    return false;
+                }
+            }
+        }
+
         //4.Delete: Xóa bản ghi nước
         public bool DeleteNuoc(int idnuoc)
         {
