@@ -15,14 +15,15 @@ namespace qlpt_DAL.DAL
         // 1. CREATE: Thêm bản ghi Lệ Phí mới (và lấy ID)
         public int InsertLePhi(LePhi objLePhi)
         {
-            // Thêm các cột lệ phí chi tiết của bạn vào đây
-            string query = "INSERT INTO lephi (id_lephi, ngaytao, tienphong, tiendv, thanhtien_lephi) " +
-                           "VALUES (@id_lephi, @ngaytao, @tienphong, @tiendv, @thanhtien_lephi); ";
+            // SỬA: Loại bỏ id_lephi khỏi INSERT và thêm SELECT SCOPE_IDENTITY() để lấy ID mới
+            string query = "INSERT INTO lephi (ngaytao, tienphong, tiendv, thanhtien_lephi) " +
+                           "VALUES (@ngaytao, @tienphong, @tiendv, @thanhtien_lephi); " +
+                           "SELECT SCOPE_IDENTITY();"; // Lấy ID vừa tạo
+
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                // Tham số hóa
-                cmd.Parameters.AddWithValue("@id_lephi", objLePhi.Id_LePhi);
+                // SỬA: Loại bỏ tham số @id_lephi
                 cmd.Parameters.AddWithValue("@ngaytao", objLePhi.NgayTao);
                 cmd.Parameters.AddWithValue("@tienphong", objLePhi.TienPhong);
                 cmd.Parameters.AddWithValue("@tiendv", objLePhi.TienDv);
@@ -31,6 +32,7 @@ namespace qlpt_DAL.DAL
                 try
                 {
                     conn.Open();
+                    // ExecuteScalar trả về ID mới (decimal, cần Convert)
                     object result = cmd.ExecuteScalar();
                     return result != null && result != DBNull.Value ? Convert.ToInt32(result) : -1;
                 }
@@ -42,15 +44,21 @@ namespace qlpt_DAL.DAL
             }
         }
 
-        //2. Read: Lấy tất cả bản ghi lệ phí
-        public List<LePhi> GetAllLePhi()
+        // 2. Read: Lấy tất cả bản ghi lệ phí theo Chủ trọ (Cần thiết cho BLL)
+        public List<LePhi> GetAllLePhi(int idChuTro)
         {
             List<LePhi> listLePhi = new List<LePhi>();
-            string query = "SELECT * FROM lephi";
+            //JOIN với HoaDon và PhongTro để lọc theo id_ChuTro
+            string query = @"
+                SELECT lp.* FROM lephi lp
+                INNER JOIN HoaDon hd ON lp.id_lephi = hd.id_lephi
+                INNER JOIN PhongTro pt ON hd.id_phong = pt.id_phong
+                WHERE pt.id_chutro = @id_chutro";
 
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
+                cmd.Parameters.AddWithValue("@id_chutro", idChuTro);
                 try
                 {
                     conn.Open();
@@ -64,6 +72,7 @@ namespace qlpt_DAL.DAL
                                 NgayTao = reader.GetDateTime(reader.GetOrdinal("ngaytao")),
                                 TienPhong = reader.GetDecimal(reader.GetOrdinal("tienphong")),
                                 TienDv = reader.GetDecimal(reader.GetOrdinal("tiendv")),
+                                //Thanhtien_lephi được tính toán sẵn không cần lấy
                             };
                             listLePhi.Add(objLePhi);
                         }
@@ -77,10 +86,11 @@ namespace qlpt_DAL.DAL
             return listLePhi;
         }
 
-        //3.Update: cập nhật bản ghi lệ phí
+        // 3. Update: cập nhật bản ghi lệ phí
         public bool UpdateLePhi(LePhi objLePhi)
         {
-            string query = "UPDATE nuoc SET id_lephi = @id_lephi, ngaytao = @ngaytao, tienphong = @tienphong, tiendv = @tiendv" +
+            // SỬA: Sửa tên bảng từ nuoc thành lephi, loại bỏ cập nhật id_lephi, thêm dấu phẩy
+            string query = "UPDATE lephi SET ngaytao = @ngaytao, tienphong = @tienphong, tiendv = @tiendv, " +
                            "thanhtien_lephi = @thanhtien_lephi WHERE id_lephi = @id_lephi";
 
             using (SqlConnection conn = connectDB.GetConnection())
@@ -91,6 +101,7 @@ namespace qlpt_DAL.DAL
                 cmd.Parameters.AddWithValue("@tienphong", objLePhi.TienPhong);
                 cmd.Parameters.AddWithValue("@tiendv", objLePhi.TienDv);
                 cmd.Parameters.AddWithValue("@thanhtien_lephi", objLePhi.ThanhTien_LePhi);
+
                 try
                 {
                     conn.Open();
@@ -98,13 +109,13 @@ namespace qlpt_DAL.DAL
                 }
                 catch (SqlException ex)
                 {
-                    Console.WriteLine("SQL Error (UpdateNuoc): " + ex.Message);
+                    Console.WriteLine("SQL Error (UpdateLePhi): " + ex.Message);
                     return false;
                 }
             }
         }
 
-        //4.Delete: Xóa bản ghi lệ phí
+        // 4. Delete: Xóa bản ghi lệ phí
         public bool DeleteLePhi(int idLePhi)
         {
             string query = "DELETE FROM lephi WHERE id_lephi = @id_lephi";

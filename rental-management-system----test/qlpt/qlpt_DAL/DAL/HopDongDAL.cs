@@ -1,4 +1,5 @@
 ﻿using qlpt_DTO.Models;
+using qlpt_DTO.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -8,25 +9,23 @@ namespace qlpt_DAL.DAL
     public class HopDongDAL
     {
         private ConnectDAL connectDB = new ConnectDAL();
-
-        // 1. CREATE: Tạo Hợp Đồng Mới (và lấy ID vừa tạo)
+        
+        //CREATE 
         public int InsertHopDong(HopDong objHopDong)
         {
-            // LƯU Ý: id_hopdong là tự tăng 
-            string query = "INSERT INTO hopdong (id_phong, id_chutro, id_nguoithue, ngaybatdau, ngayketthuc, tiencoc) " +
-                             "OUTPUT INSERTED.id_hopdong" +
-                           "VALUES (@id_phong, @id_chutro, @id_nguoithue, @ngaybatdau, @ngayketthuc, @tiencoc);"; 
+            string query = "INSERT INTO HopDong (Id_Phong, Id_NguoiThue, NgayBatDau, NgayKetThuc, TienCoc) " +
+                           "VALUES (@Id_Phong, @Id_NguoiThue, @NgayBatDau, @NgayKetThuc, @TienCoc); " +
+                           "SELECT SCOPE_IDENTITY();";
 
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                // Tham số hóa
-                cmd.Parameters.AddWithValue("@id_phong", objHopDong.Id_Phong);
-                cmd.Parameters.AddWithValue("@id_chutro", objHopDong.Id_ChuTro);
-                cmd.Parameters.AddWithValue("@id_nguoithue", objHopDong.Id_NguoiThue);
-                cmd.Parameters.AddWithValue("@ngaybatdau", objHopDong.NgayBatDau);
-                cmd.Parameters.AddWithValue("@ngayketthuc", objHopDong.NgayKetThuc);
-                cmd.Parameters.AddWithValue("@tiencoc", objHopDong.TienCoc);
+                // Không cần Id_ChuTro vì nó được xác định qua Id_Phong
+                cmd.Parameters.AddWithValue("@Id_Phong", objHopDong.Id_Phong);
+                cmd.Parameters.AddWithValue("@Id_NguoiThue", objHopDong.Id_NguoiThue);
+                cmd.Parameters.AddWithValue("@NgayBatDau", objHopDong.NgayBatDau);
+                cmd.Parameters.AddWithValue("@NgayKetThuc", objHopDong.NgayKetThuc);
+                cmd.Parameters.AddWithValue("@TienCoc", objHopDong.TienCoc);
 
                 try
                 {
@@ -36,59 +35,64 @@ namespace qlpt_DAL.DAL
                 }
                 catch (SqlException ex)
                 {
-                    Console.WriteLine("SQL Error (TaoHopDongMoi): " + ex.Message);
-                    return -1; // Thất bại
+                    Console.WriteLine("SQL Error (InsertHopDong): " + ex.Message);
+                    return -1;
                 }
             }
         }
+        // Hàm ánh xạ chung từ SqlDataReader sang NguoiThue Model (chỉ dùng READ)
 
-        //2.1. READ: Lấy Hợp Đồng đang có hiệu lực theo ID Phòng
-        public HopDong GetHopDongHienTaiByPhongId(int idPhong)
+        private HopDong MapToHopDong(SqlDataReader reader)
         {
-            HopDong objHopDong = null;
-            // Tìm hợp đồng có id_phong khớp và ngày kết thúc lớn hơn hoặc bằng ngày hiện tại
-            string query = "SELECT * FROM hopdong WHERE id_phong = @id_phong AND ngayketthuc >= GETDATE() ORDER BY ngaybatdau DESC";
+            return new HopDong
+            {
+                Id_HopDong = reader.GetInt32(reader.GetOrdinal("Id_HopDong")),
+                NgayBatDau = reader.GetDateTime(reader.GetOrdinal("NgayBatDau")),
+                NgayKetThuc = reader.GetDateTime(reader.GetOrdinal("NgayKetThuc")),
+                TienCoc = reader.GetDecimal(reader.GetOrdinal("TienCoc")),
+
+                // Khóa ngoại
+                Id_Phong = reader.GetInt32(reader.GetOrdinal("Id_Phong")),
+                Id_NguoiThue = reader.GetInt32(reader.GetOrdinal("Id_NguoiThue")),
+                Id_ChuTro = reader.GetInt32(reader.GetOrdinal("Id_ChuTro")), // Lấy từ JOIN
+            };
+        }
+
+        private HopDongViewModel MapToViewModel(SqlDataReader reader)
+        {
+            return new HopDongViewModel
+            {
+                Id_HopDong = reader.GetInt32(reader.GetOrdinal("Id_HopDong")),
+                NgayBatDau = reader.GetDateTime(reader.GetOrdinal("NgayBatDau")),
+                NgayKetThuc = reader.GetDateTime(reader.GetOrdinal("NgayKetThuc")),
+                TienCoc = reader.GetDecimal(reader.GetOrdinal("TienCoc")),
+
+                // Khóa ngoại
+                Id_Phong = reader.GetInt32(reader.GetOrdinal("Id_Phong")),
+                Id_NguoiThue = reader.GetInt32(reader.GetOrdinal("Id_NguoiThue")),
+                Id_ChuTro = reader.GetInt32(reader.GetOrdinal("Id_ChuTro")), // Lấy từ JOIN
+
+                // Các cột hiển thị (ViewModel)
+                TenPhongHienThi = reader.GetString(reader.GetOrdinal("TenPhongHienThi")),
+                TenNguoiThueHienThi = reader.GetString(reader.GetOrdinal("TenNguoiThueHienThi")),
+                CccdHienThi = reader.GetString(reader.GetOrdinal("CccdHienThi")),
+                SdtHienThi = reader.GetString(reader.GetOrdinal("SdtHienThi")),
+                TenChuTroHienThi = reader.GetString(reader.GetOrdinal("TenChuTroHienThi"))
+            };
+        }
+
+        private List<HopDongViewModel> ExecuteQueryAndMap(string query, params SqlParameter[] parameters)
+        {
+            List<HopDongViewModel> listContract = new List<HopDongViewModel>();
 
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                cmd.Parameters.AddWithValue("@id_phong", idPhong);
-                try
+                if (parameters != null)
                 {
-                    conn.Open();
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            objHopDong = new HopDong
-                            {
-                                Id_HopDong = reader.GetInt32(reader.GetOrdinal("id_hopdong")),
-                                Id_Phong = reader.GetInt32(reader.GetOrdinal("id_phong")),
-                                Id_ChuTro = reader.GetInt32(reader.GetOrdinal("id_chutro")),
-                                Id_NguoiThue = reader.GetInt32(reader.GetOrdinal("id_nguoithue")),
-                                NgayBatDau = reader.GetDateTime(reader.GetOrdinal("ngaybatdau")),
-                                NgayKetThuc = reader.GetDateTime(reader.GetOrdinal("ngayketthuc")),
-                                TienCoc = reader.GetDecimal(reader.GetOrdinal("tiencoc"))
-                            };
-                        }
-                    }
+                    cmd.Parameters.AddRange(parameters);
                 }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("SQL Error (GetHopDongHienTaiByPhongId): " + ex.Message);
-                }
-            }
-            return objHopDong;
-        }
 
-        //2.2.Read: lấy tất cả hợp đồng
-        public List<HopDong> GetAllHopDong()
-        {
-            List<HopDong> listHopDong = new List<HopDong>();
-            string query = "SELECT * FROM hopDong";
-            using (SqlConnection conn = connectDB.GetConnection())
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
                 try
                 {
                     conn.Open();
@@ -96,44 +100,98 @@ namespace qlpt_DAL.DAL
                     {
                         while (reader.Read())
                         {
-                            HopDong objHopDong = new HopDong
-                            {
-                                Id_HopDong = reader.GetInt32(reader.GetOrdinal("id_hopdong")),
-                                Id_Phong = reader.GetInt32(reader.GetOrdinal("id_phong")),
-                                Id_ChuTro = reader.GetInt32(reader.GetOrdinal("id_chutro")),
-                                Id_NguoiThue = reader.GetInt32(reader.GetOrdinal("id_nguoithue")),
-                                NgayBatDau = reader.GetDateTime(reader.GetOrdinal("ngaybatdau")),
-                                NgayKetThuc = reader.GetDateTime(reader.GetOrdinal("ngayketthuc")),
-                                TienCoc = reader.GetDecimal(reader.GetOrdinal("tiencoc"))
-                            };
-                            listHopDong.Add(objHopDong);
+                            listContract.Add(MapToViewModel(reader));
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("SQL Error (GetAllPhong): " + ex.Message);
+                    Console.WriteLine("SQL Error (ExecuteQueryAndMap): " + ex.Message);
                 }
             }
-            return listHopDong;
+            return listContract;
         }
 
-        //3:Update: Cật nhập hợp đồng
+        // --- READ / SEARCH ---
+        private string BaseSelectQuery = @"
+        SELECT 
+            hd.*, 
+            pt.TenPhong AS TenPhongHienThi, 
+            nt.HoTen AS TenNguoiThueHienThi, 
+            nt.Cccd AS CccdHienThi, 
+            nt.Sdt AS SdtHienThi,
+            pt.Id_ChuTro,
+            ct.HoTen AS TenChuTroHienThi
+        FROM HopDong hd
+        INNER JOIN PhongTro pt ON hd.Id_Phong = pt.Id_Phong
+        INNER JOIN NguoiThue nt ON hd.Id_NguoiThue = nt.Id_NguoiThue
+        INNER JOIN ChuTro ct ON pt.Id_ChuTro = ct.Id_ChuTro ";
+
+        //Lấy tất cả hợp đồng (list<ViewModel>)
+        public List<HopDongViewModel> GetAllHopDongViewModel(int idChuTro)
+        {
+            string query = BaseSelectQuery + " WHERE pt.Id_ChuTro = @Id_ChuTro";
+            return ExecuteQueryAndMap(query, new SqlParameter("@Id_ChuTro", idChuTro));
+        }
+
+        //Lấy tất cả hợp đồng theo keyword 
+        public List<HopDongViewModel> GetAllHopDongViewModelByKeyWord(int idChuTro, string keyword)
+        {
+            string query = BaseSelectQuery + @" 
+             WHERE pt.Id_ChuTro = @Id_ChuTro 
+             AND (
+                        pt.TenPhong LIKE @Keyword OR 
+                        nt.HoTen LIKE @Keyword OR 
+                        CONVERT(NVARCHAR, hd.id_hopdong) LIKE @Keyword OR 
+                        CONVERT(NVARCHAR, hd.TienCoc) LIKE @Keyword OR
+                        CONVERT(NVARCHAR, nt.Cccd) LIKE @Keyword OR
+                        CONVERT(NVARCHAR, nt.Sdt) LIKE @Keyword OR
+                         CONVERT(NVARCHAR, hd.NgayBatDau, 103) LIKE @Keyword OR
+                         CONVERT(NVARCHAR, hd.NgayKetThuc, 103) LIKE @Keyword
+            )";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+            new SqlParameter("@Id_ChuTro", idChuTro),
+            new SqlParameter("@Keyword", "%" + keyword + "%")
+            };
+
+            return ExecuteQueryAndMap(query, parameters);
+        }
+
+        public List<HopDongViewModel> GetActiveHopDongByRoomId(int idPhong)
+        {
+            // CHỈ LẤY CÁC HỢP ĐỒNG MÀ NGÀY KẾT THÚC CHƯA ĐẾN
+            string query = BaseSelectQuery + @" 
+                            WHERE hd.Id_Phong = @Id_Phong
+                            AND (hd.NgayKetThuc IS NULL OR hd.NgayKetThuc >= GETDATE())";
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@Id_Phong", idPhong)
+            };
+
+            return ExecuteQueryAndMap(query, parameters);
+        }
+
+
+
+        //UPDATE
         public bool UpdateHopDong(HopDong objHopDong)
         {
-            string query = "UPDATE hopdong SET id_hopdong = @id_hopdong, id_phong = @id_phong, id_chutro = @id_chutro, " +
-                           "id_nguoithue = @id_nguoithue, ngaybatdau = @ngaybatdau, ngayketthuc = @ngayketthuc, tiencoc = @tiencoc WHERE id_hopdong = @id_hopdong";
+            string query = "UPDATE HopDong SET Id_Phong = @Id_Phong, Id_NguoiThue = @Id_NguoiThue, " +
+                           "NgayBatDau = @NgayBatDau, NgayKetThuc = @NgayKetThuc, TienCoc = @TienCoc " +
+                           "WHERE Id_HopDong = @Id_HopDong";
 
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                cmd.Parameters.AddWithValue("@id_hopdong", objHopDong.Id_HopDong);
-                cmd.Parameters.AddWithValue("@id_phong", objHopDong.Id_Phong);
-                cmd.Parameters.AddWithValue("@id_chutro", objHopDong.Id_ChuTro);
-                cmd.Parameters.AddWithValue("@id_nguoithue", objHopDong.Id_NguoiThue);
-                cmd.Parameters.AddWithValue("@ngaybatdau", objHopDong.NgayBatDau);
-                cmd.Parameters.AddWithValue("@ngayketthuc", objHopDong.NgayKetThuc);
-                cmd.Parameters.AddWithValue("@tiencoc", objHopDong.TienCoc);
+                cmd.Parameters.AddWithValue("@Id_Phong", objHopDong.Id_Phong);
+                cmd.Parameters.AddWithValue("@Id_NguoiThue", objHopDong.Id_NguoiThue);
+                cmd.Parameters.AddWithValue("@NgayBatDau", objHopDong.NgayBatDau);
+                cmd.Parameters.AddWithValue("@NgayKetThuc", objHopDong.NgayKetThuc);
+                cmd.Parameters.AddWithValue("@TienCoc", objHopDong.TienCoc);
+                cmd.Parameters.AddWithValue("@Id_HopDong", objHopDong.Id_HopDong);
 
                 try
                 {
@@ -148,28 +206,26 @@ namespace qlpt_DAL.DAL
             }
         }
 
-        // 4. Delete: Cập nhật Ngày kết thúc Hợp đồng (Chấm dứt HĐ)
+        //DELETE
         public bool DeleteHopDong(int idHopDong)
         {
-            // Cập nhật ngày kết thúc thực tế cho hợp đồng
-            string query = "DELETE FROM hopdong WHERE id_hopdong = @id_hopdong";
+            string query = "DELETE FROM HopDong WHERE Id_HopDong = @Id_HopDong";
 
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                cmd.Parameters.AddWithValue("@id_hopdong", idHopDong);
+                cmd.Parameters.AddWithValue("@Id_HopDong", idHopDong);
                 try
                 {
                     conn.Open();
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    return rowsAffected > 0;
+                    return cmd.ExecuteNonQuery() > 0;
                 }
                 catch (SqlException ex)
                 {
-                    Console.WriteLine("SQL Error (KetThucHopDong): " + ex.Message);
+                    Console.WriteLine("SQL Error (DeleteHopDong): " + ex.Message);
                     return false;
                 }
             }
-        }     
+        }        
     }
 }

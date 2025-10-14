@@ -15,16 +15,16 @@ namespace qlpt_DAL.DAL
         // 1. CREATE: Thêm bản ghi Tiền Nước mới (và lấy ID)
         public int InsertNuoc(Nuoc objNuoc)
         {
-            string query = "INSERT INTO nuoc (id_nuoc, ngaytao, chiso_dau, chiso_cuoi, thanhtien_nuoc) " +
-                           "VALUES (@id_nuoc, @ngaytao, @chiso_dau, @chiso_cuoi, @thanhtien_nuoc); ";
+            string query = "INSERT INTO nuoc (ngaytao, chiso_dau, chiso_cuoi, thanhtien_nuoc) " +
+                           "VALUES (@ngaytao, @chiso_dau, @chiso_cuoi, @thanhtien_nuoc); " +
+                           "SELECT SCOPE_IDENTITY();"; 
+
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                // Tham số hóa
-                cmd.Parameters.AddWithValue("@id_nuoc", objNuoc.Id_Nuoc);
                 cmd.Parameters.AddWithValue("@ngaytao", objNuoc.NgayTao);
-                cmd.Parameters.AddWithValue("@ChiSo_Dau", objNuoc.ChiSo_Dau);
-                cmd.Parameters.AddWithValue("@chisomoi", objNuoc.ChiSo_Cuoi);
+                cmd.Parameters.AddWithValue("@chiso_dau", objNuoc.ChiSo_Dau);
+                cmd.Parameters.AddWithValue("@chiso_cuoi", objNuoc.ChiSo_Cuoi);
                 cmd.Parameters.AddWithValue("@thanhtien_nuoc", objNuoc.ThanhTien_Nuoc);
 
                 try
@@ -40,15 +40,22 @@ namespace qlpt_DAL.DAL
                 }
             }
         }
-        //2.Read: Lấy tất cả bản ghi nước
-        public List<Nuoc> GetAllNuoc()
+
+        // 2. Read: lấy tất cả bản ghi nước theo Chủ trọ (Cần thiết cho BLL)
+        public List<Nuoc> GetAllNuoc(int idChuTro)
         {
             List<Nuoc> listNuoc = new List<Nuoc>();
-            string query = "SELECT * FROM nuoc";
+            //JOIN với HoaDon và PhongTro để lọc theo id_ChuTro
+            string query = @"
+                SELECT n.* FROM nuoc n
+                INNER JOIN HoaDon hd ON n.id_nuoc = hd.id_nuoc
+                INNER JOIN PhongTro pt ON hd.id_phong = pt.id_phong
+                WHERE pt.id_chutro = @id_chutro";
 
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
+                cmd.Parameters.AddWithValue("@id_chutro", idChuTro);
                 try
                 {
                     conn.Open();
@@ -76,11 +83,12 @@ namespace qlpt_DAL.DAL
             return listNuoc;
         }
 
-        //3.Update: cập nhật bản ghi nuoc
+        // 3. Update: cập nhật bản ghi nuoc
         public bool UpdateNuoc(Nuoc objNuoc)
         {
-            string query = "UPDATE nuoc SET id_nuoc = @id_nuoc, ngaytao = @ngaytao, chiso_dau = @chiso_dau, chiso_cuoi = @chiso_cuoi" +
-                           "thanhtien_nuoc = @thanhtien_nuoc WHERE id_nuoc = @id_nuoc";
+            string query = "UPDATE nuoc SET ngaytao = @ngaytao, chiso_dau = @chiso_dau, " +
+                           "chiso_cuoi = @chiso_cuoi, thanhtien_nuoc = @thanhtien_nuoc " +
+                           "WHERE id_nuoc = @id_nuoc";
 
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -103,10 +111,11 @@ namespace qlpt_DAL.DAL
             }
         }
 
-        //4.Delete: Xóa bản ghi nước
+        // 4. Delete: Xóa bản ghi nước
         public bool DeleteNuoc(int idnuoc)
         {
-            string query = "DELETE FROM nuoc WHERE id_nuoc = @idnuoc";
+            // SỬA: Đồng bộ tham số @id_nuoc
+            string query = "DELETE FROM nuoc WHERE id_nuoc = @id_nuoc";
 
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
@@ -126,7 +135,5 @@ namespace qlpt_DAL.DAL
                 }
             }
         }
-
-
     }
 }

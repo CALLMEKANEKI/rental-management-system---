@@ -13,89 +13,88 @@ namespace qlpt_BLL.BLL
     public class HopDongBLL
     {
         private HopDongDAL hopDongDAL = new HopDongDAL();
-        private PhongTroDAL phongTroDAL = new PhongTroDAL();
-        private ChuTroDAL chuTroDAL = new ChuTroDAL();
-        private NguoiThueDAL NguoiThueDAL = new NguoiThueDAL();
+        private PhongTroDAL PhongTroDAL = new PhongTroDAL();
 
-        // 1. Lập Hợp Đồng Mới (CREATE)
-        public int LapHopDongMoi(HopDong objHopDong)
+        // --- CREATE ---
+        public int InsertHopDong(HopDong objHopDong)
         {
-            // BLL Validation 1: Kiểm tra dữ liệu bắt buộc
-            if (objHopDong.Id_Phong <= 0 || objHopDong.Id_NguoiThue <= 0 || objHopDong.NgayBatDau >= objHopDong.NgayKetThuc)
+            //  Validation cơ bản
+            if (objHopDong.Id_Phong <= 0 || objHopDong.Id_NguoiThue <= 0 || objHopDong.TienCoc <= 0)
             {
-                // Trả về mã lỗi: Dữ liệu thiếu hoặc ngày tháng không hợp lệ
-                return -2;
+                return -1; // Lỗi: Thiếu thông tin bắt buộc
             }
 
-            // BLL Logic 2: KIỂM TRA TÍNH HỢP LỆ CỦA PHÒNG TRỌ
-            PhongTro objPhong = phongTroDAL.GetPhongById(objHopDong.Id_Phong);
+            // Logic nghiệp vụ 2: Đảm bảo việc Thêm hợp đồng và Cập nhật trạng thái phòng là Nguyên tố
+            int newHopDongId = -1;
 
-            if (objPhong == null)
+            // Sử dụng TransactionScope để quản lý giao tác phân tán (nếu cần) hoặc giao tác cục bộ
+            using (var scope = new TransactionScope())
             {
-                return -3; // Lỗi: Không tìm thấy phòng
+                try
+                {
+                    // A. Thêm Hợp đồng vào CSDL
+                    newHopDongId = hopDongDAL.InsertHopDong(objHopDong);
+
+                    if (newHopDongId > 0)
+                    {
+                        // B. Cập nhật trạng thái phòng trọ sang "Đã thuê"
+                        // GIẢ ĐỊNH: Trong PhongTroDAL có hàm UpdateTrangThaiPhong(int idPhong, string newStatus)
+                        // Bạn cần định nghĩa PhongTro.TrangThaiPhong = "Đã Thuê"
+                        const string TRANG_THAI_DA_THUE = "Đã thuê";
+
+                        bool updatePhongSuccess = PhongTroDAL.UpdateTrangThaiPhong(objHopDong.Id_Phong, TRANG_THAI_DA_THUE);
+
+                        if (updatePhongSuccess)
+                        {
+                            scope.Complete(); // Hoàn tất giao tác
+                            return newHopDongId;
+                        }
+                        else
+                        {
+                            // Nếu cập nhật phòng thất bại, giao tác sẽ không Complete và sẽ bị Rollback
+                            return -1;
+                        }
+                    }
+                    return -1; // Thêm hợp đồng thất bại
+                }
+                catch (Exception ex)
+                {
+                    // Mọi lỗi (SQL hoặc code) sẽ dẫn đến Rollback do scope.Complete() chưa được gọi.
+                    Console.WriteLine("Error in InsertHopDong BLL Transaction: " + ex.Message);
+                    return -1;
+                }
             }
-
-            // BLL Logic 3: CHỈ CHO PHÉP LẬP HĐ KHI PHÒNG CÓ TRẠNG THÁI "TRỐNG"
-            if (objPhong.TinhTrang != "Trống")
-            {
-                return -4; // Lỗi: Phòng không ở trạng thái trống, không thể lập HĐ mới
-            }
-
-            // B4: Gọi DAL tạo Hợp đồng
-            int newIdHopDong = hopDongDAL.InsertHopDong(objHopDong);
-
-            if (newIdHopDong > 0)
-            {
-                // B5: THAO TÁC NGHIỆP VỤ QUAN TRỌNG: 
-                // Nếu lập hợp đồng thành công, CẬP NHẬT trạng thái phòng thành "Đã thuê"
-                objPhong.TinhTrang = "Đã thuê";
-                phongTroDAL.UpdatePhong(objPhong);
-            }
-
-            return newIdHopDong;
         }
 
-        // 3. Lấy Hợp Đồng đang có hiệu lực theo ID Phòng (READ)
-        public HopDong LayHopDongHienTai(int idPhong)
+        // --- UPDATE ---
+        public bool UpdateHopDong(HopDong objHopDong)
         {
-            if (idPhong <= 0)
+            // 1. Validation nghiệp vụ
+            if (objHopDong.NgayKetThuc <= objHopDong.NgayBatDau)
             {
-                return null;
+                return false;
             }
-            // Gọi DAL để truy vấn hợp đồng có ngày kết thúc lớn hơn hoặc bằng ngày hiện tại
-            return hopDongDAL.GetHopDongHienTaiByPhongId(idPhong);
+
+            // 2. Gọi DAL
+            return hopDongDAL.UpdateHopDong(objHopDong);
         }
-        public List<HopDongViewModel> GetAllHopDongViewModel()
+
+        // --- DELETE ---
+        public bool DeleteHopDong(int idHopDong)
         {
-            // 1. Lấy dữ liệu thô
-            List<HopDong> listHopDong = hopDongDAL.GetAllHopDong();
-            List<ChuTro> listChuTro = chuTroDAL.GetAllChuTro();
-            List<NguoiThue> listNguoiThue = NguoiThueDAL.GetAllNguoiThue();
-            List<PhongTro> listPhongTro = phongTroDAL.GetAllPhong();
+            // Thêm logic kiểm tra xem hợp đồng có hóa đơn liên quan không, nếu có thì ngăn chặn xóa (hoặc phải xóa hóa đơn trước)
+            return hopDongDAL.DeleteHopDong(idHopDong);
+        }
 
-            // 2. JOIN 3 bảng và Ánh xạ sang ViewModel
-            var result = from hd in listHopDong
-                         join ct in listChuTro on hd.Id_ChuTro equals ct.Id_ChuTro
-                         join pt in listPhongTro on hd.Id_Phong equals pt.Id_Phong
-                         join nt in listNguoiThue on hd.Id_NguoiThue equals nt.Id_NguoiThue
-                         select new HopDongViewModel
-                         {
-                             // Ánh xạ các thuộc tính cơ bản (từ lớp cha HopDong)
-                             Id_HopDong = hd.Id_HopDong,
-                             Id_ChuTro = hd.Id_ChuTro,
-                             Id_Phong = hd.Id_Phong,
-                             NgayBatDau = hd.NgayBatDau,
-                             NgayKetThuc = hd.NgayKetThuc,
-                             TienCoc = hd.TienCoc,
-                             // Thêm thuộc tính đã JOIN
-                             TenChuTroHienThi = ct.HoTen,
-                             TenPhongHienThi = pt.TenPhong,
-                             TenNguoiThueHienThi = nt.HoTen,
-                             CccdHienThi = nt.Cccd,
-                             SdtHienThi = nt.Sdt
-                         };
+        // --- READ / SEARCH ---
+        public List<HopDongViewModel> GetAllHopDongViewModel(int idChuTro)
+        {
+            return hopDongDAL.GetAllHopDongViewModel(idChuTro);
+        }
 
-            return result.ToList();
+        public List<HopDongViewModel> GetAllHopDongViewModelByKeyWord(int idChuTro, string keyword)
+        {
+            return hopDongDAL.GetAllHopDongViewModelByKeyWord(idChuTro, keyword);
         }
     }
 }

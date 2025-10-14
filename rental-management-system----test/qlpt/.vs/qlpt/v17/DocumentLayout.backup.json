@@ -3,27 +3,20 @@
   "WorkspaceRootPath": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/ANHGIANGDEPTRAI/quanlyphongtro/True/SqlTable/dbo.chutro.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt\\form\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|solutionrelative:qlpt\\form\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt\\form\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|solutionrelative:qlpt\\form\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt_dal\\dal\\phongtrodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|solutionrelative:qlpt_dal\\dal\\phongtrodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt\\form\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|solutionrelative:qlpt\\form\\signup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt_dal\\dal\\chutrodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|solutionrelative:qlpt_dal\\dal\\chutrodal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt_dal\\dal\\nguoithuedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|solutionrelative:qlpt_dal\\dal\\nguoithuedal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\form\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F2318693-9174-40F0-8B80-ADD04C88DB56}|qlpt\\qlpt.csproj|solutionrelative:qlpt\\form\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|c:\\github project\\rental-management-system--version test\\rental-management-system----test\\qlpt\\qlpt_dal\\dal\\connectdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F8243BD-B717-452D-A255-0C533F4BC765}|qlpt_DAL\\qlpt_DAL.csproj|solutionrelative:qlpt_dal\\dal\\connectdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,7 +30,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "main.cs [Design]",
               "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\main.cs",
               "RelativeDocumentMoniker": "qlpt\\Form\\main.cs",
@@ -51,11 +44,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "dbo.chutro [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/ANHGIANGDEPTRAI/quanlyphongtro/True/SqlTable/dbo.chutro.sql",
-              "ToolTip": "dbo.chutro [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-10-11T10:23:22.73Z",
+              "Title": "main.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\main.cs",
+              "RelativeDocumentMoniker": "qlpt\\Form\\main.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\main.cs",
+              "RelativeToolTip": "qlpt\\Form\\main.cs",
+              "ViewState": "AgIAABEDAAAAAAAAAAAjwCQDAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T07:50:35.094Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -65,52 +62,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SignUp.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\SignUp.cs",
-              "RelativeDocumentMoniker": "qlpt\\Form\\SignUp.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\SignUp.cs*",
-              "RelativeToolTip": "qlpt\\Form\\SignUp.cs*",
-              "ViewState": "AgIAABMAAAAAAAAAAADgvyIAAAAAAAAAAAAAAA==",
+              "Title": "PhongTroDAL.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\PhongTroDAL.cs",
+              "RelativeDocumentMoniker": "qlpt_DAL\\DAL\\PhongTroDAL.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\PhongTroDAL.cs",
+              "RelativeToolTip": "qlpt_DAL\\DAL\\PhongTroDAL.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAowH8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T10:21:47.467Z",
+              "WhenOpened": "2025-10-13T02:24:18.317Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SignUp.cs [Design]",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\SignUp.cs",
-              "RelativeDocumentMoniker": "qlpt\\Form\\SignUp.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt\\Form\\SignUp.cs [Design]*",
-              "RelativeToolTip": "qlpt\\Form\\SignUp.cs [Design]*",
+              "Title": "NguoiThueDAL.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\NguoiThueDAL.cs",
+              "RelativeDocumentMoniker": "qlpt_DAL\\DAL\\NguoiThueDAL.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\NguoiThueDAL.cs",
+              "RelativeToolTip": "qlpt_DAL\\DAL\\NguoiThueDAL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T10:21:45.697Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ConnectDAL.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\ConnectDAL.cs",
-              "RelativeDocumentMoniker": "qlpt_DAL\\DAL\\ConnectDAL.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\ConnectDAL.cs",
-              "RelativeToolTip": "qlpt_DAL\\DAL\\ConnectDAL.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAowDUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T09:45:18.963Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChuTroDAL.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\ChuTroDAL.cs",
-              "RelativeDocumentMoniker": "qlpt_DAL\\DAL\\ChuTroDAL.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test\\rental-management-system----test\\qlpt\\qlpt_DAL\\DAL\\ChuTroDAL.cs",
-              "RelativeToolTip": "qlpt_DAL\\DAL\\ChuTroDAL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T09:34:22.338Z",
+              "WhenOpened": "2025-10-13T02:24:16.68Z",
               "EditorCaption": ""
             }
           ]

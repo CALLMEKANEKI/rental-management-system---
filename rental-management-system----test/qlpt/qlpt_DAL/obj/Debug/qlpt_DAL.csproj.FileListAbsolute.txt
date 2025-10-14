@@ -1,11 +1,11 @@
-C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\obj\Debug\qlpt_DAL.csproj.AssemblyReference.cache
-C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\obj\Debug\qlpt_DAL.csproj.CoreCompileInputs.cache
 C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\bin\Debug\qlpt_DAL.dll
 C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\bin\Debug\qlpt_DAL.pdb
 C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\bin\Debug\qlpt_DTO.dll
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\bin\Debug\System.Configuration.ConfigurationManager.dll
 C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\bin\Debug\qlpt_DTO.pdb
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\obj\Debug\qlpt_DAL.csproj.AssemblyReference.cache
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\obj\Debug\qlpt_DAL.csproj.CoreCompileInputs.cache
 C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\obj\Debug\qlpt_DAL.csproj.Up2Date
 C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\obj\Debug\qlpt_DAL.dll
 C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\obj\Debug\qlpt_DAL.pdb
-C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\bin\Debug\System.Configuration.ConfigurationManager.dll
-C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt_DAL\bin\Debug\System.Configuration.ConfigurationManager.xml

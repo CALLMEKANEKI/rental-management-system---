@@ -1,5 +1,6 @@
 ﻿
 using qlpt_DTO.Models;
+using qlpt_DTO.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -44,22 +45,66 @@ namespace qlpt_DAL.DAL
                 }
             }
         }
+        // Hàm ánh xạ chung từ SqlDataReader sang NguoiThue Model (chỉ dùng READ)
+        private NguoiThue MapToNguoiThue(SqlDataReader reader, bool includePassword = false)
+        {
+            NguoiThue objNguoiThue = new NguoiThue
+            {
+                Id_NguoiThue = reader.GetInt32(reader.GetOrdinal("id_nguoithue")),
+                Id_Phong = reader.GetInt32(reader.GetOrdinal("id_phong")),
+                HoTen = reader.GetString(reader.GetOrdinal("hoten")),
+                Cccd = reader.GetString(reader.GetOrdinal("cccd")),
+                Sdt = reader.GetString(reader.GetOrdinal("sdt")),
+                Email = reader.IsDBNull(reader.GetOrdinal("email")) ? null : reader.GetString(reader.GetOrdinal("email")),
+                TaiKhoan = reader.IsDBNull(reader.GetOrdinal("taikhoan")) ? null : reader.GetString(reader.GetOrdinal("taikhoan"))
+            };
+
+            // Chỉ lấy mật khẩu khi được yêu cầu (thường là cho logic login)
+            if (includePassword && !reader.IsDBNull(reader.GetOrdinal("matkhau")))
+            {
+                objNguoiThue.MatKhau = reader.GetString(reader.GetOrdinal("matkhau"));
+            }
+            return objNguoiThue;
+        }
+
+        private NguoiThueViewModel MapToViewModel(SqlDataReader reader)
+        {
+            // Lấy chỉ mục cột để tối ưu hóa và kiểm tra IsDBNull an toàn
+            int emailOrdinal = reader.GetOrdinal("Email");
+            int taikhoanOrdinal = reader.GetOrdinal("TaiKhoan");
+            int matkhauOrdinal = reader.GetOrdinal("MatKhau");
+            int tenPhongOrdinal = reader.GetOrdinal("TenPhong");
+
+            return new NguoiThueViewModel
+            {
+                Id_NguoiThue = reader.GetInt32(reader.GetOrdinal("Id_NguoiThue")),
+                HoTen = reader.GetString(reader.GetOrdinal("HoTen")),
+                Cccd = reader.GetString(reader.GetOrdinal("Cccd")),
+                Sdt = reader.GetString(reader.GetOrdinal("Sdt")),
+                Id_Phong = reader.GetInt32(reader.GetOrdinal("Id_Phong")),
+
+                // Xử lý NULL an toàn cho các trường có thể NULL trong DB
+                Email = reader.IsDBNull(emailOrdinal) ? null : reader.GetString(emailOrdinal),
+                TaiKhoan = reader.IsDBNull(taikhoanOrdinal) ? null : reader.GetString(taikhoanOrdinal),
+                MatKhau = reader.IsDBNull(matkhauOrdinal) ? null : reader.GetString(matkhauOrdinal),
+
+                // Xử lý NULL cho cột JOIN (TenPhong)
+                TenPhongHienThi = reader.IsDBNull(tenPhongOrdinal) ? string.Empty : reader.GetString(tenPhongOrdinal)
+            };
+        }
 
         // 2. READ: Hàm Đăng nhập (Login)
-        public NguoiThue Login(string taiKhoan, string matKhau)
+        public NguoiThue Login(string taiKhoan, string matkhau)
         {
             NguoiThue objNguoiThue = null;
-
-            // LƯU Ý: Không trả về mật khẩu. Chỉ lấy các thông tin cần thiết.
-            string query = "SELECT id_nguoithue, id_phong, hoten, cccd, sdt, email, taikhoan " +
-                           "FROM nguoithue WHERE taikhoan = @taikhoan AND matkhau = @matkhau";
+            string query = "SELECT id_nguoithue, id_phong, hoten, cccd, sdt, email, taikhoan, matkhau " +
+                           "FROM nguoithue WHERE taikhoan = @taikhoan and matkhau = @matkhau";
 
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                // Tham số hóa để ngăn chặn SQL Injection
                 cmd.Parameters.AddWithValue("@taikhoan", taiKhoan);
-                cmd.Parameters.AddWithValue("@matkhau", matKhau);
+                cmd.Parameters.AddWithValue("@matkhau", matkhau);
 
                 try
                 {
@@ -68,29 +113,15 @@ namespace qlpt_DAL.DAL
                     {
                         if (reader.Read())
                         {
-                            // Ánh xạ dữ liệu từ CSDL sang đối tượng NguoiThue
-                            objNguoiThue = new NguoiThue
-                            {
-                                Id_NguoiThue = reader.GetInt32(reader.GetOrdinal("id_nguoithue")),
-                                Id_Phong = reader.GetInt32(reader.GetOrdinal("id_phong")),
-                                HoTen = reader.GetString(reader.GetOrdinal("hoten")),
-                                Cccd = reader.GetString(reader.GetOrdinal("cccd")),
-                                Sdt = reader.GetString(reader.GetOrdinal("sdt")),
-                                Email = reader.GetString(reader.GetOrdinal("email")),
-                                TaiKhoan = reader.GetString(reader.GetOrdinal("taikhoan"))
-                                // KHÔNG gán mật khẩu vào đây. Đảm bảo tính bảo mật
-                            };
+                            objNguoiThue = MapToNguoiThue(reader, true);
                         }
                     }
                 }
                 catch (SqlException ex)
                 {
-                    // Ghi lại lỗi CSDL 
-                    Console.WriteLine("SQL Error (Login): " + ex.Message);
-                    // Trả về null nếu có lỗi
+                    Console.WriteLine("SQL Error (GetNguoiThueByTaiKhoan): " + ex.Message);
                 }
             }
-            // Trả về đối tượng ChuTro (nếu thành công) hoặc null (nếu thất bại)
             return objNguoiThue;
         }
 
@@ -119,6 +150,42 @@ namespace qlpt_DAL.DAL
             }
         }
 
+        //2.3.Read: Lấy tất cả người thuê
+        public List<NguoiThue> GetAllNguoiThue(int idChuTro)
+        {
+            List<NguoiThue> listNguoiThue = new List<NguoiThue>();
+
+            //Thêm JOIN và WHERE để lọc theo id_chutro
+            string query = "SELECT nt.id_nguoithue, nt.id_phong, nt.hoten, nt.cccd, nt.sdt, nt.email, nt.taikhoan, nt.matkhau " +
+                           "FROM nguoithue nt " +
+                           "INNER JOIN phongtro pt ON nt.id_phong = pt.id_phong " + // JOIN để lấy id_chutro
+                           "WHERE pt.id_chutro = @id_chutro"; // LỌC theo ID của Chủ trọ đang đăng nhập
+
+            using (SqlConnection conn = connectDB.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                //Tham số hóa ID Chủ trọ được truyền vào hàm
+                cmd.Parameters.AddWithValue("@id_chutro", idChuTro);
+
+                try
+                {
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            listNguoiThue.Add(MapToNguoiThue(reader, true));
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("SQL Error (GetAllNguoiThue): " + ex.Message);
+                }
+            }
+            return listNguoiThue;
+        }
+
 
         //2.3. READ: Lấy danh sách Người Thuê theo ID Phòng
         public List<NguoiThue> GetNguoiThueByPhong(int idPhong)
@@ -138,15 +205,7 @@ namespace qlpt_DAL.DAL
                     {
                         while (reader.Read())
                         {
-                            list.Add(new NguoiThue
-                            {
-                                Id_NguoiThue = reader.GetInt32(reader.GetOrdinal("id_nguoithue")),
-                                Id_Phong = reader.GetInt32(reader.GetOrdinal("id_phong")),
-                                HoTen = reader.GetString(reader.GetOrdinal("hoten")),
-                                Cccd = reader.GetString(reader.GetOrdinal("cccd")),
-                                Sdt = reader.GetString(reader.GetOrdinal("sdt")),
-                                Email = reader.GetString(reader.GetOrdinal("email"))
-                            });
+                            list.Add( MapToNguoiThue(reader, true));
                         }
                     }
                 }
@@ -158,14 +217,84 @@ namespace qlpt_DAL.DAL
             return list;
         }
 
-        //2.4.Read: Lấy tất cả người thuê
-        public List<NguoiThue> GetAllNguoiThue()
+        
+
+        //2.5 Lấy người thuê theo id
+
+        public NguoiThue GetNguoiThueById(int idNguoiThue)
         {
-            List<NguoiThue> listNguoiThue = new List<NguoiThue>();
-            string query = "SELECT id_nguoithue, id_phong, hoten, cccd, sdt ,email , taikhoan, matkhau FROM nguoithue";
+            string query = "SELECT id_nguoithue, id_phong, hoten, cccd, sdt, email, taikhoan, matkhau " +
+                           "FROM nguoithue WHERE id_nguoithue = @id_nguoithue";
+
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
+                cmd.Parameters.AddWithValue("@id_nguoithue", idNguoiThue);
+                try
+                {
+                    conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            return MapToNguoiThue(reader, true);
+                        }
+                    }
+                }
+                catch (SqlException ex)
+                {
+                    Console.WriteLine("SQL Error (GetNguoiThueById): " + ex.Message);
+                }
+            }
+            return null;
+        }
+
+        //2.5 Lấy tất cả khách thuê ViewModel theo keyword
+        public List<NguoiThueViewModel> GetAllNguoiThueVewModelByKeyWord(int idChuTro, string keyword)
+        {
+            List<NguoiThueViewModel> listGuest = new List<NguoiThueViewModel>();
+
+            // Đảm bảo từ khóa sạch và kiểm tra NULL/rỗng
+            string trimmedKeyword = keyword?.Trim() ?? string.Empty;
+
+            // 1. CÂU TRUY VẤN CƠ SỞ: Chỉ lọc theo Id_ChuTro (Không có điều kiện tìm kiếm ban đầu)
+            string query = @"
+    SELECT nt.*, pt.tenphong 
+    FROM NguoiThue nt 
+    INNER JOIN PhongTro pt ON nt.id_phong = pt.id_phong
+    WHERE pt.id_chutro = @id_chuTro";
+
+            // Khởi tạo danh sách tham số (CHỈ sử dụng List này để thêm vào cmd)
+            List<SqlParameter> parameters = new List<SqlParameter>
+    {
+        new SqlParameter("@id_chuTro", idChuTro)
+    };
+
+            // 2. LOGIC ĐIỀU KIỆN: Chỉ thêm mệnh đề tìm kiếm nếu có từ khóa
+            if (!string.IsNullOrEmpty(trimmedKeyword))
+            {
+                query += @" AND(
+    CONVERT(NVARCHAR, nt.id_nguoithue) LIKE '%' + @keyword + '%'
+    OR nt.hoten LIKE '%' + @keyword + '%'
+    OR nt.cccd LIKE '%' + @keyword + '%'
+    OR nt.sdt LIKE '%' + @keyword + '%'
+    OR nt.email LIKE '%' + @keyword + '%'
+    OR nt.taikhoan LIKE '%' + @keyword + '%'
+    OR pt.tenphong LIKE '%' + @keyword + '%'
+)";
+
+                // Thêm tham số keyword vào danh sách
+                parameters.Add(new SqlParameter("@keyword", "%" + trimmedKeyword + "%"));
+            }
+
+            // 3. THỰC THI TRUY VẤN
+            using (SqlConnection conn = connectDB.GetConnection())
+            using (SqlCommand cmd = new SqlCommand(query, conn))
+            {
+                // === SỬA LỖI QUAN TRỌNG: Sử dụng mảng tham số đã được chuẩn bị ===
+                cmd.Parameters.AddRange(parameters.ToArray());
+                // =================================================================
+
                 try
                 {
                     conn.Open();
@@ -173,31 +302,17 @@ namespace qlpt_DAL.DAL
                     {
                         while (reader.Read())
                         {
-                            NguoiThue objNguoiThue = new NguoiThue
-                            {
-                                Id_NguoiThue = reader.GetInt32(reader.GetOrdinal("id_nguoithue")),
-                                Id_Phong = reader.GetInt32(reader.GetOrdinal("id_phong")),
-                                HoTen = reader.GetString(reader.GetOrdinal("hoten")),
-                                Cccd = reader.GetString(reader.GetOrdinal("cccd")),
-                                Sdt = reader.GetString(reader.GetOrdinal("sdt")),
-                                Email = reader.IsDBNull(reader.GetOrdinal("email"))
-                                ? null
-                                : reader.GetString(reader.GetOrdinal("email")),
-                                TaiKhoan = reader.GetString(reader.GetOrdinal("taikhoan")),
-                                MatKhau = reader.GetString(reader.GetOrdinal("matkhau"))
-                            };
-                            listNguoiThue.Add(objNguoiThue);
+                            listGuest.Add(MapToViewModel(reader));
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("SQL Error (GetAllPhong): " + ex.Message);
+                    Console.WriteLine("SQL Error (Search NguoiThue ViewModel): " + ex.Message);
                 }
             }
-            return listNguoiThue;
+            return listGuest;
         }
-
         //3. UPDATE: cập nhật thông tin người thuê
         public bool UpdateNguoiThue(NguoiThue objNguoiThue)
         {
@@ -237,7 +352,7 @@ namespace qlpt_DAL.DAL
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))
             {
-                cmd.Parameters.AddWithValue("@NewPass", objNguoiThue.MatKhau);
+                cmd.Parameters.AddWithValue("@NewPass", NewPass);
                 cmd.Parameters.AddWithValue("@id_nguoithue", objNguoiThue.Id_NguoiThue);
                 try
                 {
@@ -275,7 +390,5 @@ namespace qlpt_DAL.DAL
                 }
             }
         }
-
-        
     }
 }

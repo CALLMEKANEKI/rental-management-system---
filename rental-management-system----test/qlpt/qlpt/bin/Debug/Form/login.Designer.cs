@@ -30,6 +30,7 @@
         {
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSighUp = new System.Windows.Forms.Button();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.cobRole = new System.Windows.Forms.ComboBox();
             this.lblRole = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.lblTilte = new System.Windows.Forms.Label();
-            this.btnSighUp = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +68,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(510, 328);
             this.panel1.TabIndex = 9;
+            // 
+            // btnSighUp
+            // 
+            this.btnSighUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSighUp.Location = new System.Drawing.Point(199, 246);
+            this.btnSighUp.Name = "btnSighUp";
+            this.btnSighUp.Size = new System.Drawing.Size(140, 50);
+            this.btnSighUp.TabIndex = 13;
+            this.btnSighUp.Text = "Đăng ký";
+            this.btnSighUp.UseVisualStyleBackColor = true;
+            this.btnSighUp.Click += new System.EventHandler(this.btnSighUp_Click);
             // 
             // btnSignIn
             // 
@@ -137,19 +148,17 @@
             // 
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.Location = new System.Drawing.Point(199, 31);
-            this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(278, 42);
+            this.txtUserName.Size = new System.Drawing.Size(278, 38);
             this.txtUserName.TabIndex = 2;
             // 
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(199, 102);
-            this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(278, 42);
+            this.txtPass.Size = new System.Drawing.Size(278, 38);
             this.txtPass.TabIndex = 3;
             // 
             // lblTilte
@@ -161,17 +170,6 @@
             this.lblTilte.Size = new System.Drawing.Size(162, 32);
             this.lblTilte.TabIndex = 8;
             this.lblTilte.Text = "Đăng nhập";
-            // 
-            // btnSighUp
-            // 
-            this.btnSighUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSighUp.Location = new System.Drawing.Point(199, 246);
-            this.btnSighUp.Name = "btnSighUp";
-            this.btnSighUp.Size = new System.Drawing.Size(140, 50);
-            this.btnSighUp.TabIndex = 13;
-            this.btnSighUp.Text = "Đăng ký";
-            this.btnSighUp.UseVisualStyleBackColor = true;
-            this.btnSighUp.Click += new System.EventHandler(this.btnSighUp_Click);
             // 
             // login
             // 

@@ -202,8 +202,8 @@ namespace qlpt_DAL.DAL
         //3.1 Update: Cật nhật thông tin chủ trọ (trừ mật khẩu)
         public bool UpdateChuTro(ChuTro objChuTro)
         {
-            string query = "UPDATE chutro SET id_chutro = @id_chutro, hoten = @hoten, sdt = @sdt, " +
-                           " email = @email, diachi =@diachi taikhoan = @taikhoan, matkhau = @matkhau WHERE id_chutro = @id_chutro";
+            string query = "UPDATE chutro SET hoten = @hoten, sdt = @sdt, " +
+                           " email = @email, diachi =@diachi WHERE id_chutro = @id_chutro";
 
             using (SqlConnection conn = connectDB.GetConnection())
             using (SqlCommand cmd = new SqlCommand(query, conn))

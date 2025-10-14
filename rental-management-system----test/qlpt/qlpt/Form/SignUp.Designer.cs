@@ -83,9 +83,8 @@
             // 
             this.txtAddressAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddressAd.Location = new System.Drawing.Point(157, 96);
-            this.txtAddressAd.Multiline = true;
             this.txtAddressAd.Name = "txtAddressAd";
-            this.txtAddressAd.Size = new System.Drawing.Size(291, 32);
+            this.txtAddressAd.Size = new System.Drawing.Size(291, 38);
             this.txtAddressAd.TabIndex = 26;
             // 
             // lblAddressAd
@@ -102,9 +101,8 @@
             // 
             this.txtEmailAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailAd.Location = new System.Drawing.Point(157, 236);
-            this.txtEmailAd.Multiline = true;
             this.txtEmailAd.Name = "txtEmailAd";
-            this.txtEmailAd.Size = new System.Drawing.Size(291, 32);
+            this.txtEmailAd.Size = new System.Drawing.Size(291, 38);
             this.txtEmailAd.TabIndex = 24;
             // 
             // lblEmailAd
@@ -121,9 +119,8 @@
             // 
             this.txtPhoneNumberAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumberAd.Location = new System.Drawing.Point(157, 166);
-            this.txtPhoneNumberAd.Multiline = true;
             this.txtPhoneNumberAd.Name = "txtPhoneNumberAd";
-            this.txtPhoneNumberAd.Size = new System.Drawing.Size(291, 32);
+            this.txtPhoneNumberAd.Size = new System.Drawing.Size(291, 38);
             this.txtPhoneNumberAd.TabIndex = 22;
             // 
             // lblPhoneNumberAd
@@ -140,9 +137,8 @@
             // 
             this.txtNameAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameAd.Location = new System.Drawing.Point(157, 26);
-            this.txtNameAd.Multiline = true;
             this.txtNameAd.Name = "txtNameAd";
-            this.txtNameAd.Size = new System.Drawing.Size(291, 32);
+            this.txtNameAd.Size = new System.Drawing.Size(291, 38);
             this.txtNameAd.TabIndex = 20;
             // 
             // lblNameAd
@@ -179,19 +175,17 @@
             // 
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.Location = new System.Drawing.Point(668, 23);
-            this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(278, 42);
+            this.txtUserName.Size = new System.Drawing.Size(278, 38);
             this.txtUserName.TabIndex = 17;
             // 
             // txtPass
             // 
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(668, 94);
-            this.txtPass.Multiline = true;
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
-            this.txtPass.Size = new System.Drawing.Size(278, 42);
+            this.txtPass.Size = new System.Drawing.Size(278, 38);
             this.txtPass.TabIndex = 18;
             // 
             // btnSignUp

@@ -30,7 +30,7 @@ namespace qlpt
 
             if (role == "Chủ trọ")
             {
-                ChuTro user = chuTroBLL.login(username, pass);
+                ChuTro user = chuTroBLL.Login(username, pass);
                 if (user != null)
                 {
                         main Main = new main(user.Id_ChuTro);
@@ -46,7 +46,7 @@ namespace qlpt
             }
             else if (role == "Người thuê")
             {
-                NguoiThue user = nguoiThueBLL.login(username, pass);
+                NguoiThue user = nguoiThueBLL.Login(username, pass);
                 if (user != null)
                 {
                     MessageBox.Show("Đăng nhập thành công !!! Chào mừng người dùng " + username);

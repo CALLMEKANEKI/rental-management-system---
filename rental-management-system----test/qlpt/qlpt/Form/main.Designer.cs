@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.grbBillList = new System.Windows.Forms.GroupBox();
-            this.txtFIndBill = new System.Windows.Forms.TextBox();
+            this.dgvBillList = new System.Windows.Forms.DataGridView();
+            this.txtSearchBill = new System.Windows.Forms.TextBox();
             this.btnFindBill = new System.Windows.Forms.Button();
             this.grbBill = new System.Windows.Forms.GroupBox();
+            this.btnInsertBill = new System.Windows.Forms.Button();
+            this.dateTimeCreate = new System.Windows.Forms.DateTimePicker();
             this.btnDelBill = new System.Windows.Forms.Button();
             this.txtBillStatus = new System.Windows.Forms.TextBox();
             this.txtDetail = new System.Windows.Forms.TextBox();
-            this.txtCreatedDate = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtWaterFee = new System.Windows.Forms.TextBox();
             this.txtWaterNewReading = new System.Windows.Forms.TextBox();
@@ -68,17 +70,20 @@
             this.lblRoomNameBill = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.grbContractList = new System.Windows.Forms.GroupBox();
+            this.txtSearchContract = new System.Windows.Forms.TextBox();
+            this.btnSearchContract = new System.Windows.Forms.Button();
             this.dgvContractList = new System.Windows.Forms.DataGridView();
             this.grbContract = new System.Windows.Forms.GroupBox();
+            this.btnInsertContract = new System.Windows.Forms.Button();
             this.lblContract = new System.Windows.Forms.Label();
             this.txtIdContract = new System.Windows.Forms.TextBox();
             this.lblIdContract = new System.Windows.Forms.Label();
-            this.txtRoomNameContract = new System.Windows.Forms.TextBox();
+            this.txtNameRoomContract = new System.Windows.Forms.TextBox();
             this.txtDepositContract = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnDeleteContract = new System.Windows.Forms.Button();
             this.picContract = new System.Windows.Forms.PictureBox();
             this.btnUploadContract = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnUpdateContract = new System.Windows.Forms.Button();
             this.txtNameAdContract = new System.Windows.Forms.TextBox();
             this.lblAdNameContract = new System.Windows.Forms.Label();
             this.dateTimeEnd = new System.Windows.Forms.DateTimePicker();
@@ -91,10 +96,15 @@
             this.txtGuestCCCDContract = new System.Windows.Forms.TextBox();
             this.lblGuestPhoneNumberContract = new System.Windows.Forms.Label();
             this.lblGuestCCCDContract = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtNameGuestContract = new System.Windows.Forms.TextBox();
             this.lblGuestNameContract = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.grbGuest = new System.Windows.Forms.GroupBox();
+            this.btnInsertGuest = new System.Windows.Forms.Button();
+            this.txtGuestPass = new System.Windows.Forms.TextBox();
+            this.lblGuestPass = new System.Windows.Forms.Label();
+            this.txtGuestUsername = new System.Windows.Forms.TextBox();
+            this.lblGuestUsernname = new System.Windows.Forms.Label();
             this.txtIdGuest = new System.Windows.Forms.TextBox();
             this.lblIdGuest = new System.Windows.Forms.Label();
             this.lblGuestCCCDBack = new System.Windows.Forms.Label();
@@ -120,10 +130,11 @@
             this.lblGuestName = new System.Windows.Forms.Label();
             this.grbGuestList = new System.Windows.Forms.GroupBox();
             this.dgvGuestList = new System.Windows.Forms.DataGridView();
-            this.txtFindGuest = new System.Windows.Forms.TextBox();
-            this.btnFindGuest = new System.Windows.Forms.Button();
+            this.txtSearchGuest = new System.Windows.Forms.TextBox();
+            this.btnSearchGuest = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.grbRoom = new System.Windows.Forms.GroupBox();
+            this.btnInsert = new System.Windows.Forms.Button();
             this.txtIdRoom = new System.Windows.Forms.TextBox();
             this.lblIdRoom = new System.Windows.Forms.Label();
             this.txtRoomStatus = new System.Windows.Forms.TextBox();
@@ -137,8 +148,8 @@
             this.lblRoomName = new System.Windows.Forms.Label();
             this.grbRoomList = new System.Windows.Forms.GroupBox();
             this.dgvRoomList = new System.Windows.Forms.DataGridView();
-            this.btnFindRoom = new System.Windows.Forms.Button();
-            this.txtFindRoom = new System.Windows.Forms.TextBox();
+            this.btnSearchRoom = new System.Windows.Forms.Button();
+            this.txtSearchRoom = new System.Windows.Forms.TextBox();
             this.labelEmpty = new System.Windows.Forms.Label();
             this.labelSoPhongTrong = new System.Windows.Forms.Label();
             this.labelSoPhongChoThue = new System.Windows.Forms.Label();
@@ -146,6 +157,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.grbAd = new System.Windows.Forms.GroupBox();
+            this.btnQr = new System.Windows.Forms.Button();
+            this.btnDeleteAd = new System.Windows.Forms.Button();
+            this.btnUpdateAd = new System.Windows.Forms.Button();
             this.lblQRAd = new System.Windows.Forms.Label();
             this.picQRAd = new System.Windows.Forms.PictureBox();
             this.txtAddressAd = new System.Windows.Forms.TextBox();
@@ -187,9 +201,9 @@
             this.btnSuaTK = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.dgvBillList = new System.Windows.Forms.DataGridView();
             this.tabPage5.SuspendLayout();
             this.grbBillList.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBillList)).BeginInit();
             this.grbBill.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.grbContractList.SuspendLayout();
@@ -216,7 +230,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picAdCCCDBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAdProfile)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBillList)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage5
@@ -226,7 +239,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1916, 765);
+            this.tabPage5.Size = new System.Drawing.Size(1916, 905);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Hóa đơn";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -234,7 +247,7 @@
             // grbBillList
             // 
             this.grbBillList.Controls.Add(this.dgvBillList);
-            this.grbBillList.Controls.Add(this.txtFIndBill);
+            this.grbBillList.Controls.Add(this.txtSearchBill);
             this.grbBillList.Controls.Add(this.btnFindBill);
             this.grbBillList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbBillList.Location = new System.Drawing.Point(909, 6);
@@ -244,17 +257,31 @@
             this.grbBillList.TabStop = false;
             this.grbBillList.Text = "Danh sách hóa đơn";
             // 
-            // txtFIndBill
+            // dgvBillList
             // 
-            this.txtFIndBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFIndBill.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtFIndBill.Location = new System.Drawing.Point(6, 38);
-            this.txtFIndBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtFIndBill.Multiline = true;
-            this.txtFIndBill.Name = "txtFIndBill";
-            this.txtFIndBill.Size = new System.Drawing.Size(315, 40);
-            this.txtFIndBill.TabIndex = 25;
-            this.txtFIndBill.Text = "Nhập tháng cần tìm";
+            this.dgvBillList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBillList.Location = new System.Drawing.Point(6, 101);
+            this.dgvBillList.Name = "dgvBillList";
+            this.dgvBillList.ReadOnly = true;
+            this.dgvBillList.RowHeadersWidth = 51;
+            this.dgvBillList.RowTemplate.Height = 24;
+            this.dgvBillList.Size = new System.Drawing.Size(998, 652);
+            this.dgvBillList.TabIndex = 26;
+            this.dgvBillList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBillList_CellClick);
+            this.dgvBillList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBillList_CellClick);
+            // 
+            // txtSearchBill
+            // 
+            this.txtSearchBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchBill.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearchBill.Location = new System.Drawing.Point(6, 38);
+            this.txtSearchBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearchBill.Multiline = true;
+            this.txtSearchBill.Name = "txtSearchBill";
+            this.txtSearchBill.Size = new System.Drawing.Size(315, 40);
+            this.txtSearchBill.TabIndex = 25;
+            this.txtSearchBill.Tag = "Bill";
+            this.txtSearchBill.Text = "Nhập số hóa đơn cần tìm";
             // 
             // btnFindBill
             // 
@@ -264,15 +291,18 @@
             this.btnFindBill.Name = "btnFindBill";
             this.btnFindBill.Size = new System.Drawing.Size(112, 40);
             this.btnFindBill.TabIndex = 24;
+            this.btnFindBill.Tag = "Bill";
             this.btnFindBill.Text = "Tìm kiếm";
             this.btnFindBill.UseVisualStyleBackColor = true;
+            this.btnFindBill.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // grbBill
             // 
+            this.grbBill.Controls.Add(this.btnInsertBill);
+            this.grbBill.Controls.Add(this.dateTimeCreate);
             this.grbBill.Controls.Add(this.btnDelBill);
             this.grbBill.Controls.Add(this.txtBillStatus);
             this.grbBill.Controls.Add(this.txtDetail);
-            this.grbBill.Controls.Add(this.txtCreatedDate);
             this.grbBill.Controls.Add(this.txtTotal);
             this.grbBill.Controls.Add(this.txtWaterFee);
             this.grbBill.Controls.Add(this.txtWaterNewReading);
@@ -309,14 +339,38 @@
             this.grbBill.TabStop = false;
             this.grbBill.Text = "Thông tin hóa đơn";
             // 
+            // btnInsertBill
+            // 
+            this.btnInsertBill.Location = new System.Drawing.Point(759, 466);
+            this.btnInsertBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInsertBill.Name = "btnInsertBill";
+            this.btnInsertBill.Size = new System.Drawing.Size(125, 35);
+            this.btnInsertBill.TabIndex = 42;
+            this.btnInsertBill.Text = "Thêm mới";
+            this.btnInsertBill.UseVisualStyleBackColor = true;
+            // 
+            // dateTimeCreate
+            // 
+            this.dateTimeCreate.Enabled = false;
+            this.dateTimeCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeCreate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeCreate.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dateTimeCreate.Location = new System.Drawing.Point(707, 279);
+            this.dateTimeCreate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimeCreate.Name = "dateTimeCreate";
+            this.dateTimeCreate.Size = new System.Drawing.Size(177, 38);
+            this.dateTimeCreate.TabIndex = 41;
+            this.dateTimeCreate.UseWaitCursor = true;
+            this.dateTimeCreate.Value = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
+            // 
             // btnDelBill
             // 
-            this.btnDelBill.Location = new System.Drawing.Point(743, 464);
+            this.btnDelBill.Location = new System.Drawing.Point(473, 466);
             this.btnDelBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelBill.Name = "btnDelBill";
-            this.btnDelBill.Size = new System.Drawing.Size(66, 35);
+            this.btnDelBill.Size = new System.Drawing.Size(139, 35);
             this.btnDelBill.TabIndex = 40;
-            this.btnDelBill.Text = "Xóa";
+            this.btnDelBill.Text = "Xóa hóa đơn";
             this.btnDelBill.UseVisualStyleBackColor = true;
             // 
             // txtBillStatus
@@ -326,6 +380,7 @@
             this.txtBillStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBillStatus.Multiline = true;
             this.txtBillStatus.Name = "txtBillStatus";
+            this.txtBillStatus.ReadOnly = true;
             this.txtBillStatus.Size = new System.Drawing.Size(177, 32);
             this.txtBillStatus.TabIndex = 39;
             // 
@@ -336,18 +391,9 @@
             this.txtDetail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDetail.Multiline = true;
             this.txtDetail.Name = "txtDetail";
+            this.txtDetail.ReadOnly = true;
             this.txtDetail.Size = new System.Drawing.Size(177, 32);
             this.txtDetail.TabIndex = 38;
-            // 
-            // txtCreatedDate
-            // 
-            this.txtCreatedDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCreatedDate.Location = new System.Drawing.Point(707, 282);
-            this.txtCreatedDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCreatedDate.Multiline = true;
-            this.txtCreatedDate.Name = "txtCreatedDate";
-            this.txtCreatedDate.Size = new System.Drawing.Size(177, 32);
-            this.txtCreatedDate.TabIndex = 37;
             // 
             // txtTotal
             // 
@@ -356,6 +402,7 @@
             this.txtTotal.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTotal.Multiline = true;
             this.txtTotal.Name = "txtTotal";
+            this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(177, 32);
             this.txtTotal.TabIndex = 36;
             // 
@@ -366,6 +413,7 @@
             this.txtWaterFee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtWaterFee.Multiline = true;
             this.txtWaterFee.Name = "txtWaterFee";
+            this.txtWaterFee.ReadOnly = true;
             this.txtWaterFee.Size = new System.Drawing.Size(177, 32);
             this.txtWaterFee.TabIndex = 35;
             // 
@@ -376,6 +424,7 @@
             this.txtWaterNewReading.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtWaterNewReading.Multiline = true;
             this.txtWaterNewReading.Name = "txtWaterNewReading";
+            this.txtWaterNewReading.ReadOnly = true;
             this.txtWaterNewReading.Size = new System.Drawing.Size(177, 32);
             this.txtWaterNewReading.TabIndex = 34;
             // 
@@ -386,66 +435,73 @@
             this.txtWaterOldReading.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtWaterOldReading.Multiline = true;
             this.txtWaterOldReading.Name = "txtWaterOldReading";
+            this.txtWaterOldReading.ReadOnly = true;
             this.txtWaterOldReading.Size = new System.Drawing.Size(177, 32);
             this.txtWaterOldReading.TabIndex = 33;
             // 
             // txtElectricFee
             // 
             this.txtElectricFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtElectricFee.Location = new System.Drawing.Point(229, 399);
+            this.txtElectricFee.Location = new System.Drawing.Point(251, 401);
             this.txtElectricFee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtElectricFee.Multiline = true;
             this.txtElectricFee.Name = "txtElectricFee";
+            this.txtElectricFee.ReadOnly = true;
             this.txtElectricFee.Size = new System.Drawing.Size(177, 32);
             this.txtElectricFee.TabIndex = 32;
             // 
             // txtElectricNewReading
             // 
             this.txtElectricNewReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtElectricNewReading.Location = new System.Drawing.Point(229, 339);
+            this.txtElectricNewReading.Location = new System.Drawing.Point(251, 341);
             this.txtElectricNewReading.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtElectricNewReading.Multiline = true;
             this.txtElectricNewReading.Name = "txtElectricNewReading";
+            this.txtElectricNewReading.ReadOnly = true;
             this.txtElectricNewReading.Size = new System.Drawing.Size(177, 32);
             this.txtElectricNewReading.TabIndex = 31;
             // 
             // txtElectricOldReading
             // 
             this.txtElectricOldReading.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtElectricOldReading.Location = new System.Drawing.Point(229, 279);
+            this.txtElectricOldReading.Location = new System.Drawing.Point(251, 281);
             this.txtElectricOldReading.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtElectricOldReading.Multiline = true;
             this.txtElectricOldReading.Name = "txtElectricOldReading";
+            this.txtElectricOldReading.ReadOnly = true;
             this.txtElectricOldReading.Size = new System.Drawing.Size(177, 32);
             this.txtElectricOldReading.TabIndex = 30;
             // 
             // txtServiceFeeBill
             // 
             this.txtServiceFeeBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtServiceFeeBill.Location = new System.Drawing.Point(229, 219);
+            this.txtServiceFeeBill.Location = new System.Drawing.Point(251, 221);
             this.txtServiceFeeBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtServiceFeeBill.Multiline = true;
             this.txtServiceFeeBill.Name = "txtServiceFeeBill";
+            this.txtServiceFeeBill.ReadOnly = true;
             this.txtServiceFeeBill.Size = new System.Drawing.Size(177, 32);
             this.txtServiceFeeBill.TabIndex = 29;
             // 
             // txtPriceBill
             // 
             this.txtPriceBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPriceBill.Location = new System.Drawing.Point(229, 159);
+            this.txtPriceBill.Location = new System.Drawing.Point(251, 161);
             this.txtPriceBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPriceBill.Multiline = true;
             this.txtPriceBill.Name = "txtPriceBill";
+            this.txtPriceBill.ReadOnly = true;
             this.txtPriceBill.Size = new System.Drawing.Size(177, 32);
             this.txtPriceBill.TabIndex = 28;
             // 
             // txtRoomNameBill
             // 
             this.txtRoomNameBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRoomNameBill.Location = new System.Drawing.Point(229, 99);
+            this.txtRoomNameBill.Location = new System.Drawing.Point(251, 101);
             this.txtRoomNameBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRoomNameBill.Multiline = true;
             this.txtRoomNameBill.Name = "txtRoomNameBill";
+            this.txtRoomNameBill.ReadOnly = true;
             this.txtRoomNameBill.Size = new System.Drawing.Size(177, 32);
             this.txtRoomNameBill.TabIndex = 27;
             // 
@@ -541,12 +597,12 @@
             // 
             // btnUpdateBill
             // 
-            this.btnUpdateBill.Location = new System.Drawing.Point(532, 464);
+            this.btnUpdateBill.Location = new System.Drawing.Point(254, 466);
             this.btnUpdateBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateBill.Name = "btnUpdateBill";
             this.btnUpdateBill.Size = new System.Drawing.Size(174, 35);
             this.btnUpdateBill.TabIndex = 9;
-            this.btnUpdateBill.Text = "Thêm/Cập nhật";
+            this.btnUpdateBill.Text = "Cập nhật";
             this.btnUpdateBill.UseVisualStyleBackColor = true;
             // 
             // lblWaterNewReading
@@ -582,10 +638,11 @@
             // txtIdBill
             // 
             this.txtIdBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdBill.Location = new System.Drawing.Point(229, 36);
+            this.txtIdBill.Location = new System.Drawing.Point(251, 38);
             this.txtIdBill.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIdBill.Multiline = true;
             this.txtIdBill.Name = "txtIdBill";
+            this.txtIdBill.ReadOnly = true;
             this.txtIdBill.Size = new System.Drawing.Size(177, 32);
             this.txtIdBill.TabIndex = 4;
             // 
@@ -616,13 +673,15 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1916, 775);
+            this.tabPage4.Size = new System.Drawing.Size(1916, 905);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Hợp đồng";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // grbContractList
             // 
+            this.grbContractList.Controls.Add(this.txtSearchContract);
+            this.grbContractList.Controls.Add(this.btnSearchContract);
             this.grbContractList.Controls.Add(this.dgvContractList);
             this.grbContractList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbContractList.Location = new System.Drawing.Point(931, 13);
@@ -632,28 +691,57 @@
             this.grbContractList.TabStop = false;
             this.grbContractList.Text = "Danh sách hợp đồng";
             // 
+            // txtSearchContract
+            // 
+            this.txtSearchContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchContract.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearchContract.Location = new System.Drawing.Point(6, 30);
+            this.txtSearchContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearchContract.Multiline = true;
+            this.txtSearchContract.Name = "txtSearchContract";
+            this.txtSearchContract.Size = new System.Drawing.Size(356, 40);
+            this.txtSearchContract.TabIndex = 25;
+            this.txtSearchContract.Tag = "Contract";
+            this.txtSearchContract.Text = "Nhập mã hợp đồng cần tìm";
+            // 
+            // btnSearchContract
+            // 
+            this.btnSearchContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchContract.Location = new System.Drawing.Point(381, 33);
+            this.btnSearchContract.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchContract.Name = "btnSearchContract";
+            this.btnSearchContract.Size = new System.Drawing.Size(112, 40);
+            this.btnSearchContract.TabIndex = 24;
+            this.btnSearchContract.Tag = "Contract";
+            this.btnSearchContract.Text = "Tìm kiếm";
+            this.btnSearchContract.UseVisualStyleBackColor = true;
+            this.btnSearchContract.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // dgvContractList
             // 
             this.dgvContractList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContractList.Location = new System.Drawing.Point(6, 35);
+            this.dgvContractList.Location = new System.Drawing.Point(6, 75);
             this.dgvContractList.Name = "dgvContractList";
             this.dgvContractList.ReadOnly = true;
             this.dgvContractList.RowHeadersWidth = 51;
             this.dgvContractList.RowTemplate.Height = 24;
-            this.dgvContractList.Size = new System.Drawing.Size(628, 538);
+            this.dgvContractList.Size = new System.Drawing.Size(628, 498);
             this.dgvContractList.TabIndex = 0;
+            this.dgvContractList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContractList_CellClick);
+            this.dgvContractList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvContractList_CellClick);
             // 
             // grbContract
             // 
+            this.grbContract.Controls.Add(this.btnInsertContract);
             this.grbContract.Controls.Add(this.lblContract);
             this.grbContract.Controls.Add(this.txtIdContract);
             this.grbContract.Controls.Add(this.lblIdContract);
-            this.grbContract.Controls.Add(this.txtRoomNameContract);
+            this.grbContract.Controls.Add(this.txtNameRoomContract);
             this.grbContract.Controls.Add(this.txtDepositContract);
-            this.grbContract.Controls.Add(this.button4);
+            this.grbContract.Controls.Add(this.btnDeleteContract);
             this.grbContract.Controls.Add(this.picContract);
             this.grbContract.Controls.Add(this.btnUploadContract);
-            this.grbContract.Controls.Add(this.button6);
+            this.grbContract.Controls.Add(this.btnUpdateContract);
             this.grbContract.Controls.Add(this.txtNameAdContract);
             this.grbContract.Controls.Add(this.lblAdNameContract);
             this.grbContract.Controls.Add(this.dateTimeEnd);
@@ -666,7 +754,7 @@
             this.grbContract.Controls.Add(this.txtGuestCCCDContract);
             this.grbContract.Controls.Add(this.lblGuestPhoneNumberContract);
             this.grbContract.Controls.Add(this.lblGuestCCCDContract);
-            this.grbContract.Controls.Add(this.textBox6);
+            this.grbContract.Controls.Add(this.txtNameGuestContract);
             this.grbContract.Controls.Add(this.lblGuestNameContract);
             this.grbContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbContract.Location = new System.Drawing.Point(8, 13);
@@ -677,6 +765,16 @@
             this.grbContract.TabIndex = 1;
             this.grbContract.TabStop = false;
             this.grbContract.Text = "Hợp đồng";
+            // 
+            // btnInsertContract
+            // 
+            this.btnInsertContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertContract.Location = new System.Drawing.Point(542, 433);
+            this.btnInsertContract.Name = "btnInsertContract";
+            this.btnInsertContract.Size = new System.Drawing.Size(158, 43);
+            this.btnInsertContract.TabIndex = 36;
+            this.btnInsertContract.Text = "Thêm mới";
+            this.btnInsertContract.UseVisualStyleBackColor = true;
             // 
             // lblContract
             // 
@@ -694,9 +792,9 @@
             this.txtIdContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdContract.Location = new System.Drawing.Point(265, 35);
             this.txtIdContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtIdContract.Multiline = true;
             this.txtIdContract.Name = "txtIdContract";
-            this.txtIdContract.Size = new System.Drawing.Size(342, 32);
+            this.txtIdContract.ReadOnly = true;
+            this.txtIdContract.Size = new System.Drawing.Size(342, 38);
             this.txtIdContract.TabIndex = 33;
             // 
             // lblIdContract
@@ -709,35 +807,35 @@
             this.lblIdContract.TabIndex = 32;
             this.lblIdContract.Text = "Mã hợp đồng";
             // 
-            // txtRoomNameContract
+            // txtNameRoomContract
             // 
-            this.txtRoomNameContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRoomNameContract.Location = new System.Drawing.Point(265, 235);
-            this.txtRoomNameContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtRoomNameContract.Multiline = true;
-            this.txtRoomNameContract.Name = "txtRoomNameContract";
-            this.txtRoomNameContract.Size = new System.Drawing.Size(342, 32);
-            this.txtRoomNameContract.TabIndex = 30;
+            this.txtNameRoomContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameRoomContract.Location = new System.Drawing.Point(265, 235);
+            this.txtNameRoomContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNameRoomContract.Name = "txtNameRoomContract";
+            this.txtNameRoomContract.ReadOnly = true;
+            this.txtNameRoomContract.Size = new System.Drawing.Size(342, 38);
+            this.txtNameRoomContract.TabIndex = 30;
             // 
             // txtDepositContract
             // 
             this.txtDepositContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDepositContract.Location = new System.Drawing.Point(265, 275);
             this.txtDepositContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtDepositContract.Multiline = true;
             this.txtDepositContract.Name = "txtDepositContract";
-            this.txtDepositContract.Size = new System.Drawing.Size(342, 32);
+            this.txtDepositContract.ReadOnly = true;
+            this.txtDepositContract.Size = new System.Drawing.Size(342, 38);
             this.txtDepositContract.TabIndex = 29;
             // 
-            // button4
+            // btnDeleteContract
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(570, 433);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(146, 43);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Xóa hợp đồng";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnDeleteContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteContract.Location = new System.Drawing.Point(336, 433);
+            this.btnDeleteContract.Name = "btnDeleteContract";
+            this.btnDeleteContract.Size = new System.Drawing.Size(146, 43);
+            this.btnDeleteContract.TabIndex = 28;
+            this.btnDeleteContract.Text = "Xóa hợp đồng";
+            this.btnDeleteContract.UseVisualStyleBackColor = true;
             // 
             // picContract
             // 
@@ -758,25 +856,26 @@
             this.btnUploadContract.Tag = "Contract";
             this.btnUploadContract.Text = "upload";
             this.btnUploadContract.UseVisualStyleBackColor = true;
+            this.btnUploadContract.Click += new System.EventHandler(this.btnUpload_Click);
             // 
-            // button6
+            // btnUpdateContract
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(388, 433);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(158, 43);
-            this.button6.TabIndex = 26;
-            this.button6.Text = "Thêm/Cập nhật";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnUpdateContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateContract.Location = new System.Drawing.Point(93, 433);
+            this.btnUpdateContract.Name = "btnUpdateContract";
+            this.btnUpdateContract.Size = new System.Drawing.Size(158, 43);
+            this.btnUpdateContract.TabIndex = 26;
+            this.btnUpdateContract.Text = "Cập nhật";
+            this.btnUpdateContract.UseVisualStyleBackColor = true;
             // 
             // txtNameAdContract
             // 
             this.txtNameAdContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameAdContract.Location = new System.Drawing.Point(265, 75);
             this.txtNameAdContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtNameAdContract.Multiline = true;
             this.txtNameAdContract.Name = "txtNameAdContract";
-            this.txtNameAdContract.Size = new System.Drawing.Size(342, 32);
+            this.txtNameAdContract.ReadOnly = true;
+            this.txtNameAdContract.Size = new System.Drawing.Size(342, 38);
             this.txtNameAdContract.TabIndex = 20;
             // 
             // lblAdNameContract
@@ -791,6 +890,7 @@
             // 
             // dateTimeEnd
             // 
+            this.dateTimeEnd.Enabled = false;
             this.dateTimeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimeEnd.Location = new System.Drawing.Point(265, 360);
@@ -802,6 +902,7 @@
             // 
             // dateTimeStart
             // 
+            this.dateTimeStart.Enabled = false;
             this.dateTimeStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimeStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -857,9 +958,9 @@
             this.txtGuestPhoneNumberContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGuestPhoneNumberContract.Location = new System.Drawing.Point(265, 195);
             this.txtGuestPhoneNumberContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtGuestPhoneNumberContract.Multiline = true;
             this.txtGuestPhoneNumberContract.Name = "txtGuestPhoneNumberContract";
-            this.txtGuestPhoneNumberContract.Size = new System.Drawing.Size(342, 32);
+            this.txtGuestPhoneNumberContract.ReadOnly = true;
+            this.txtGuestPhoneNumberContract.Size = new System.Drawing.Size(342, 38);
             this.txtGuestPhoneNumberContract.TabIndex = 7;
             // 
             // txtGuestCCCDContract
@@ -867,9 +968,9 @@
             this.txtGuestCCCDContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGuestCCCDContract.Location = new System.Drawing.Point(265, 155);
             this.txtGuestCCCDContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtGuestCCCDContract.Multiline = true;
             this.txtGuestCCCDContract.Name = "txtGuestCCCDContract";
-            this.txtGuestCCCDContract.Size = new System.Drawing.Size(342, 32);
+            this.txtGuestCCCDContract.ReadOnly = true;
+            this.txtGuestCCCDContract.Size = new System.Drawing.Size(342, 38);
             this.txtGuestCCCDContract.TabIndex = 6;
             // 
             // lblGuestPhoneNumberContract
@@ -892,15 +993,15 @@
             this.lblGuestCCCDContract.TabIndex = 2;
             this.lblGuestCCCDContract.Text = "CCCD";
             // 
-            // textBox6
+            // txtNameGuestContract
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(265, 115);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(342, 32);
-            this.textBox6.TabIndex = 34;
+            this.txtNameGuestContract.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNameGuestContract.Location = new System.Drawing.Point(265, 115);
+            this.txtNameGuestContract.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNameGuestContract.Name = "txtNameGuestContract";
+            this.txtNameGuestContract.ReadOnly = true;
+            this.txtNameGuestContract.Size = new System.Drawing.Size(342, 38);
+            this.txtNameGuestContract.TabIndex = 34;
             // 
             // lblGuestNameContract
             // 
@@ -919,13 +1020,18 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1916, 775);
+            this.tabPage3.Size = new System.Drawing.Size(1916, 905);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Người Thuê";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // grbGuest
             // 
+            this.grbGuest.Controls.Add(this.btnInsertGuest);
+            this.grbGuest.Controls.Add(this.txtGuestPass);
+            this.grbGuest.Controls.Add(this.lblGuestPass);
+            this.grbGuest.Controls.Add(this.txtGuestUsername);
+            this.grbGuest.Controls.Add(this.lblGuestUsernname);
             this.grbGuest.Controls.Add(this.txtIdGuest);
             this.grbGuest.Controls.Add(this.lblIdGuest);
             this.grbGuest.Controls.Add(this.lblGuestCCCDBack);
@@ -954,10 +1060,61 @@
             this.grbGuest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbGuest.Name = "grbGuest";
             this.grbGuest.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbGuest.Size = new System.Drawing.Size(662, 741);
+            this.grbGuest.Size = new System.Drawing.Size(662, 898);
             this.grbGuest.TabIndex = 2;
             this.grbGuest.TabStop = false;
             this.grbGuest.Text = "Thông tin khách thuê";
+            // 
+            // btnInsertGuest
+            // 
+            this.btnInsertGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertGuest.Location = new System.Drawing.Point(518, 810);
+            this.btnInsertGuest.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInsertGuest.Name = "btnInsertGuest";
+            this.btnInsertGuest.Size = new System.Drawing.Size(118, 40);
+            this.btnInsertGuest.TabIndex = 44;
+            this.btnInsertGuest.Text = "Thêm mới";
+            this.btnInsertGuest.UseVisualStyleBackColor = true;
+            // 
+            // txtGuestPass
+            // 
+            this.txtGuestPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGuestPass.Location = new System.Drawing.Point(274, 723);
+            this.txtGuestPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtGuestPass.Name = "txtGuestPass";
+            this.txtGuestPass.ReadOnly = true;
+            this.txtGuestPass.Size = new System.Drawing.Size(362, 38);
+            this.txtGuestPass.TabIndex = 43;
+            // 
+            // lblGuestPass
+            // 
+            this.lblGuestPass.AutoSize = true;
+            this.lblGuestPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGuestPass.Location = new System.Drawing.Point(35, 725);
+            this.lblGuestPass.Name = "lblGuestPass";
+            this.lblGuestPass.Size = new System.Drawing.Size(130, 32);
+            this.lblGuestPass.TabIndex = 42;
+            this.lblGuestPass.Text = "Mật khẩu";
+            // 
+            // txtGuestUsername
+            // 
+            this.txtGuestUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGuestUsername.Location = new System.Drawing.Point(274, 672);
+            this.txtGuestUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtGuestUsername.Name = "txtGuestUsername";
+            this.txtGuestUsername.ReadOnly = true;
+            this.txtGuestUsername.Size = new System.Drawing.Size(362, 38);
+            this.txtGuestUsername.TabIndex = 41;
+            // 
+            // lblGuestUsernname
+            // 
+            this.lblGuestUsernname.AutoSize = true;
+            this.lblGuestUsernname.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGuestUsernname.Location = new System.Drawing.Point(35, 674);
+            this.lblGuestUsernname.Name = "lblGuestUsernname";
+            this.lblGuestUsernname.Size = new System.Drawing.Size(186, 32);
+            this.lblGuestUsernname.TabIndex = 40;
+            this.lblGuestUsernname.Text = "Tên tài khoản";
             // 
             // txtIdGuest
             // 
@@ -965,9 +1122,9 @@
             this.txtIdGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIdGuest.Location = new System.Drawing.Point(274, 378);
             this.txtIdGuest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtIdGuest.Multiline = true;
             this.txtIdGuest.Name = "txtIdGuest";
-            this.txtIdGuest.Size = new System.Drawing.Size(362, 32);
+            this.txtIdGuest.ReadOnly = true;
+            this.txtIdGuest.Size = new System.Drawing.Size(362, 38);
             this.txtIdGuest.TabIndex = 39;
             // 
             // lblIdGuest
@@ -1083,7 +1240,7 @@
             // btnDelGuestList
             // 
             this.btnDelGuestList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelGuestList.Location = new System.Drawing.Point(427, 678);
+            this.btnDelGuestList.Location = new System.Drawing.Point(342, 810);
             this.btnDelGuestList.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelGuestList.Name = "btnDelGuestList";
             this.btnDelGuestList.Size = new System.Drawing.Size(100, 40);
@@ -1094,12 +1251,12 @@
             // btnUpdateGuestList
             // 
             this.btnUpdateGuestList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateGuestList.Location = new System.Drawing.Point(274, 678);
+            this.btnUpdateGuestList.Location = new System.Drawing.Point(148, 810);
             this.btnUpdateGuestList.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdateGuestList.Name = "btnUpdateGuestList";
             this.btnUpdateGuestList.Size = new System.Drawing.Size(118, 40);
             this.btnUpdateGuestList.TabIndex = 27;
-            this.btnUpdateGuestList.Text = "Thêm/Sửa";
+            this.btnUpdateGuestList.Text = "Cập nhật";
             this.btnUpdateGuestList.UseVisualStyleBackColor = true;
             // 
             // txtGuestRoomName
@@ -1107,9 +1264,9 @@
             this.txtGuestRoomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGuestRoomName.Location = new System.Drawing.Point(274, 620);
             this.txtGuestRoomName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtGuestRoomName.Multiline = true;
             this.txtGuestRoomName.Name = "txtGuestRoomName";
-            this.txtGuestRoomName.Size = new System.Drawing.Size(362, 32);
+            this.txtGuestRoomName.ReadOnly = true;
+            this.txtGuestRoomName.Size = new System.Drawing.Size(362, 38);
             this.txtGuestRoomName.TabIndex = 26;
             // 
             // txtGuestEmail
@@ -1117,9 +1274,9 @@
             this.txtGuestEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGuestEmail.Location = new System.Drawing.Point(274, 572);
             this.txtGuestEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtGuestEmail.Multiline = true;
             this.txtGuestEmail.Name = "txtGuestEmail";
-            this.txtGuestEmail.Size = new System.Drawing.Size(362, 32);
+            this.txtGuestEmail.ReadOnly = true;
+            this.txtGuestEmail.Size = new System.Drawing.Size(362, 38);
             this.txtGuestEmail.TabIndex = 25;
             // 
             // lblGuestEmail
@@ -1147,9 +1304,9 @@
             this.txtGuestPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGuestPhoneNumber.Location = new System.Drawing.Point(274, 525);
             this.txtGuestPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtGuestPhoneNumber.Multiline = true;
             this.txtGuestPhoneNumber.Name = "txtGuestPhoneNumber";
-            this.txtGuestPhoneNumber.Size = new System.Drawing.Size(362, 32);
+            this.txtGuestPhoneNumber.ReadOnly = true;
+            this.txtGuestPhoneNumber.Size = new System.Drawing.Size(362, 38);
             this.txtGuestPhoneNumber.TabIndex = 7;
             // 
             // txtGuestCCCD
@@ -1157,9 +1314,9 @@
             this.txtGuestCCCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGuestCCCD.Location = new System.Drawing.Point(274, 476);
             this.txtGuestCCCD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtGuestCCCD.Multiline = true;
             this.txtGuestCCCD.Name = "txtGuestCCCD";
-            this.txtGuestCCCD.Size = new System.Drawing.Size(362, 32);
+            this.txtGuestCCCD.ReadOnly = true;
+            this.txtGuestCCCD.Size = new System.Drawing.Size(362, 38);
             this.txtGuestCCCD.TabIndex = 6;
             // 
             // lblGuestPhoneNumber
@@ -1187,9 +1344,9 @@
             this.txtGuestName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGuestName.Location = new System.Drawing.Point(274, 428);
             this.txtGuestName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtGuestName.Multiline = true;
             this.txtGuestName.Name = "txtGuestName";
-            this.txtGuestName.Size = new System.Drawing.Size(362, 32);
+            this.txtGuestName.ReadOnly = true;
+            this.txtGuestName.Size = new System.Drawing.Size(362, 38);
             this.txtGuestName.TabIndex = 1;
             // 
             // lblGuestName
@@ -1205,8 +1362,8 @@
             // grbGuestList
             // 
             this.grbGuestList.Controls.Add(this.dgvGuestList);
-            this.grbGuestList.Controls.Add(this.txtFindGuest);
-            this.grbGuestList.Controls.Add(this.btnFindGuest);
+            this.grbGuestList.Controls.Add(this.txtSearchGuest);
+            this.grbGuestList.Controls.Add(this.btnSearchGuest);
             this.grbGuestList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbGuestList.Location = new System.Drawing.Point(712, 6);
             this.grbGuestList.Name = "grbGuestList";
@@ -1225,29 +1382,34 @@
             this.dgvGuestList.RowTemplate.Height = 24;
             this.dgvGuestList.Size = new System.Drawing.Size(887, 617);
             this.dgvGuestList.TabIndex = 29;
+            this.dgvGuestList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGuestList_CellClick);
+            this.dgvGuestList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGuestList_CellClick);
             // 
-            // txtFindGuest
+            // txtSearchGuest
             // 
-            this.txtFindGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFindGuest.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtFindGuest.Location = new System.Drawing.Point(19, 39);
-            this.txtFindGuest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtFindGuest.Multiline = true;
-            this.txtFindGuest.Name = "txtFindGuest";
-            this.txtFindGuest.Size = new System.Drawing.Size(315, 40);
-            this.txtFindGuest.TabIndex = 23;
-            this.txtFindGuest.Text = "Nhập họ tên cần tìm";
+            this.txtSearchGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchGuest.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearchGuest.Location = new System.Drawing.Point(19, 39);
+            this.txtSearchGuest.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearchGuest.Multiline = true;
+            this.txtSearchGuest.Name = "txtSearchGuest";
+            this.txtSearchGuest.Size = new System.Drawing.Size(315, 40);
+            this.txtSearchGuest.TabIndex = 23;
+            this.txtSearchGuest.Tag = "Guest";
+            this.txtSearchGuest.Text = "Nhập họ tên cần tìm";
             // 
-            // btnFindGuest
+            // btnSearchGuest
             // 
-            this.btnFindGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFindGuest.Location = new System.Drawing.Point(351, 39);
-            this.btnFindGuest.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFindGuest.Name = "btnFindGuest";
-            this.btnFindGuest.Size = new System.Drawing.Size(112, 40);
-            this.btnFindGuest.TabIndex = 22;
-            this.btnFindGuest.Text = "Tìm kiếm";
-            this.btnFindGuest.UseVisualStyleBackColor = true;
+            this.btnSearchGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchGuest.Location = new System.Drawing.Point(351, 39);
+            this.btnSearchGuest.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchGuest.Name = "btnSearchGuest";
+            this.btnSearchGuest.Size = new System.Drawing.Size(112, 40);
+            this.btnSearchGuest.TabIndex = 22;
+            this.btnSearchGuest.Tag = "Guest";
+            this.btnSearchGuest.Text = "Tìm kiếm";
+            this.btnSearchGuest.UseVisualStyleBackColor = true;
+            this.btnSearchGuest.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // tabPage2
             // 
@@ -1256,7 +1418,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1916, 775);
+            this.tabPage2.Size = new System.Drawing.Size(1916, 905);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Phòng trọ ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1264,6 +1426,7 @@
             // grbRoom
             // 
             this.grbRoom.BackColor = System.Drawing.Color.White;
+            this.grbRoom.Controls.Add(this.btnInsert);
             this.grbRoom.Controls.Add(this.txtIdRoom);
             this.grbRoom.Controls.Add(this.lblIdRoom);
             this.grbRoom.Controls.Add(this.txtRoomStatus);
@@ -1285,11 +1448,24 @@
             this.grbRoom.TabStop = false;
             this.grbRoom.Text = "Thông tin phòng";
             // 
+            // btnInsert
+            // 
+            this.btnInsert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.Location = new System.Drawing.Point(340, 299);
+            this.btnInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(126, 35);
+            this.btnInsert.TabIndex = 46;
+            this.btnInsert.Text = "Thêm mới";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsertAndUpdateRoom_Click);
+            // 
             // txtIdRoom
             // 
             this.txtIdRoom.Location = new System.Drawing.Point(216, 48);
             this.txtIdRoom.Multiline = true;
             this.txtIdRoom.Name = "txtIdRoom";
+            this.txtIdRoom.ReadOnly = true;
             this.txtIdRoom.Size = new System.Drawing.Size(250, 32);
             this.txtIdRoom.TabIndex = 45;
             // 
@@ -1308,6 +1484,7 @@
             this.txtRoomStatus.Location = new System.Drawing.Point(216, 216);
             this.txtRoomStatus.Multiline = true;
             this.txtRoomStatus.Name = "txtRoomStatus";
+            this.txtRoomStatus.ReadOnly = true;
             this.txtRoomStatus.Size = new System.Drawing.Size(250, 32);
             this.txtRoomStatus.TabIndex = 43;
             // 
@@ -1316,6 +1493,7 @@
             this.txtRoomPrice.Location = new System.Drawing.Point(216, 161);
             this.txtRoomPrice.Multiline = true;
             this.txtRoomPrice.Name = "txtRoomPrice";
+            this.txtRoomPrice.ReadOnly = true;
             this.txtRoomPrice.Size = new System.Drawing.Size(250, 32);
             this.txtRoomPrice.TabIndex = 42;
             // 
@@ -1324,30 +1502,33 @@
             this.txtRoomName.Location = new System.Drawing.Point(216, 108);
             this.txtRoomName.Multiline = true;
             this.txtRoomName.Name = "txtRoomName";
+            this.txtRoomName.ReadOnly = true;
             this.txtRoomName.Size = new System.Drawing.Size(250, 32);
             this.txtRoomName.TabIndex = 41;
             // 
             // btnDelRoom
             // 
             this.btnDelRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelRoom.Location = new System.Drawing.Point(346, 299);
+            this.btnDelRoom.Location = new System.Drawing.Point(216, 299);
             this.btnDelRoom.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelRoom.Name = "btnDelRoom";
-            this.btnDelRoom.Size = new System.Drawing.Size(90, 35);
+            this.btnDelRoom.Size = new System.Drawing.Size(93, 35);
             this.btnDelRoom.TabIndex = 40;
             this.btnDelRoom.Text = "Xóa";
             this.btnDelRoom.UseVisualStyleBackColor = true;
+            this.btnDelRoom.Click += new System.EventHandler(this.btnDeleteRoom_Click);
             // 
             // btnUpdateRoom
             // 
             this.btnUpdateRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdateRoom.Location = new System.Drawing.Point(111, 299);
+            this.btnUpdateRoom.Location = new System.Drawing.Point(42, 299);
             this.btnUpdateRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateRoom.Name = "btnUpdateRoom";
-            this.btnUpdateRoom.Size = new System.Drawing.Size(158, 35);
+            this.btnUpdateRoom.Size = new System.Drawing.Size(144, 35);
             this.btnUpdateRoom.TabIndex = 32;
-            this.btnUpdateRoom.Text = "Thêm/Cập nhật";
+            this.btnUpdateRoom.Text = "Cập nhật";
             this.btnUpdateRoom.UseVisualStyleBackColor = true;
+            this.btnUpdateRoom.Click += new System.EventHandler(this.btnInsertAndUpdateRoom_Click);
             // 
             // lblRoomFee
             // 
@@ -1390,8 +1571,8 @@
             // grbRoomList
             // 
             this.grbRoomList.Controls.Add(this.dgvRoomList);
-            this.grbRoomList.Controls.Add(this.btnFindRoom);
-            this.grbRoomList.Controls.Add(this.txtFindRoom);
+            this.grbRoomList.Controls.Add(this.btnSearchRoom);
+            this.grbRoomList.Controls.Add(this.txtSearchRoom);
             this.grbRoomList.Controls.Add(this.labelEmpty);
             this.grbRoomList.Controls.Add(this.labelSoPhongTrong);
             this.grbRoomList.Controls.Add(this.labelSoPhongChoThue);
@@ -1414,29 +1595,35 @@
             this.dgvRoomList.RowTemplate.Height = 24;
             this.dgvRoomList.Size = new System.Drawing.Size(598, 467);
             this.dgvRoomList.TabIndex = 28;
+            this.dgvRoomList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoomList_CellClick);
+            this.dgvRoomList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRoomList_CellClick);
             // 
-            // btnFindRoom
+            // btnSearchRoom
             // 
-            this.btnFindRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFindRoom.Location = new System.Drawing.Point(377, 47);
-            this.btnFindRoom.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFindRoom.Name = "btnFindRoom";
-            this.btnFindRoom.Size = new System.Drawing.Size(108, 36);
-            this.btnFindRoom.TabIndex = 38;
-            this.btnFindRoom.Text = "Tìm kiếm";
-            this.btnFindRoom.UseVisualStyleBackColor = true;
+            this.btnSearchRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchRoom.Location = new System.Drawing.Point(377, 47);
+            this.btnSearchRoom.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearchRoom.Name = "btnSearchRoom";
+            this.btnSearchRoom.Size = new System.Drawing.Size(108, 36);
+            this.btnSearchRoom.TabIndex = 38;
+            this.btnSearchRoom.Tag = "Room";
+            this.btnSearchRoom.Text = "Tìm kiếm";
+            this.btnSearchRoom.UseVisualStyleBackColor = true;
+            this.btnSearchRoom.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtFindRoom
+            // txtSearchRoom
             // 
-            this.txtFindRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFindRoom.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtFindRoom.Location = new System.Drawing.Point(30, 43);
-            this.txtFindRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtFindRoom.Multiline = true;
-            this.txtFindRoom.Name = "txtFindRoom";
-            this.txtFindRoom.Size = new System.Drawing.Size(307, 40);
-            this.txtFindRoom.TabIndex = 39;
-            this.txtFindRoom.Text = "Nhập tên phòng cần tìm";
+            this.txtSearchRoom.BackColor = System.Drawing.SystemColors.Window;
+            this.txtSearchRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchRoom.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtSearchRoom.Location = new System.Drawing.Point(30, 43);
+            this.txtSearchRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearchRoom.Multiline = true;
+            this.txtSearchRoom.Name = "txtSearchRoom";
+            this.txtSearchRoom.Size = new System.Drawing.Size(307, 40);
+            this.txtSearchRoom.TabIndex = 39;
+            this.txtSearchRoom.Tag = "Room";
+            this.txtSearchRoom.Text = "Nhập tên phòng cần tìm";
             // 
             // labelEmpty
             // 
@@ -1487,7 +1674,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1924, 794);
+            this.tabControl1.Size = new System.Drawing.Size(1924, 934);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -1497,13 +1684,16 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1916, 775);
+            this.tabPage1.Size = new System.Drawing.Size(1916, 905);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Thông tin cá nhân";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // grbAd
             // 
+            this.grbAd.Controls.Add(this.btnQr);
+            this.grbAd.Controls.Add(this.btnDeleteAd);
+            this.grbAd.Controls.Add(this.btnUpdateAd);
             this.grbAd.Controls.Add(this.lblQRAd);
             this.grbAd.Controls.Add(this.picQRAd);
             this.grbAd.Controls.Add(this.txtAddressAd);
@@ -1522,10 +1712,48 @@
             this.grbAd.TabStop = false;
             this.grbAd.Text = "Thông tin cá nhân";
             // 
+            // btnQr
+            // 
+            this.btnQr.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQr.Location = new System.Drawing.Point(361, 455);
+            this.btnQr.Name = "btnQr";
+            this.btnQr.Size = new System.Drawing.Size(75, 23);
+            this.btnQr.TabIndex = 14;
+            this.btnQr.Tag = "Qr";
+            this.btnQr.Text = "Upload";
+            this.btnQr.UseVisualStyleBackColor = true;
+            this.btnQr.Click += new System.EventHandler(this.btnUpload_Click);
+            // 
+            // btnDeleteAd
+            // 
+            this.btnDeleteAd.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnDeleteAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteAd.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDeleteAd.Location = new System.Drawing.Point(150, 345);
+            this.btnDeleteAd.Name = "btnDeleteAd";
+            this.btnDeleteAd.Size = new System.Drawing.Size(121, 36);
+            this.btnDeleteAd.TabIndex = 13;
+            this.btnDeleteAd.Text = "Xóa";
+            this.btnDeleteAd.UseVisualStyleBackColor = false;
+            this.btnDeleteAd.Click += new System.EventHandler(this.btnDeleteAd_Click);
+            // 
+            // btnUpdateAd
+            // 
+            this.btnUpdateAd.BackColor = System.Drawing.Color.DarkOliveGreen;
+            this.btnUpdateAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateAd.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnUpdateAd.Location = new System.Drawing.Point(20, 345);
+            this.btnUpdateAd.Name = "btnUpdateAd";
+            this.btnUpdateAd.Size = new System.Drawing.Size(121, 36);
+            this.btnUpdateAd.TabIndex = 12;
+            this.btnUpdateAd.Text = "Cập nhật";
+            this.btnUpdateAd.UseVisualStyleBackColor = false;
+            this.btnUpdateAd.Click += new System.EventHandler(this.btnUpdateAd_Click);
+            // 
             // lblQRAd
             // 
             this.lblQRAd.AutoSize = true;
-            this.lblQRAd.Location = new System.Drawing.Point(328, 412);
+            this.lblQRAd.Location = new System.Drawing.Point(357, 412);
             this.lblQRAd.Name = "lblQRAd";
             this.lblQRAd.Size = new System.Drawing.Size(79, 25);
             this.lblQRAd.TabIndex = 11;
@@ -1534,20 +1762,20 @@
             // picQRAd
             // 
             this.picQRAd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picQRAd.Location = new System.Drawing.Point(277, 345);
+            this.picQRAd.Location = new System.Drawing.Point(306, 345);
             this.picQRAd.Name = "picQRAd";
             this.picQRAd.Size = new System.Drawing.Size(178, 162);
             this.picQRAd.TabIndex = 10;
             this.picQRAd.TabStop = false;
+            this.picQRAd.Tag = "Qr";
             // 
             // txtAddressAd
             // 
             this.txtAddressAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddressAd.Location = new System.Drawing.Point(127, 134);
-            this.txtAddressAd.Multiline = true;
             this.txtAddressAd.Name = "txtAddressAd";
             this.txtAddressAd.ReadOnly = true;
-            this.txtAddressAd.Size = new System.Drawing.Size(328, 32);
+            this.txtAddressAd.Size = new System.Drawing.Size(328, 38);
             this.txtAddressAd.TabIndex = 9;
             // 
             // lblAddressAd
@@ -1564,10 +1792,9 @@
             // 
             this.txtEmailAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailAd.Location = new System.Drawing.Point(127, 274);
-            this.txtEmailAd.Multiline = true;
             this.txtEmailAd.Name = "txtEmailAd";
             this.txtEmailAd.ReadOnly = true;
-            this.txtEmailAd.Size = new System.Drawing.Size(328, 32);
+            this.txtEmailAd.Size = new System.Drawing.Size(328, 38);
             this.txtEmailAd.TabIndex = 5;
             // 
             // lblEmailAd
@@ -1584,10 +1811,9 @@
             // 
             this.txtPhoneNumberAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhoneNumberAd.Location = new System.Drawing.Point(127, 204);
-            this.txtPhoneNumberAd.Multiline = true;
             this.txtPhoneNumberAd.Name = "txtPhoneNumberAd";
             this.txtPhoneNumberAd.ReadOnly = true;
-            this.txtPhoneNumberAd.Size = new System.Drawing.Size(328, 32);
+            this.txtPhoneNumberAd.Size = new System.Drawing.Size(328, 38);
             this.txtPhoneNumberAd.TabIndex = 3;
             // 
             // lblPhoneNumberAd
@@ -1604,10 +1830,9 @@
             // 
             this.txtNameAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameAd.Location = new System.Drawing.Point(127, 64);
-            this.txtNameAd.Multiline = true;
             this.txtNameAd.Name = "txtNameAd";
             this.txtNameAd.ReadOnly = true;
-            this.txtNameAd.Size = new System.Drawing.Size(328, 32);
+            this.txtNameAd.Size = new System.Drawing.Size(328, 38);
             this.txtNameAd.TabIndex = 1;
             // 
             // lblNameAd
@@ -1737,33 +1962,33 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridView1.Location = new System.Drawing.Point(17, 33);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -1918,31 +2143,23 @@
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = true;
             // 
-            // dgvBillList
-            // 
-            this.dgvBillList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBillList.Location = new System.Drawing.Point(6, 101);
-            this.dgvBillList.Name = "dgvBillList";
-            this.dgvBillList.RowHeadersWidth = 51;
-            this.dgvBillList.RowTemplate.Height = 24;
-            this.dgvBillList.Size = new System.Drawing.Size(998, 652);
-            this.dgvBillList.TabIndex = 26;
-            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 794);
+            this.ClientSize = new System.Drawing.Size(1924, 934);
             this.Controls.Add(this.tabControl1);
             this.Name = "main";
             this.Load += new System.EventHandler(this.main_Load);
             this.tabPage5.ResumeLayout(false);
             this.grbBillList.ResumeLayout(false);
             this.grbBillList.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBillList)).EndInit();
             this.grbBill.ResumeLayout(false);
             this.grbBill.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.grbContractList.ResumeLayout(false);
+            this.grbContractList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContractList)).EndInit();
             this.grbContract.ResumeLayout(false);
             this.grbContract.PerformLayout();
@@ -1973,7 +2190,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picAdCCCDBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAdProfile)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBillList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2000,11 +2216,11 @@
         private System.Windows.Forms.TextBox txtGuestCCCDContract;
         private System.Windows.Forms.Label lblGuestPhoneNumberContract;
         private System.Windows.Forms.Label lblGuestCCCDContract;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtNameGuestContract;
         private System.Windows.Forms.Label lblGuestNameContract;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.GroupBox grbGuest;
-        private System.Windows.Forms.Button btnFindGuest;
+        private System.Windows.Forms.Button btnSearchGuest;
         private System.Windows.Forms.Label lblGuestEmail;
         private System.Windows.Forms.Label lblGuestRoomName;
         private System.Windows.Forms.TextBox txtGuestPhoneNumber;
@@ -2051,8 +2267,8 @@
         private System.Windows.Forms.Button btnSuaTK;
         private System.Windows.Forms.Button btnLamMoi;
         private System.Windows.Forms.Button btnUploadContract;
-        private System.Windows.Forms.TextBox txtFindGuest;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox txtSearchGuest;
+        private System.Windows.Forms.Button btnUpdateContract;
         private System.Windows.Forms.PictureBox picAdProfile;
         private System.Windows.Forms.Button btnUploadAdProfilePic;
         private System.Windows.Forms.GroupBox grbPic;
@@ -2077,14 +2293,14 @@
         private System.Windows.Forms.TextBox txtGuestEmail;
         private System.Windows.Forms.Button btnDelGuestList;
         private System.Windows.Forms.Button btnUpdateGuestList;
-        private System.Windows.Forms.TextBox txtFindRoom;
-        private System.Windows.Forms.Button btnFindRoom;
+        private System.Windows.Forms.TextBox txtSearchRoom;
+        private System.Windows.Forms.Button btnSearchRoom;
         private System.Windows.Forms.Button btnDelRoom;
         private System.Windows.Forms.GroupBox grbContractList;
         private System.Windows.Forms.PictureBox picContract;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDeleteContract;
         private System.Windows.Forms.TextBox txtDepositContract;
-        private System.Windows.Forms.TextBox txtRoomNameContract;
+        private System.Windows.Forms.TextBox txtNameRoomContract;
         private System.Windows.Forms.Label lblDepositContract;
         private System.Windows.Forms.TextBox txtIdContract;
         private System.Windows.Forms.Label lblIdContract;
@@ -2115,7 +2331,6 @@
         private System.Windows.Forms.Label lblRoomFeeBill;
         private System.Windows.Forms.TextBox txtBillStatus;
         private System.Windows.Forms.TextBox txtDetail;
-        private System.Windows.Forms.TextBox txtCreatedDate;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.TextBox txtWaterFee;
         private System.Windows.Forms.TextBox txtWaterNewReading;
@@ -2129,12 +2344,26 @@
         private System.Windows.Forms.Label lblBillStatus;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.GroupBox grbBillList;
-        private System.Windows.Forms.TextBox txtFIndBill;
+        private System.Windows.Forms.TextBox txtSearchBill;
         private System.Windows.Forms.Button btnFindBill;
         private System.Windows.Forms.Label lblContract;
         private System.Windows.Forms.Button btnDelBill;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.PictureBox picQRAd;
         private System.Windows.Forms.DataGridView dgvBillList;
+        private System.Windows.Forms.Button btnDeleteAd;
+        private System.Windows.Forms.Button btnUpdateAd;
+        private System.Windows.Forms.Button btnQr;
+        private System.Windows.Forms.TextBox txtGuestUsername;
+        private System.Windows.Forms.Label lblGuestUsernname;
+        private System.Windows.Forms.TextBox txtGuestPass;
+        private System.Windows.Forms.Label lblGuestPass;
+        private System.Windows.Forms.TextBox txtSearchContract;
+        private System.Windows.Forms.Button btnSearchContract;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.DateTimePicker dateTimeCreate;
+        private System.Windows.Forms.Button btnInsertGuest;
+        private System.Windows.Forms.Button btnInsertContract;
+        private System.Windows.Forms.Button btnInsertBill;
     }
 }

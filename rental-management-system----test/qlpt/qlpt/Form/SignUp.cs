@@ -36,6 +36,8 @@ namespace qlpt
             {
                 MessageBox.Show("Tạo tài khoản thành công");
                 this.Close();
+                login login = new login();
+                login.Show();
             }
             else if (result == -2)
             {
