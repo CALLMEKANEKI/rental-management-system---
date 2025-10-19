@@ -1,0 +1,51 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ASPIRE A715 - 42G\\source\\repos\\L\u1EADp tr\u00ECnh tr\u00EAn Win\\rental-management-system--Version test 1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\users\\aspire a715 - 42g\\source\\repos\\l\u1EADp tr\u00ECnh tr\u00EAn win\\rental-management-system--version test 1\\bll\\bll\\thanhtoanbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\bll\\thanhtoanbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "thanhtoanBLL.cs",
+              "DocumentMoniker": "C:\\Users\\ASPIRE A715 - 42G\\source\\repos\\L\u1EADp tr\u00ECnh tr\u00EAn Win\\rental-management-system--Version test 1\\BLL\\BLL\\thanhtoanBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL\\thanhtoanBLL.cs",
+              "ToolTip": "C:\\Users\\ASPIRE A715 - 42G\\source\\repos\\L\u1EADp tr\u00ECnh tr\u00EAn Win\\rental-management-system--Version test 1\\BLL\\BLL\\thanhtoanBLL.cs",
+              "RelativeToolTip": "BLL\\BLL\\thanhtoanBLL.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T09:08:24.731Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

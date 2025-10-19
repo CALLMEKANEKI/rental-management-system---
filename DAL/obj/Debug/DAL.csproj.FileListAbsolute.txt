@@ -1,0 +1,12 @@
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\bin\Debug\DAL.dll.config
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\bin\Debug\DAL.dll
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\bin\Debug\DAL.pdb
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\bin\Debug\EntityFramework.dll
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\bin\Debug\EntityFramework.xml
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\obj\Debug\DAL.dll
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\obj\Debug\DAL.pdb
