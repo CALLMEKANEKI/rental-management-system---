@@ -1,0 +1,10 @@
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.exe.config
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.login.resources
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.main.resources
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.khachthue.resources
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.Properties.Resources.resources
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.exe
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.pdb
