@@ -65,6 +65,10 @@
     <Compile Include="Model\phongtro.cs" />
     <Compile Include="Model\thanh_toan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\hoadonViewModel.cs" />
+    <Compile Include="ViewModel\hopdongViewModel.cs" />
+    <Compile Include="ViewModel\nguoithueViewModel.cs" />
+    <Compile Include="ViewModel\phongtroViewModel.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

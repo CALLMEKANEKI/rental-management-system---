@@ -130,10 +130,6 @@ namespace DAL.Model
                 .Property(e => e.id_lephi)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<lephi>()
-                .Property(e => e.tenphong)
-                .IsUnicode(false);
-
             modelBuilder.Entity<nguoi_thue>()
                 .Property(e => e.id_nguoi_thue)
                 .IsUnicode(false);

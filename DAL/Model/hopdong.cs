@@ -29,7 +29,7 @@ namespace DAL.Model
         public DateTime ngay_bat_dau { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? ngay_ket_thuc { get; set; }
+        public DateTime ngay_ket_thuc { get; set; }
 
         public decimal tien_coc { get; set; }
 

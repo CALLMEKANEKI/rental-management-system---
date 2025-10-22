@@ -1,4 +1,5 @@
 ﻿using DAL.Model;
+using DAL.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -105,6 +106,28 @@ namespace BLL.BLL
             return _dbContext.hopdongs.
                 FirstOrDefault(hd => hd.phongtro.id_chutro == id_chutro && 
                                         hd.id_hopdong == id_hopdong);
+        }
+
+        // R - READ (ALL): Lấy tất cả Hợp đồng ViewModel
+        public List<hopdongViewModel> LayTatCaHopDongViewModel(string idChuTro)
+        {
+            var query = from hd in _dbContext.hopdongs
+                        join pt in _dbContext.phongtroes on hd.id_phong equals pt.id_phong
+                        join nt in _dbContext.nguoithues on hd.id_nguoi_thue equals nt.id_nguoi_thue
+                        where pt.id_chutro == idChuTro
+                        select new hopdongViewModel
+                        {
+                            IDHopDong = hd.id_hopdong,
+                            NgayBatDau = hd.ngay_bat_dau,
+                            NgayKetThuc = hd.ngay_ket_thuc,
+                            TienCoc = hd.tien_coc,
+
+                            // Ánh xạ thuộc tính
+                            TenNguoiThue = nt.hoten,
+                            TenPhong = pt.tenphong,
+                        };
+
+            return query.ToList();
         }
 
         // U - UPDATE: Cập nhật Hợp đồng

@@ -1,4 +1,5 @@
 ﻿using DAL.Model;
+using DAL.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -93,6 +94,27 @@ namespace BLL.BLL
             return _dbContext.nguoithues
                              .FirstOrDefault(nt => nt.phongtro.id_chutro == id_chutro
                                                 && nt.id_nguoi_thue == id_nguoithue); // Truy vấn qua Navigation Property                             
+        }
+        //R - READ (BY ID): Lấy người thuê viewmodel
+        public List<nguoithueViewModel> LayTatCaNguoiThueViewModel(string id_chutro)
+        {
+            // Giả định _dbContext là DbContext của bạn
+            var query = from nt in _dbContext.nguoithues
+                        join pt in _dbContext.phongtroes on nt.id_phong equals pt.id_phong
+                        where pt.id_chutro == id_chutro
+                        select new nguoithueViewModel
+                        {
+                            IDNguoiThue = nt.id_nguoi_thue,
+                            HoTenNguoiThue = nt.hoten,
+                            SoDienThoai = nt.sdt,
+                            CCCD = nt.cccd,
+                            Email = nt.email,
+                            // Ánh xạ thuộc tính từ PhongTro
+                            TenPhong = pt.tenphong,
+                            IDPhong = pt.id_phong
+                        };
+
+            return query.ToList();
         }
 
         // U - UPDATE: Cập nhật thông tin Người Thuê

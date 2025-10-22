@@ -1,5 +1,6 @@
 ﻿using BLL.BLL;
 using DAL.Model;
+using DAL.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -52,6 +53,12 @@ namespace BLL.Services
         {
             return hopdongBLL.LayTatCaHopDong(id_chutro);
         }
+
+        public List<hopdongViewModel> LayAllHopDongViewModel(string id_chutro)
+        {
+            return hopdongBLL.LayTatCaHopDongViewModel(id_chutro);
+        }
+
 
         public string CapNhat(hopdong objHopDong, string id_chutro)
         {

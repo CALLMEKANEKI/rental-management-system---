@@ -21,7 +21,6 @@ namespace DAL.Model
 
         [Required]
         [StringLength(100)]
-        public string tenphong { get; set; }
 
         public decimal tien_dv { get; set; }
 

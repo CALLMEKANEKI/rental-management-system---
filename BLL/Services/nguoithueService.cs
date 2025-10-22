@@ -1,5 +1,6 @@
 ﻿using BLL.BLL;
 using DAL.Model;
+using DAL.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -43,6 +44,20 @@ namespace BLL.Services
                 return "Lỗi: " + mess;
             }
         }
+        public List<nguoi_thue> LayTatCaNguoiThue(string id_chutro)
+        {
+            return nguoithueBLL.LayTatCaNguoiThue(id_chutro);
+        }
+
+        public nguoi_thue LayTatCaNguoiThueById(string id_chutro, string id_nguoithue)
+        {
+            return nguoithueBLL.LayNguoiThueTheoId(id_chutro, id_nguoithue);
+        }
+
+        public List<nguoithueViewModel> LayTatCaNguoiThueViewModel(string id_chutro)
+        {
+            return nguoithueBLL.LayTatCaNguoiThueViewModel(id_chutro);
+        }
 
         public string CapNhat(nguoi_thue objNguoiThue, string id_chutro)
         {
@@ -76,6 +91,7 @@ namespace BLL.Services
             }
         }
 
+       
         public string Xoa(string id_NguoiThue, string id_chutro)
         {
             try

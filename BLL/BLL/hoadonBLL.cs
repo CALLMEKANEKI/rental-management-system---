@@ -1,4 +1,5 @@
 ﻿using DAL.Model;
+using DAL.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -29,7 +30,7 @@ namespace BLL.BLL
                                    .FirstOrDefault();
 
             string prefix = "B";
-            int numberLength = 9; // 8 chữ số sau HD
+            int numberLength = 9; // 9 chữ số sau HD
             int newNumber = 1;
 
             if (lastId != null && lastId.StartsWith(prefix) && lastId.Length == prefix.Length + numberLength)
@@ -111,6 +112,43 @@ namespace BLL.BLL
                                                                         && hd.id_hoadon == id_hoadon);
         }
 
+        // R - READ (ALL): Lấy tất cả hóa đơn ViewModel 
+        public List<hoadonViewModel> LayDanhSachHoaDonViewModel(string idChuTro)
+        {
+            var query = from hd in _dbContext.hoadons
+                        join pt in _dbContext.phongtroes on hd.id_phong equals pt.id_phong
+                        join d in _dbContext.diens on hd.id_hoadon equals d.id_dien
+                        join n in _dbContext.nuocs on hd.id_hoadon equals n.id_nuoc
+                        join lp in _dbContext.lephis on hd.id_hoadon equals lp.id_lephi
+                        // Có thể JOIN thêm bảng thanh_toan nếu trạng thái nằm ở đó
+                        where pt.id_chutro == idChuTro
+                        select new hoadonViewModel
+                        {
+                            IDHoaDon = hd.id_hoadon,
+                            NgayTao = hd.ngay_tao,
+                            TrangThai = hd.trang_thai,
+                            NoiDung = hd.noi_dung, 
+                            ThanhTien = hd.thanh_tien,
+
+                            TenPhong = pt.tenphong,
+
+                            ChiSoDien_Dau = d.chi_so_dau,
+                            ChiSoDien_Cuoi = d.chi_so_cuoi,
+                            ThanhTien_Dien = d.thanh_tien_dien,
+
+                            ChiSoNuoc_Dau = n.chi_so_dau,
+                            ChiSoNuoc_Cuoi = n.chi_so_cuoi,
+                            ThanhTien_Nuoc = n.thanh_tien_nuoc,
+
+                            Tien_dv = lp.tien_dv,
+                            ThanhTien_lephi = lp.thanh_tien_lephi,
+
+                        };
+
+            return query.ToList();
+        }
+
+        // U - Update: Cập nhật hóa đơn
         public bool CapNhatHoaDon(hoadon updatedHoaDon, dien updatedDien, nuoc updatedNuoc, lephi updatedLePhi, string id_chutro)
         {
             if (updatedHoaDon == null) return false;
@@ -157,7 +195,6 @@ namespace BLL.BLL
                     var existingLePhi = _dbContext.lephis.Find(existingHoaDon.id_lephi);
                     if (existingLePhi != null)
                     {
-                        existingLePhi.tenphong = updatedLePhi.tenphong;
                         existingLePhi.tien_dv = updatedLePhi.tien_dv;
                         existingLePhi.thanh_tien_lephi = updatedLePhi.thanh_tien_lephi;
                     }
