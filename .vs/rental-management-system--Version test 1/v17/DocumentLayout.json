@@ -1,10 +1,49 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ASPIRE A715 - 42G\\source\\repos\\L\u1EADp tr\u00ECnh tr\u00EAn Win\\rental-management-system--Version test 1\\",
+  "WorkspaceRootPath": "C:\\GitHub Project\\rental-management-system--Version test 1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\users\\aspire a715 - 42g\\source\\repos\\l\u1EADp tr\u00ECnh tr\u00EAn win\\rental-management-system--version test 1\\bll\\bll\\thanhtoanbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\bll\\thanhtoanbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\rental-management-system--version test 1\\main\\main\\frmquanly.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmquanly.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\rental-management-system--version test 1\\main\\main\\frmchutro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmchutro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\rental-management-system--version test 1\\main\\main\\frmquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\rental-management-system--version test 1\\main\\main\\frmquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\rental-management-system--version test 1\\bll\\services\\chutroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\services\\chutroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\rental-management-system--version test 1\\bll\\bll\\chutrobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\bll\\chutrobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/Anhgiangdeptrai/DB_QLPHONGTRO/True/SqlTable/dbo.chutro.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\rental-management-system--version test 1\\main\\main\\frmchutro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmchutro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\rental-management-system--version test 1\\main\\main\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\rental-management-system--version test 1\\main\\main\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\rental-management-system--version test 1\\bll\\services\\validators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\services\\validators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +53,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmChuTro.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\frmChuTro.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmChuTro.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\frmChuTro.cs",
+              "RelativeToolTip": "MAIN\\main\\frmChuTro.cs",
+              "ViewState": "AgIAAPAAAAAAAAAAAAAcwAIBAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T03:32:11.379Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmChuTro.cs [Design]",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\frmChuTro.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmChuTro.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\frmChuTro.cs [Design]",
+              "RelativeToolTip": "MAIN\\main\\frmChuTro.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T03:31:34.141Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -23,14 +89,113 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "thanhtoanBLL.cs",
-              "DocumentMoniker": "C:\\Users\\ASPIRE A715 - 42G\\source\\repos\\L\u1EADp tr\u00ECnh tr\u00EAn Win\\rental-management-system--Version test 1\\BLL\\BLL\\thanhtoanBLL.cs",
-              "RelativeDocumentMoniker": "BLL\\BLL\\thanhtoanBLL.cs",
-              "ToolTip": "C:\\Users\\ASPIRE A715 - 42G\\source\\repos\\L\u1EADp tr\u00ECnh tr\u00EAn Win\\rental-management-system--Version test 1\\BLL\\BLL\\thanhtoanBLL.cs",
-              "RelativeToolTip": "BLL\\BLL\\thanhtoanBLL.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwBQAAAAdAAAAAAAAAA==",
+              "Title": "frmQuanLy.Designer.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\frmQuanLy.Designer.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmQuanLy.Designer.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\frmQuanLy.Designer.cs",
+              "RelativeToolTip": "MAIN\\main\\frmQuanLy.Designer.cs",
+              "ViewState": "AgIAAKQAAAAAAAAAAAAowLIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T09:08:24.731Z",
+              "WhenOpened": "2025-10-22T05:25:15.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmQuanLy.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\frmQuanLy.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmQuanLy.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\frmQuanLy.cs",
+              "RelativeToolTip": "MAIN\\main\\frmQuanLy.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAhwFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T04:22:22.238Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmQuanLy.cs [Design]",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\frmQuanLy.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmQuanLy.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\frmQuanLy.cs [Design]",
+              "RelativeToolTip": "MAIN\\main\\frmQuanLy.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T05:19:55.341Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Validators.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\BLL\\Services\\Validators.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\Validators.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\BLL\\Services\\Validators.cs",
+              "RelativeToolTip": "BLL\\Services\\Validators.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAQwEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T04:56:38.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "LOGIN.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\LOGIN.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\LOGIN.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\LOGIN.cs",
+              "RelativeToolTip": "MAIN\\main\\LOGIN.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T04:41:58.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "LOGIN.cs [Design]",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\LOGIN.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\LOGIN.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\LOGIN.cs [Design]",
+              "RelativeToolTip": "MAIN\\main\\LOGIN.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T04:41:57.096Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "dbo.chutro [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/Anhgiangdeptrai/DB_QLPHONGTRO/True/SqlTable/dbo.chutro.sql",
+              "ToolTip": "dbo.chutro [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-10-22T04:17:07.016Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "chutroBLL.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\BLL\\BLL\\chutroBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL\\chutroBLL.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\BLL\\BLL\\chutroBLL.cs",
+              "RelativeToolTip": "BLL\\BLL\\chutroBLL.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAwwHMAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T03:11:10.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "chutroService.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\BLL\\Services\\chutroService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\chutroService.cs",
+              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\BLL\\Services\\chutroService.cs",
+              "RelativeToolTip": "BLL\\Services\\chutroService.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAlwHsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-22T03:02:02.814Z",
               "EditorCaption": ""
             }
           ]

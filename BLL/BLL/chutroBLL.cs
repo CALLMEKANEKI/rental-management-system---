@@ -21,32 +21,45 @@ namespace BLL.BLL
         //Hàm tự khởi taỌ ID
         private string GenerateNewChuTroId()
         {
-            // Cố gắng tìm ID Chủ trọ lớn nhất hiện có
-            var lastId = _dbContext.chutroes // Giả định tên DbSet là Chutros
-                                   .OrderByDescending(ct => ct.id_chutro)
-                                   .Select(ct => ct.id_chutro)
-                                   .FirstOrDefault();
-
             string prefix = "A";
-            int numberLength = 9; // 8 chữ số sau CT
-            int newNumber = 1;
+            int numberLength = 9;
+            int newNumber = 1; // Mặc định là A000000001
 
-            if (lastId != null && lastId.StartsWith(prefix) && lastId.Length == prefix.Length + numberLength)
+            // 1. Lấy tất cả ID thỏa mãn prefix và độ dài
+            var validIds = _dbContext.chutroes
+                                     // Chỉ chọn các ID đúng format "A" + 9 chữ số
+                                     .Where(ct => ct.id_chutro.StartsWith(prefix) && ct.id_chutro.Length == prefix.Length + numberLength)
+                                     .Select(ct => ct.id_chutro)
+                                     .ToList(); // Chuyển về List để xử lý trong C#
+
+            // 2. Tìm số lớn nhất
+            int maxNumber = 0;
+            foreach (var id in validIds)
             {
-                string numberPart = lastId.Substring(prefix.Length);
+                string numberPart = id.Substring(prefix.Length);
                 if (int.TryParse(numberPart, out int currentNumber))
                 {
-                    if (currentNumber < int.MaxValue)
+                    if (currentNumber > maxNumber)
                     {
-                        newNumber = currentNumber + 1;
-                    }
-                    else
-                    {
-                        throw new OverflowException("ID Chủ trọ đã đạt giới hạn tối đa.");
+                        maxNumber = currentNumber;
                     }
                 }
             }
-            // Định dạng số thành chuỗi với số 0 đệm
+
+            // 3. Tính toán ID mới
+            if (maxNumber > 0)
+            {
+                if (maxNumber < 999999999) // Giới hạn 9 chữ số
+                {
+                    newNumber = maxNumber + 1;
+                }
+                else
+                {
+                    throw new OverflowException("ID Chủ trọ đã đạt giới hạn tối đa (A999999999).");
+                }
+            }
+
+            // 4. Định dạng và trả về
             return prefix + newNumber.ToString($"D{numberLength}");
         }
         public bool ThemChutro(chutro newChutro)
@@ -108,6 +121,7 @@ namespace BLL.BLL
                 }
 
                 // Cập nhật các thuộc tính
+                existingChutro.hoten = updatedChutro.hoten;
                 existingChutro.sdt = updatedChutro.sdt;
                 existingChutro.email = updatedChutro.email;
                 existingChutro.diachi = updatedChutro.diachi;

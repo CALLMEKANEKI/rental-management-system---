@@ -28,13 +28,6 @@ namespace BLL.Services
                 return false;
             }
 
-            // 1. Kiểm tra ID (Giả sử ID không rỗng và có định dạng hợp lệ)
-            if (string.IsNullOrEmpty(chuTro.id_chutro) || chuTro.id_chutro.Length > 10)
-            {
-                errorMessage = "ID Chủ trọ không hợp lệ (Không được rỗng và tối đa 10 ký tự).";
-                return false;
-            }
-
             // 2. Kiểm tra Họ tên
             if (string.IsNullOrEmpty(chuTro.hoten) || chuTro.hoten.Length > 50)
             {
@@ -70,12 +63,6 @@ namespace BLL.Services
                 return false;
             }
             //6.1 Kiểm tra xem tài khoản có tồn tại hay chưa
-            chutro result = ChuTroBLL.LayChutroTheoUserName(chuTro.taikhoan);
-            if (result != null)
-            {
-                errorMessage = "Tên tài khoản đã tồn tại";
-                return false;
-            }    
 
             // 7. Kiểm tra tài khoản (Chỉ kiểm tra khi tạo mới hoặc thay đổi)
             if (!string.IsNullOrEmpty(chuTro.matkhau) && chuTro.matkhau.Length > 20)
@@ -93,13 +80,6 @@ namespace BLL.Services
             if (phongTro == null)
             {
                 errorMessage = "Dữ liệu Phòng trọ không được null.";
-                return false;
-            }
-
-            // 1. Kiểm tra ID Phòng
-            if (string.IsNullOrEmpty(phongTro.id_phong))
-            {
-                errorMessage = "ID Phòng không được rỗng.";
                 return false;
             }
 
@@ -134,13 +114,6 @@ namespace BLL.Services
             if (nguoiThue == null)
             {
                 errorMessage = "Dữ liệu Người thuê không được null.";
-                return false;
-            }
-
-            // 1. Kiểm tra ID Người thuê
-            if (string.IsNullOrEmpty(nguoiThue.id_nguoi_thue))
-            {
-                errorMessage = "ID Người thuê không được rỗng.";
                 return false;
             }
 
@@ -221,13 +194,6 @@ namespace BLL.Services
             if (hopDong == null)
             {
                 errorMessage = "Dữ liệu Hợp đồng không được null.";
-                return false;
-            }
-
-            // 1. Kiểm tra ID Hợp đồng
-            if (string.IsNullOrEmpty(hopDong.id_hopdong))
-            {
-                errorMessage = "ID Hợp đồng không được rỗng.";
                 return false;
             }
 

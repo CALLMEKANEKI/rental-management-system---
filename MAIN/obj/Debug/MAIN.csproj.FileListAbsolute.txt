@@ -1,0 +1,257 @@
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.AssemblyReference.cache
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.DANGNHAP.resources
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.Phong.resources
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLCHUTRO.resources
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLHOADON.resources
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLHOPDONG.resources
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLKHACH.resources
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLPHONG.resources
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLTHUE.resources
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLTRA.resources
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMHOADON.resources
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMHOPDONG.resources
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMKHACHTHUE.resources
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMPHONG.resources
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.Properties.Resources.resources
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.GenerateResource.cache
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.CoreCompileInputs.cache
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\MAIN.exe.config
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\MAIN.exe
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\MAIN.pdb
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.exe
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.pdb
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.exe.config
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\BLL.dll
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\DAL.dll
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\EntityFramework.dll
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\BLL.pdb
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\BLL.dll.config
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\DAL.pdb
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\DAL.dll.config
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\EntityFramework.xml
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.Up2Date
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\MAIN.exe.config
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\MAIN.exe
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\MAIN.pdb
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\BLL.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\DAL.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\EntityFramework.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\BLL.pdb
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\BLL.dll.config
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\DAL.pdb
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\DAL.dll.config
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\EntityFramework.xml
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.AssemblyReference.cache
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.DANGNHAP.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.Phong.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLCHUTRO.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLHOADON.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLHOPDONG.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLKHACH.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLPHONG.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLTHUE.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLTRA.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMHOADON.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMHOPDONG.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMKHACHTHUE.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMPHONG.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.Properties.Resources.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.GenerateResource.cache
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.CoreCompileInputs.cache
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.Up2Date
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.exe
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.pdb
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.exe.config
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\MAIN.exe.config
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\MAIN.exe
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\MAIN.pdb
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\BLL.dll
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\DAL.dll
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\EntityFramework.dll
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\EntityFramework.SqlServer.dll
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\BLL.pdb
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\BLL.dll.config
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\DAL.pdb
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\DAL.dll.config
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\EntityFramework.xml
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\bin\Debug\EntityFramework.SqlServer.xml
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.AssemblyReference.cache
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.exe.config
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.DANGNHAP.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.Phong.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLCHUTRO.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLHOADON.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLHOPDONG.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLKHACH.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLPHONG.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLTHUE.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLTRA.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMHOADON.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMHOPDONG.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMKHACHTHUE.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMPHONG.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.Properties.Resources.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.GenerateResource.cache
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.CoreCompileInputs.cache
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.Up2Date
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.exe
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.pdb
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmHopDong.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmNguoiThue.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmPhongTro.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmQuanLy.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmThuePhong.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTimHoaDon.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTimHopDong.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTimKhachThue.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTimPhong.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTraPhong.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmChuTro.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmDien.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmHoaDon.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmLePhi.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmNuoc.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmThanhToan.resources
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\MAIN\obj\Debug\MAIN.main.LOGIN.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\bin\Debug\MAIN.exe.config
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\bin\Debug\MAIN.exe
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\bin\Debug\MAIN.pdb
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\bin\Debug\BLL.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\bin\Debug\DAL.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\bin\Debug\EntityFramework.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\bin\Debug\BLL.pdb
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\bin\Debug\BLL.dll.config
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\bin\Debug\DAL.pdb
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\bin\Debug\DAL.dll.config
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\bin\Debug\EntityFramework.xml
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.AssemblyReference.cache
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.exe.config
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.DANGNHAP.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.Phong.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLCHUTRO.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLHOADON.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLHOPDONG.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLKHACH.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLPHONG.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLTHUE.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLTRA.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMHOADON.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMHOPDONG.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMKHACHTHUE.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMPHONG.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.LOGIN.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmChuTro.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmDien.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmHoaDon.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmHopDong.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmLePhi.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmNguoiThue.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmNuoc.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmPhongTro.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmQuanLy.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmThanhToan.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmThuePhong.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTimHoaDon.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTimHopDong.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTimKhachThue.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTimPhong.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTraPhong.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.Properties.Resources.resources
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.GenerateResource.cache
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.CoreCompileInputs.cache
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.Up2Date
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.exe
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\MAIN\obj\Debug\MAIN.pdb
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\bin\Debug\MAIN.exe.config
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\bin\Debug\MAIN.exe
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\bin\Debug\MAIN.pdb
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\bin\Debug\BLL.dll
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\bin\Debug\DAL.dll
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\bin\Debug\EntityFramework.dll
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\bin\Debug\BLL.pdb
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\bin\Debug\BLL.dll.config
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\bin\Debug\DAL.pdb
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\bin\Debug\DAL.dll.config
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\bin\Debug\EntityFramework.xml
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.AssemblyReference.cache
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.exe.config
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.DANGNHAP.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.Phong.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLCHUTRO.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLHOADON.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLHOPDONG.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLKHACH.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLPHONG.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLTHUE.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.QLTRA.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMHOADON.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMHOPDONG.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMKHACHTHUE.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\qlpt.GUI.TIMPHONG.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.LOGIN.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmChuTro.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmDien.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmHoaDon.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmHopDong.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmLePhi.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmNguoiThue.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmNuoc.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmPhongTro.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmQuanLy.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmThanhToan.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmThuePhong.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTimHoaDon.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTimHopDong.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTimKhachThue.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTimPhong.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.main.frmTraPhong.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.Properties.Resources.resources
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.GenerateResource.cache
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.CoreCompileInputs.cache
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.csproj.Up2Date
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.exe
+C:\GitHub Project\nhattien-\rental-management-system----main\MAIN\obj\Debug\MAIN.pdb
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.csproj.AssemblyReference.cache
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.exe.config
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.LOGIN.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmChuTro.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmDien.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmHoaDon.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmHopDong.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmLePhi.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmNguoiThue.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmNuoc.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmPhongTro.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmQuanLy.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmThanhToan.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmThuePhong.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmTimHoaDon.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmTimHopDong.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmTimKhachThue.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmTimPhong.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.main.frmTraPhong.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.Properties.Resources.resources
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.csproj.GenerateResource.cache
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.csproj.CoreCompileInputs.cache
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.exe
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.pdb
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\MAIN.exe.config
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\MAIN.exe
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\MAIN.pdb
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\BLL.dll
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\DAL.dll
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\EntityFramework.dll
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\BLL.pdb
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\BLL.dll.config
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\DAL.pdb
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\DAL.dll.config
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\EntityFramework.xml
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.csproj.Up2Date

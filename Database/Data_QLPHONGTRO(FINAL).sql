@@ -13,8 +13,9 @@ CREATE TABLE lephi (
 -- Tạo bảng chutro (Chủ trọ)
 CREATE TABLE chutro (
     id_chutro VARCHAR(50) PRIMARY KEY,
-    sdt VARCHAR(15) UNIQUE,
-    email VARCHAR(100) UNIQUE,
+	hoten NVARCHAR(50),
+    sdt VARCHAR(15),
+    email VARCHAR(100) ,
     diachi VARCHAR(255),
     taikhoan VARCHAR(100),
     matkhau VARCHAR(255) NOT NULL,
