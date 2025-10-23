@@ -261,18 +261,9 @@ namespace MAIN.main
             }
         }
 
-        /*
+        private void frmChuTro_Load(object sender, EventArgs e)
+        {
 
-// Nút xóa
-private void btnXoa_Click(object sender, EventArgs e)
-{
-   if (dgvChuTro.CurrentRow != null)
-   {
-       int index = dgvChuTro.CurrentRow.Index;
-       dtChuTro.Rows.RemoveAt(index);
-       LamMoi();
-   }
-}
-*/
+        }
     }
 }

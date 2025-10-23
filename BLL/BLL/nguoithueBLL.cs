@@ -46,10 +46,13 @@ namespace BLL.BLL
             }
             return prefix + newNumber.ToString($"D{numberLength}");
         }
+        
         public bool ThemNguoiThue(nguoi_thue newNguoiThue, string id_chutro)
         {
             // 1. Kiểm tra dữ liệu đầu vào cơ bản (Bỏ kiểm tra id_nguoithue)
-            if (newNguoiThue == null || string.IsNullOrEmpty(newNguoiThue.id_phong)) return false;
+            if (newNguoiThue == null || string.IsNullOrEmpty(newNguoiThue.id_phong))
+                throw new Exception("Phòng trọ không hợp lệ hoặc chưa được chọn.");
+
 
             // LỖI LOGIC ĐÃ SỬA: Kiểm tra id_phong trong Người thuê có thuộc id_chutro không
             var phongTro = _dbContext.phongtroes // Giả định tên DbSet là Phongtros
@@ -79,6 +82,9 @@ namespace BLL.BLL
                 return false;
             }
         }
+        
+
+      
 
         // R - READ (ALL): Lấy tất cả Người Thuê
         public List<nguoi_thue> LayTatCaNguoiThue(string id_chutro)

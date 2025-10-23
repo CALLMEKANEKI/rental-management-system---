@@ -255,3 +255,35 @@ C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\DAL.dl
 C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\EntityFramework.xml
 C:\GitHub Project\rental-management-system--Version test 1\MAIN\bin\Debug\EntityFramework.SqlServer.xml
 C:\GitHub Project\rental-management-system--Version test 1\MAIN\obj\Debug\MAIN.csproj.Up2Date
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\bin\Debug\MAIN.exe.config
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\bin\Debug\MAIN.exe
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\bin\Debug\MAIN.pdb
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\bin\Debug\BLL.dll
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\bin\Debug\DAL.dll
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\bin\Debug\EntityFramework.dll
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\bin\Debug\EntityFramework.SqlServer.dll
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\bin\Debug\BLL.pdb
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\bin\Debug\BLL.dll.config
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\bin\Debug\DAL.pdb
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\bin\Debug\DAL.dll.config
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\bin\Debug\EntityFramework.xml
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\bin\Debug\EntityFramework.SqlServer.xml
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.csproj.AssemblyReference.cache
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.exe.config
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.main.LOGIN.resources
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.main.frmChuTro.resources
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.main.frmDien.resources
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.main.frmHoaDon.resources
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.main.frmHopDong.resources
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.main.frmLePhi.resources
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.main.frmNguoiThue.resources
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.main.frmNuoc.resources
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.main.frmPhongTro.resources
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.main.frmQuanLy.resources
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.main.frmThanhToan.resources
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.Properties.Resources.resources
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.csproj.GenerateResource.cache
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.csproj.CoreCompileInputs.cache
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.csproj.Up2Date
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.exe
+D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.pdb

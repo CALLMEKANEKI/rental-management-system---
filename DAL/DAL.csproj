@@ -69,6 +69,7 @@
     <Compile Include="ViewModel\hopdongViewModel.cs" />
     <Compile Include="ViewModel\nguoithueViewModel.cs" />
     <Compile Include="ViewModel\phongtroViewModel.cs" />
+    <Compile Include="YourDbContext.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

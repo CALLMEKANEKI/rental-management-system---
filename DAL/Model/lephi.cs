@@ -19,10 +19,11 @@ namespace DAL.Model
         [StringLength(10)]
         public string id_lephi { get; set; }
 
-        [Required]
-        [StringLength(100)]
+        [Column(TypeName = "date")]
+        public DateTime ngay_tao { get; set; }
 
         public decimal tien_dv { get; set; }
+        public decimal tien_phong { get; set; }
 
         public decimal thanh_tien_lephi { get; set; }
 

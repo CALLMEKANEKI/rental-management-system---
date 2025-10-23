@@ -4,6 +4,7 @@ using DAL.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 
@@ -12,12 +13,16 @@ namespace MAIN.main
     public partial class frmNguoiThue : Form
     {
         private nguoithueService _nguoithueSerVice = new nguoithueService();
+        private phongtroService _phongtroService = new phongtroService();
         private string id_chutrohientai;
+
+     
 
         public frmNguoiThue()
         {
             InitializeComponent();
             this.id_chutrohientai = main.LOGIN.id_chutrohientai;
+            LoadComboBoxPhong();
             LoadDGVNguoiThue();
         }
 
@@ -35,6 +40,7 @@ namespace MAIN.main
             }
 
         }
+
 
         private void EditDGVNguoiThue()
         {
@@ -56,7 +62,7 @@ namespace MAIN.main
             dgvNguoiThue.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
 
-        private void DGVNguoiThue_CellCLick (object sender, DataGridViewCellEventArgs e)
+        private void DGVNguoiThue_CellCLick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex < 0)
                 return;
@@ -65,10 +71,9 @@ namespace MAIN.main
             {
                 DataGridViewRow row = dgvNguoiThue.Rows[e.RowIndex];
 
-                
-                string selectedID = row.Cells["IDNguoiThue"].Value?.ToString();
-                string selectedIDPhong = row.Cells["IDPhong"].Value?.ToString();
-                txtID.Text = selectedID;
+
+               
+                txtID.Text = row.Cells["IDNguoiThue"].Value?.ToString();
                 txtHoTen.Text = row.Cells["HoTenNguoiThue"].Value?.ToString();
                 txtSDT.Text = row.Cells["SoDienThoai"].Value?.ToString();
                 txtCCCD.Text = row.Cells["CCCD"].Value?.ToString();
@@ -83,118 +88,180 @@ namespace MAIN.main
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
+            clearNguoiThue();
             LoadDGVNguoiThue();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            Button btn = (Button)sender;
+            if (btn.Text == "Thêm")
+            {
+                clearNguoiThue();
+                isNguoiThueEditing(true);
+                MessageBox.Show("Vui lòng nhập thông tin người thuê mới. \nNhấn vào nút Lưu để lưu thông tin ");
+                btn.Text = "Lưu";
+            }
+            else if (btn.Text == "Lưu")
+            {
+                // Lưu thông tin người thuê mới
+                nguoi_thue newNguoiThue = new nguoi_thue
+                {
+                    id_nguoi_thue = txtID.Text,
+                    hoten = txtHoTen.Text,
+                    cccd = txtCCCD.Text,
+                    sdt = txtSDT.Text,
+                    email = txtEmail.Text,
+                    id_phong = cboPhong.SelectedValue?.ToString()
+
+                };
+                string mess = _nguoithueSerVice.ThemNguoiThue(newNguoiThue, id_chutrohientai);
+                if (mess == "Thêm người thuê thành công.")
+                {
+                    clearNguoiThue();
+                    isNguoiThueEditing(false);
+                    btn.Text = "Thêm";
+                    LoadDGVNguoiThue();
+                    LoadComboBoxPhong();    
+
+
+                }
+                MessageBox.Show(mess);
+
+
+            }
+        }
+        private void isNguoiThueEditing(bool mode)
+        {
+            txtID.ReadOnly = !mode;
+            txtHoTen.ReadOnly = !mode;
+            txtCCCD.ReadOnly = !mode;
+            txtSDT.ReadOnly = !mode;
+            txtEmail.ReadOnly = !mode;
+
+        }
+        private void clearNguoiThue()
+        {
+            txtID.Text = "";
+            txtHoTen.Text = "";
+            txtCCCD.Text = "";
+            txtSDT.Text = "";
+            txtEmail.Text = "";
+
+        }
+        private void frmNguoiThue_Load(object sender, EventArgs e)
+        {
+            LoadComboBoxPhong();
+            LoadDGVNguoiThue();
+        }
+
+        private void LoadComboBoxPhong()
+        {
+            try
+            {
+                var listPhong = _phongtroService.LayTatCaPhongTroViewModel(id_chutrohientai);
+
+                if (listPhong != null && listPhong.Any())
+                {
+                    cboPhong.DataSource = listPhong;
+                    cboPhong.DisplayMember = "tenphong"; // đúng tên trong ViewModel
+                    cboPhong.ValueMember = "id_phong";   // đúng tên trong ViewModel
+                    cboPhong.SelectedIndex = -1;
+                }
+                else
+                {
+                    cboPhong.DataSource = null;
+                    MessageBox.Show("Không có phòng nào để hiển thị.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi load danh sách phòng: " + ex.Message);
+            }
+        }
+
+
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show(
+               "LƯU Ý: HÀNH ĐỘNG SAU ĐÂY KHÔNG THỂ HOÀN TÁC!!!\n BẠN CHẮC CHẮN MUỐN XÓA?",
+               "Xác nhận",
+               MessageBoxButtons.YesNo,
+               MessageBoxIcon.Question
+           );
+            if (result == DialogResult.Yes)
+            {
+                if (string.IsNullOrEmpty(txtID.Text))
+                {
+                    MessageBox.Show("Vui lòng chọn người thuê để xóa.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                string idNguoiThueToDelete = txtID.Text;
+                string mess = _nguoithueSerVice.Xoa(idNguoiThueToDelete, id_chutrohientai);
+                if (mess == "Xóa người thuê thành công.")
+                {
+                    clearNguoiThue();
+                    LoadDGVNguoiThue();
+                }
+                else
+                {
+                    MessageBox.Show(mess, "Lỗi xóa", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            if (btn.Text == "Sửa")
+            {
+                if (string.IsNullOrEmpty(txtID.Text))
+                {
+                    MessageBox.Show("Vui lòng chọn người thuê để sửa thông tin.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+
+
+                MessageBox.Show("Bây giờ bạn đã có thể chỉnh sửa !!! \nNhấn vào nút Lưu để lưu thông tin ");
+                isNguoiThueEditing(true);
+                ((Button)sender).Text = "Lưu";
+            }
+
+            else if (btn.Text == "Lưu")
+            {
+                // Lưu thông tin người thuê đã chỉnh sửa
+                nguoi_thue updatedNguoiThue = new nguoi_thue
+                {
+                    id_nguoi_thue = txtID.Text,
+                    hoten = txtHoTen.Text,
+                    cccd = txtCCCD.Text,
+                    sdt = txtSDT.Text,
+                    email = txtEmail.Text,
+                };
+                string mess = _nguoithueSerVice.CapNhat(updatedNguoiThue, id_chutrohientai);
+                if (mess == "Cập nhật người thuê thành công.")
+                {
+                    clearNguoiThue();
+                    isNguoiThueEditing(false);
+                    btn.Text = "Sửa";
+                    LoadDGVNguoiThue();
+                }
+                MessageBox.Show(mess);
+
+            }
+        }
+
+        private void btnTimNT_Click(object sender, EventArgs e)
+        {
 
         }
 
-        /*
-                // Khi form mở ra
-                private void frmNguoiThue_Load(object sender, EventArgs e)
-                {
-                    // 🔹 Khởi tạo bảng người thuê
-                    dtNguoiThue = new DataTable();
-                    dtNguoiThue.Columns.Add("ID");
-                    dtNguoiThue.Columns.Add("HoTen");
-                    dtNguoiThue.Columns.Add("CCCD");
-                    dtNguoiThue.Columns.Add("SDT");
-                    dtNguoiThue.Columns.Add("Email");
-                    dtNguoiThue.Columns.Add("MaPhong");
-                    dgvNguoiThue.DataSource = dtNguoiThue;
+        private void cboPhong_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-                    // 🔹 Khởi tạo bảng phòng (trống)
-                    dtPhong = new DataTable();
-                    dtPhong.Columns.Add("MaPhong");
-                    dtPhong.Columns.Add("TenPhong");
-
-                    // Combobox phòng (rỗng, cho phép tự nhập nếu muốn)
-                    cboPhong.DataSource = null;
-                    cboPhong.Items.Clear();
-                }
-
-                // 🔹 Thêm người thuê
-                private void btnThem_Click(object sender, EventArgs e)
-                {
-                    if (string.IsNullOrWhiteSpace(txtHoTen.Text) || string.IsNullOrWhiteSpace(cboPhong.Text))
-                    {
-                        MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
-                        return;
-                    }
-
-                    DataRow newRow = dtNguoiThue.NewRow();
-                    newRow["ID"] = string.IsNullOrWhiteSpace(txtID.Text) ? (dtNguoiThue.Rows.Count + 1).ToString() : txtID.Text;
-                    newRow["HoTen"] = txtHoTen.Text;
-                    newRow["CCCD"] = txtCCCD.Text;
-                    newRow["SDT"] = txtSDT.Text;
-                    newRow["Email"] = txtEmail.Text;
-                    newRow["MaPhong"] = cboPhong.Text;
-                    dtNguoiThue.Rows.Add(newRow);
-
-                    MessageBox.Show("Thêm người thuê thành công!");
-                }
-
-                // 🔹 Sửa người thuê
-                private void btnSua_Click(object sender, EventArgs e)
-                {
-                    if (dgvNguoiThue.CurrentRow == null)
-                    {
-                        MessageBox.Show("Chọn dòng cần sửa!");
-                        return;
-                    }
-
-                    dgvNguoiThue.CurrentRow.Cells["HoTen"].Value = txtHoTen.Text;
-                    dgvNguoiThue.CurrentRow.Cells["CCCD"].Value = txtCCCD.Text;
-                    dgvNguoiThue.CurrentRow.Cells["SDT"].Value = txtSDT.Text;
-                    dgvNguoiThue.CurrentRow.Cells["Email"].Value = txtEmail.Text;
-                    dgvNguoiThue.CurrentRow.Cells["MaPhong"].Value = cboPhong.Text;
-
-                    MessageBox.Show("Cập nhật thành công!");
-                }
-
-                // 🔹 Xóa người thuê
-                private void btnXoa_Click(object sender, EventArgs e)
-                {
-                    if (dgvNguoiThue.CurrentRow == null)
-                    {
-                        MessageBox.Show("Chọn dòng cần xóa!");
-                        return;
-                    }
-
-                    if (MessageBox.Show("Bạn có chắc muốn xóa?", "Xác nhận", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                    {
-                        dgvNguoiThue.Rows.RemoveAt(dgvNguoiThue.CurrentRow.Index);
-                        MessageBox.Show("Xóa thành công!");
-                    }
-                }
-
-                // 🔹 Làm mới form
-                private void btnLamMoi_Click(object sender, EventArgs e)
-                {
-                    txtID.Clear();
-                    txtHoTen.Clear();
-                    txtCCCD.Clear();
-                    txtSDT.Clear();
-                    txtEmail.Clear();
-                    cboPhong.SelectedIndex = -1;
-                }
-
-                // 🔹 Khi click vào dòng → hiển thị thông tin
-                private void dgvNguoiThue_CellClick(object sender, DataGridViewCellEventArgs e)
-                {
-                    if (e.RowIndex >= 0)
-                    {
-                        DataGridViewRow row = dgvNguoiThue.Rows[e.RowIndex];
-                        txtID.Text = row.Cells["ID"].Value?.ToString();
-                        txtHoTen.Text = row.Cells["HoTen"].Value?.ToString();
-                        txtCCCD.Text = row.Cells["CCCD"].Value?.ToString();
-                        txtSDT.Text = row.Cells["SDT"].Value?.ToString();
-                        txtEmail.Text = row.Cells["Email"].Value?.ToString();
-                        cboPhong.Text = row.Cells["MaPhong"].Value?.ToString();
-                    }
-                }
-        */
+        }
     }
 }

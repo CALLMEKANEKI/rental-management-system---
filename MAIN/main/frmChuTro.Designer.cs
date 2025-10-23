@@ -348,6 +348,7 @@
             this.Controls.Add(this.btnLamMoi);
             this.Name = "frmChuTro";
             this.Text = "Quản lý Chủ trọ";
+            this.Load += new System.EventHandler(this.frmChuTro_Load);
             this.grbPic.ResumeLayout(false);
             this.grbPic.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picAvatar)).EndInit();

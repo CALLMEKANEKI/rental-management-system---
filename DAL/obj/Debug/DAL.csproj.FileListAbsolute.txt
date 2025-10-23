@@ -10,3 +10,15 @@ C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management
 C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\obj\Debug\DAL.csproj.Up2Date
 C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\obj\Debug\DAL.dll
 C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\DAL\obj\Debug\DAL.pdb
+D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\bin\Debug\DAL.dll.config
+D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\bin\Debug\DAL.dll
+D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\bin\Debug\DAL.pdb
+D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\bin\Debug\EntityFramework.dll
+D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\bin\Debug\EntityFramework.xml
+D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\obj\Debug\DAL.dll
+D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\obj\Debug\DAL.pdb

@@ -46,45 +46,28 @@ namespace MAIN.main
             frm.ShowDialog();
         }
 
-        // ======================= MENU "CHỨC NĂNG" =========================
-
         private void thuêToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmThuePhong frm = new frmThuePhong();
+            frmDien frm = new frmDien();
             frm.ShowDialog();
         }
 
         private void trảToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmTraPhong frm = new frmTraPhong();
+            frmNuoc frm = new frmNuoc();
             frm.ShowDialog();
         }
 
-        // ======================= MENU "TÌM" =========================
-
-        private void tìmPhòngThuêToolStripMenuItem_Click(object sender, EventArgs e)
+        private void tiềnDịchVụToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmTimPhong frm = new frmTimPhong();
+            frmLePhi frm = new frmLePhi();
             frm.ShowDialog();
         }
 
-        private void tìmKháchThuêToolStripMenuItem_Click(object sender, EventArgs e)
+        private void thanhToánToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmTimKhachThue frm = new frmTimKhachThue();
+            frmThanhToan frm = new frmThanhToan();
             frm.ShowDialog();
         }
-
-        private void tìmHợpĐồngToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmTimHopDong frm = new frmTimHopDong();
-            frm.ShowDialog();
-        }
-
-        private void tìmHóaĐơnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmTimHoaDon frm = new frmTimHoaDon();
-            frm.ShowDialog();
-        }
-
     }
 }

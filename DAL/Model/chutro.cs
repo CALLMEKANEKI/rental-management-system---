@@ -48,6 +48,8 @@ namespace DAL.Model
         [StringLength(255)]
         public string anh_cccd_sau_url { get; set; }
 
+        
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<hopdong> hopdongs { get; set; }
 

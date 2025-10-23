@@ -117,6 +117,8 @@ namespace BLL.Services
                 return false;
             }
 
+        
+
             // 2. Kiểm tra Họ tên
             if (string.IsNullOrEmpty(nguoiThue.hoten) || nguoiThue.hoten.Length > 100)
             {
@@ -132,7 +134,8 @@ namespace BLL.Services
             }
 
             // 4.Kiểm tra sdt 
-            if (string.IsNullOrEmpty(nguoiThue.cccd) || !Regex.IsMatch(nguoiThue.cccd, @"^\d{10,11}$"))
+            if (string.IsNullOrEmpty(nguoiThue.sdt) || !Regex.IsMatch(nguoiThue.sdt, @"^\d{10}$"))
+
             {
                 errorMessage = "Số điện thoại không hợp lệ (Phải là 10 chữ số).";
                 return false;

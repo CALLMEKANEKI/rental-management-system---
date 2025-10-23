@@ -1,4 +1,5 @@
 ﻿using DAL.Model;
+using DAL.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -72,6 +73,22 @@ namespace BLL.BLL
             }
         }
 
+
+        public List<phongtroViewModel> LayTatCaPhongTroViewModel(string id_chutro)
+        {
+            return _dbContext.phongtroes
+                             .Where(p => p.id_chutro == id_chutro) // Lọc theo id_chutro
+                             .Select(p => new phongtroViewModel
+                             {
+                                 id_phong = p.id_phong,
+                                 tenphong = p.tenphong,
+                                 giaphong = p.giaphong,
+                                 tinhtrang = p.tinhtrang,
+                                 id_chutro = p.id_chutro
+                             })
+                             .ToList();
+        }
+
         // R - READ (ALL): Lấy tất cả Phòng Trọ
         public List<phongtro> LayTatCaPhongTro(string id_chutro)
         {
@@ -134,11 +151,38 @@ namespace BLL.BLL
                 return false;
             }
         }
+        public bool TraPhong(string id_phong, string id_chutro)
+        {
+            try
+            {
+                var phong = _dbContext.phongtroes
+                                      .FirstOrDefault(p => p.id_phong == id_phong && p.id_chutro == id_chutro);
+                if (phong == null)
+                    return false;
+
+                phong.tinhtrang = "Trống";
+                _dbContext.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Không thể trả phòng. Lỗi: " + ex.Message);
+                return false;
+            }
+        }
+
+
 
         // Nghiệp vụ đặc thù: Tìm Phòng Trống
-        public List<phongtro> TimPhongTrong()
+        // Thêm tham số id_chutro vào BLL
+        public List<phongtro> TimPhongTrong(string id_chutro)
         {
-            return _dbContext.phongtroes.Where(p => p.tinhtrang == "Trống").ToList();
+            return _dbContext.phongtroes
+                .Where(p => p.tinhtrang.ToLower().Contains("trong") && p.id_chutro == id_chutro)
+                .ToList();
         }
+
+
+
     }
 }

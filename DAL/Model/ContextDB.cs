@@ -206,9 +206,14 @@ namespace DAL.Model
                 .Property(e => e.id_nguoi_thue)
                 .IsUnicode(false);
 
+
+
             modelBuilder.Entity<thanh_toan>()
                 .Property(e => e.id_hoadon)
                 .IsUnicode(false);
+            
+
         }
     }
-}
+       
+    }

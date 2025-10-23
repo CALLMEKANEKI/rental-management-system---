@@ -1,5 +1,6 @@
 ﻿using BLL.BLL;
 using DAL.Model;
+using DAL.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,26 +14,16 @@ namespace BLL.Services
         phongtroBLL PhongTroBLL = new phongtroBLL();
         nguoithueBLL nguoithueBLL = new nguoithueBLL();
 
+        // === THÊM PHÒNG TRỌ ===
         public string ThemPhongTro(phongtro objPhongTro, string id_chutro)
         {
-            string mess = ""; // Khởi tạo biến để Validator gán lỗi vào
-
+            string mess = "";
             if (Validators.ValidatePhongTro(objPhongTro, out mess))
             {
-                // 2. Nếu HỢP LỆ (Validate trả về true)
                 try
                 {
-                    // Thực hiện tạo phòng trọ trong DB (gọi BLL)
                     bool isSuccess = PhongTroBLL.ThemPhongTro(objPhongTro, id_chutro);
-
-                    if (isSuccess)
-                    {
-                        return "Thêm phòng thành công.";
-                    }
-                    else
-                    {
-                        return "Lỗi: Không thể thêm vào cơ sở dữ liệu. (Có thể do ID đã tồn tại)";
-                    }
+                    return isSuccess ? "Thêm phòng thành công." : "Lỗi: Không thể thêm vào cơ sở dữ liệu.";
                 }
                 catch (Exception ex)
                 {
@@ -45,26 +36,16 @@ namespace BLL.Services
             }
         }
 
+        // === CẬP NHẬT PHÒNG TRỌ ===
         public string CapNhat(phongtro objPhongTro, string id_chutro)
         {
-            string mess = ""; // Khởi tạo biến để Validator gán lỗi vào
-
+            string mess = "";
             if (Validators.ValidatePhongTro(objPhongTro, out mess))
             {
-                // 2. Nếu HỢP LỆ (Validate trả về true)
                 try
                 {
-                    // Thực hiện cập nhật trong DB (gọi BLL)
                     bool isSuccess = PhongTroBLL.CapNhatPhongTro(objPhongTro, id_chutro);
-
-                    if (isSuccess)
-                    {
-                        return "Cập nhật phòng thành công.";
-                    }
-                    else
-                    {
-                        return "Lỗi: Không thể cập nhật vào cơ sở dữ liệu.";
-                    }
+                    return isSuccess ? "Cập nhật phòng thành công." : "Lỗi: Không thể cập nhật vào cơ sở dữ liệu.";
                 }
                 catch (Exception ex)
                 {
@@ -77,36 +58,106 @@ namespace BLL.Services
             }
         }
 
-        public string Xoa(string id_Phongtro,string id_chutro)
-        {
-            //Kiểm tra xem có ai đang thuê phòng hay không
-            var result = (nguoithueBLL.LayTatCaNguoiThue(id_chutro)).
-                                Where(nt => nt.id_phong == id_Phongtro).
-                                ToList();
-            if (result != null && result.Count > 0)
-            {
-                return "Không thể xóa phòng do đang có người thuê phòng";
 
-            }    //Nếu có, phòng đang có người thuê -> không được phép xóa
-            else
+
+
+        // === LẤY DỮ LIỆU ===
+        public phongtro LayPhongTroById(string id_phongtro, string id_chutro)
+        {
+            return PhongTroBLL.LayPhongTroTheoId(id_phongtro, id_chutro);
+        }
+
+        public List<phongtro> LayTatCaPhongTro(string id_chutro)
+        {
+            return PhongTroBLL.LayTatCaPhongTro(id_chutro);
+        }
+
+        public List<phongtroViewModel> LayTatCaPhongTroViewModel(string id_chutro)
+        {
+            return PhongTroBLL.LayTatCaPhongTroViewModel(id_chutro);
+        }
+
+        public List<phongtroViewModel> TimKiemPhongTro(string keyword, string tinhTrang, string id_chutro)
+        {
+            try
             {
-                try
+                var list = PhongTroBLL.LayTatCaPhongTroViewModel(id_chutro);
+
+                // Lọc theo từ khóa
+                if (!string.IsNullOrEmpty(keyword))
                 {
-                    // Thực hiện xóa phòng trong DB (gọi BLL)
-                    bool isSuccess = PhongTroBLL.XoaPhongTro(id_Phongtro, id_chutro);
-                    if (isSuccess)
-                    {
-                        return "Xóa phòng thành công.";
-                    }
-                    else
-                    {
-                        return "Lỗi: Không thể xóa vào cơ sở dữ liệu.";
-                    }
+                    list = list.Where(p =>
+                        p.tenphong.ToLower().Contains(keyword.ToLower()) ||
+                        p.id_phong.ToLower().Contains(keyword.ToLower())
+                    ).ToList();
                 }
-                catch (Exception ex)
+
+                // Lọc theo tình trạng (nếu có chọn)
+                if (!string.IsNullOrEmpty(tinhTrang) && tinhTrang != "Tất cả")
                 {
-                    return "Lỗi hệ thống khi xóa dữ liệu: " + ex.Message;
+                    list = list.Where(p => p.tinhtrang == tinhTrang).ToList();
                 }
+
+                return list;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi tìm kiếm: " + ex.Message);
+                return new List<phongtroViewModel>();
+            }
+        }
+
+
+
+        // === XÓA PHÒNG ===
+        public string Xoa(string id_Phongtro, string id_chutro)
+        {
+            var result = nguoithueBLL.LayTatCaNguoiThue(id_chutro)
+                                     .Where(nt => nt.id_phong == id_Phongtro)
+                                     .ToList();
+
+            if (result != null && result.Count > 0)
+                return "Không thể xóa phòng do đang có người thuê.";
+
+            try
+            {
+                bool isSuccess = PhongTroBLL.XoaPhongTro(id_Phongtro, id_chutro);
+                return isSuccess ? "Xóa phòng thành công." : "Lỗi: Không thể xóa phòng.";
+            }
+            catch (Exception ex)
+            {
+                return "Lỗi hệ thống khi xóa dữ liệu: " + ex.Message;
+            }
+        }
+
+        // === TÌM PHÒNG TRỐNG ===
+
+
+
+        public List<phongtro> TimPhongTrong(string id_chutro)
+        {
+            try
+            {
+                // Chỉ gọi BLL với id_chutro
+                return PhongTroBLL.TimPhongTrong(id_chutro);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi lấy danh sách phòng trống: " + ex.Message);
+            }
+        }
+        public string TraPhong(phongtro objPhongTro, string id_chutro)
+        {
+            string mess = "";
+          
+            try
+            {
+                bool isSuccess = PhongTroBLL.TraPhong(objPhongTro.id_phong, id_chutro);
+                return isSuccess ? "Trả phòng thành công." : "Lỗi: Phòng không tồn tại hoặc không thuộc quyền quản lý.";
+            }
+            catch (Exception ex)
+            {
+                return "Lỗi hệ thống khi trả phòng: " + ex.Message;
             }
         }
     }

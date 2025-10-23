@@ -29,7 +29,7 @@ namespace DAL.Model
         [StringLength(12)]
         public string cccd { get; set; }
 
-        [StringLength(11)]
+        [StringLength(10)]
         public string sdt { get; set; }
 
         [StringLength(100)]

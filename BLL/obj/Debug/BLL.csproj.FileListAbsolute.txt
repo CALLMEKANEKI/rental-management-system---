@@ -28,3 +28,18 @@ C:\GitHub Project\rental-management-system--Version test 1\BLL\obj\Debug\BLL.csp
 C:\GitHub Project\rental-management-system--Version test 1\BLL\obj\Debug\BLL.csproj.Up2Date
 C:\GitHub Project\rental-management-system--Version test 1\BLL\obj\Debug\BLL.dll
 C:\GitHub Project\rental-management-system--Version test 1\BLL\obj\Debug\BLL.pdb
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\bin\Debug\BLL.dll.config
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\bin\Debug\BLL.dll
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\bin\Debug\BLL.pdb
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\bin\Debug\DAL.dll
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\bin\Debug\EntityFramework.dll
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\bin\Debug\DAL.pdb
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\bin\Debug\DAL.dll.config
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\bin\Debug\EntityFramework.xml
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\obj\Debug\BLL.dll
+D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\obj\Debug\BLL.pdb

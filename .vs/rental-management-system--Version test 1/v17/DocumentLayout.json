@@ -1,34 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\GitHub Project\\rental-management-system--Version test 1\\",
+  "WorkspaceRootPath": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FD765009-1C1B-40EC-A75F-C866A9C28304}|DAL\\DAL.csproj|c:\\github project\\rental-management-system--version test 1\\dal\\viewmodel\\nguoithueviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD765009-1C1B-40EC-A75F-C866A9C28304}|DAL\\DAL.csproj|solutionrelative:dal\\viewmodel\\nguoithueviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|d:\\lap trinh win\\chieut4\\rental-management-system---\\main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\rental-management-system--version test 1\\main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|d:\\lap trinh win\\chieut4\\rental-management-system---\\bll\\services\\phongtroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\services\\phongtroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|d:\\lap trinh win\\chieut4\\rental-management-system---\\main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|d:\\lap trinh win\\chieut4\\rental-management-system---\\bll\\bll\\phongtrobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\bll\\phongtrobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|d:\\lap trinh win\\chieut4\\rental-management-system---\\bll\\services\\validators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\services\\validators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|d:\\lap trinh win\\chieut4\\rental-management-system---\\main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\rental-management-system--version test 1\\main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\rental-management-system--version test 1\\bll\\bll\\nguoithuebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\bll\\nguoithuebll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD765009-1C1B-40EC-A75F-C866A9C28304}|DAL\\DAL.csproj|c:\\github project\\rental-management-system--version test 1\\dal\\viewmodel\\hoadonviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD765009-1C1B-40EC-A75F-C866A9C28304}|DAL\\DAL.csproj|solutionrelative:dal\\viewmodel\\hoadonviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FD765009-1C1B-40EC-A75F-C866A9C28304}|DAL\\DAL.csproj|c:\\github project\\rental-management-system--version test 1\\dal\\viewmodel\\hopdongviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD765009-1C1B-40EC-A75F-C866A9C28304}|DAL\\DAL.csproj|solutionrelative:dal\\viewmodel\\hopdongviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\rental-management-system--version test 1\\bll\\services\\nguoithueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\services\\nguoithueservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|d:\\lap trinh win\\chieut4\\rental-management-system---\\main\\main\\frmquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,99 +41,101 @@
           "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmNguoiThue.cs [Design]",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\frmNguoiThue.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmNguoiThue.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\frmNguoiThue.cs [Design]",
-              "RelativeToolTip": "MAIN\\main\\frmNguoiThue.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T06:20:29.701Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "hopdongViewModel.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\DAL\\ViewModel\\hopdongViewModel.cs",
-              "RelativeDocumentMoniker": "DAL\\ViewModel\\hopdongViewModel.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\DAL\\ViewModel\\hopdongViewModel.cs",
-              "RelativeToolTip": "DAL\\ViewModel\\hopdongViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T07:46:06.821Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "hoadonViewModel.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\DAL\\ViewModel\\hoadonViewModel.cs",
-              "RelativeDocumentMoniker": "DAL\\ViewModel\\hoadonViewModel.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\DAL\\ViewModel\\hoadonViewModel.cs",
-              "RelativeToolTip": "DAL\\ViewModel\\hoadonViewModel.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAA9wAAAAAAAAAAAAAAAAA==",
+              "Title": "Validators.cs",
+              "DocumentMoniker": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\BLL\\Services\\Validators.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\Validators.cs",
+              "ToolTip": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\BLL\\Services\\Validators.cs",
+              "RelativeToolTip": "BLL\\Services\\Validators.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAQwFkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T07:46:03.316Z",
+              "WhenOpened": "2025-10-23T14:00:41.869Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "nguoithueBLL.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\BLL\\BLL\\nguoithueBLL.cs",
-              "RelativeDocumentMoniker": "BLL\\BLL\\nguoithueBLL.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\BLL\\BLL\\nguoithueBLL.cs",
-              "RelativeToolTip": "BLL\\BLL\\nguoithueBLL.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAAgwGcAAAA3AAAAAAAAAA==",
+              "Title": "phongtroBLL.cs",
+              "DocumentMoniker": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\BLL\\BLL\\phongtroBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL\\phongtroBLL.cs",
+              "ToolTip": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\BLL\\BLL\\phongtroBLL.cs",
+              "RelativeToolTip": "BLL\\BLL\\phongtroBLL.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAuwLQAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T07:42:12.208Z",
+              "WhenOpened": "2025-10-23T11:22:47.989Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "nguoithueService.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\BLL\\Services\\nguoithueService.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\nguoithueService.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\BLL\\Services\\nguoithueService.cs",
-              "RelativeToolTip": "BLL\\Services\\nguoithueService.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAQwDgAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "phongtroService.cs",
+              "DocumentMoniker": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\BLL\\Services\\phongtroService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\phongtroService.cs",
+              "ToolTip": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\BLL\\Services\\phongtroService.cs",
+              "RelativeToolTip": "BLL\\Services\\phongtroService.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAUwFwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T07:42:10.433Z",
+              "WhenOpened": "2025-10-23T11:22:33.476Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "nguoithueViewModel.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\DAL\\ViewModel\\nguoithueViewModel.cs",
-              "RelativeDocumentMoniker": "DAL\\ViewModel\\nguoithueViewModel.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\DAL\\ViewModel\\nguoithueViewModel.cs",
-              "RelativeToolTip": "DAL\\ViewModel\\nguoithueViewModel.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Title": "frmPhongTro.cs",
+              "DocumentMoniker": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmPhongTro.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmPhongTro.cs",
+              "ToolTip": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmPhongTro.cs",
+              "RelativeToolTip": "MAIN\\main\\frmPhongTro.cs",
+              "ViewState": "AgIAAL8AAAAAAAAAAAAcwNQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T07:40:38.301Z",
+              "WhenOpened": "2025-10-23T10:55:18.519Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmNguoiThue.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\frmNguoiThue.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmNguoiThue.cs",
-              "ToolTip": "C:\\GitHub Project\\rental-management-system--Version test 1\\MAIN\\main\\frmNguoiThue.cs",
-              "RelativeToolTip": "MAIN\\main\\frmNguoiThue.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAlwFYAAAAJAAAAAAAAAA==",
+              "Title": "frmPhongTro.cs [Design]",
+              "DocumentMoniker": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmPhongTro.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmPhongTro.cs",
+              "ToolTip": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmPhongTro.cs [Design]",
+              "RelativeToolTip": "MAIN\\main\\frmPhongTro.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-22T07:39:33.589Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-23T10:55:03.589Z",
+              "EditorCaption": " [Design]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmNguoiThue.cs [Design]",
+              "DocumentMoniker": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmNguoiThue.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmNguoiThue.cs",
+              "ToolTip": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmNguoiThue.cs [Design]",
+              "RelativeToolTip": "MAIN\\main\\frmNguoiThue.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T10:54:59.469Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmQuanLy.cs",
+              "DocumentMoniker": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmQuanLy.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmQuanLy.cs",
+              "ToolTip": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmQuanLy.cs",
+              "RelativeToolTip": "MAIN\\main\\frmQuanLy.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAA/wEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T10:46:40.715Z",
+              "EditorCaption": ""
             }
           ]
         },

@@ -26,7 +26,9 @@ namespace DAL.ViewModel
 
         public decimal Tien_dv { get; set; }
 
+        public decimal Tien_Phong { get; set; }
         public decimal ThanhTien_lephi { get; set; }
+
 
     }
 }
