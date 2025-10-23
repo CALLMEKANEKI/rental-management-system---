@@ -1,0 +1,75 @@
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\bin\Debug\BLL.dll
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\bin\Debug\BLL.pdb
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\obj\Debug\BLL.dll
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\obj\Debug\BLL.pdb
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\bin\Debug\BLL.dll.config
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\bin\Debug\DAL.dll
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\bin\Debug\EntityFramework.dll
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\bin\Debug\DAL.pdb
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\bin\Debug\DAL.dll.config
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\bin\Debug\EntityFramework.xml
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ASPIRE A715 - 42G\source\repos\Lập trình trên Win\rental-management-system--Version test 1\BLL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\BLL.dll.config
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\BLL.dll
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\BLL.pdb
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\DAL.dll
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\EntityFramework.dll
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\DAL.pdb
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\DAL.dll.config
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\EntityFramework.xml
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.dll
+C:\Users\NItro 5\Downloads\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.pdb
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\BLL.dll.config
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\BLL.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\BLL.pdb
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\DAL.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\EntityFramework.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\DAL.pdb
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\DAL.dll.config
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\EntityFramework.xml
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.pdb
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\BLL.dll.config
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\BLL.dll
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\BLL.pdb
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\DAL.dll
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\EntityFramework.dll
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\DAL.pdb
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\DAL.dll.config
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\EntityFramework.xml
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.csproj.Up2Date
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.dll
+D:\phân tích và thiết kế csdl\rental-management-system----main\rental-management-system----main\BLL\obj\Debug\BLL.pdb
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\bin\Debug\BLL.dll.config
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\bin\Debug\BLL.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\bin\Debug\BLL.pdb
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\bin\Debug\DAL.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\bin\Debug\EntityFramework.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\bin\Debug\DAL.pdb
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\bin\Debug\DAL.dll.config
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\bin\Debug\EntityFramework.xml
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\obj\Debug\BLL.csproj.Up2Date
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\obj\Debug\BLL.dll
+C:\Users\NHAT TUYEN\Downloads\rental-management-system----main (1)\rental-management-system----main\BLL\obj\Debug\BLL.pdb

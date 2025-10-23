@@ -1,0 +1,85 @@
+D:\laptrinhwin\qlpt\qlpt\bin\Debug\qlpt.exe.config
+D:\laptrinhwin\qlpt\qlpt\bin\Debug\qlpt.exe
+D:\laptrinhwin\qlpt\qlpt\bin\Debug\qlpt.pdb
+D:\laptrinhwin\qlpt\qlpt\obj\Debug\qlpt.csproj.AssemblyReference.cache
+D:\laptrinhwin\qlpt\qlpt\obj\Debug\qlpt.Properties.Resources.resources
+D:\laptrinhwin\qlpt\qlpt\obj\Debug\qlpt.csproj.GenerateResource.cache
+D:\laptrinhwin\qlpt\qlpt\obj\Debug\qlpt.csproj.CoreCompileInputs.cache
+D:\laptrinhwin\qlpt\qlpt\obj\Debug\qlpt.exe
+D:\laptrinhwin\qlpt\qlpt\obj\Debug\qlpt.pdb
+D:\laptrinhwin\qlpt\qlpt\obj\Debug\qlpt.UserControl1.resources
+D:\laptrinhwin\qlpt\qlpt\obj\Debug\qlpt.login.resources
+D:\laptrinhwin\qlpt\qlpt\obj\Debug\qlpt.main.resources
+D:\laptrinhwin\qlpt\qlpt\obj\Debug\qlpt.Menu.resources
+D:\laptrinhwin\qlpt\qlpt\obj\Debug\qlpt.nguoithue.resources
+D:\laptrinhwin\qlpt\qlpt\obj\Debug\qlpt.exe.config
+C:\Users\ASPIRE A715 - 42G\source\repos\qlpt\qlpt\bin\Debug\qlpt.exe.config
+C:\Users\ASPIRE A715 - 42G\source\repos\qlpt\qlpt\bin\Debug\qlpt.exe
+C:\Users\ASPIRE A715 - 42G\source\repos\qlpt\qlpt\bin\Debug\qlpt.pdb
+C:\Users\ASPIRE A715 - 42G\source\repos\qlpt\qlpt\obj\Debug\qlpt.csproj.AssemblyReference.cache
+C:\Users\ASPIRE A715 - 42G\source\repos\qlpt\qlpt\obj\Debug\qlpt.exe.config
+C:\Users\ASPIRE A715 - 42G\source\repos\qlpt\qlpt\obj\Debug\qlpt.login.resources
+C:\Users\ASPIRE A715 - 42G\source\repos\qlpt\qlpt\obj\Debug\qlpt.main.resources
+C:\Users\ASPIRE A715 - 42G\source\repos\qlpt\qlpt\obj\Debug\qlpt.Properties.Resources.resources
+C:\Users\ASPIRE A715 - 42G\source\repos\qlpt\qlpt\obj\Debug\qlpt.UserControl1.resources
+C:\Users\ASPIRE A715 - 42G\source\repos\qlpt\qlpt\obj\Debug\qlpt.csproj.GenerateResource.cache
+C:\Users\ASPIRE A715 - 42G\source\repos\qlpt\qlpt\obj\Debug\qlpt.csproj.CoreCompileInputs.cache
+C:\Users\ASPIRE A715 - 42G\source\repos\qlpt\qlpt\obj\Debug\qlpt.exe
+C:\Users\ASPIRE A715 - 42G\source\repos\qlpt\qlpt\obj\Debug\qlpt.pdb
+D:\laptrinhwin\fix (1)\fix\qlpt\qlpt\bin\Debug\qlpt.exe.config
+D:\laptrinhwin\fix (1)\fix\qlpt\qlpt\bin\Debug\qlpt.exe
+D:\laptrinhwin\fix (1)\fix\qlpt\qlpt\bin\Debug\qlpt.pdb
+D:\laptrinhwin\fix (1)\fix\qlpt\qlpt\obj\Debug\qlpt.csproj.AssemblyReference.cache
+D:\laptrinhwin\fix (1)\fix\qlpt\qlpt\obj\Debug\qlpt.exe.config
+D:\laptrinhwin\fix (1)\fix\qlpt\qlpt\obj\Debug\qlpt.login.resources
+D:\laptrinhwin\fix (1)\fix\qlpt\qlpt\obj\Debug\qlpt.main.resources
+D:\laptrinhwin\fix (1)\fix\qlpt\qlpt\obj\Debug\qlpt.nguoithue.resources
+D:\laptrinhwin\fix (1)\fix\qlpt\qlpt\obj\Debug\qlpt.Properties.Resources.resources
+D:\laptrinhwin\fix (1)\fix\qlpt\qlpt\obj\Debug\qlpt.UserControl1.resources
+D:\laptrinhwin\fix (1)\fix\qlpt\qlpt\obj\Debug\qlpt.csproj.GenerateResource.cache
+D:\laptrinhwin\fix (1)\fix\qlpt\qlpt\obj\Debug\qlpt.csproj.CoreCompileInputs.cache
+D:\laptrinhwin\fix (1)\fix\qlpt\qlpt\obj\Debug\qlpt.exe
+D:\laptrinhwin\fix (1)\fix\qlpt\qlpt\obj\Debug\qlpt.pdb
+C:\Users\ASPIRE A715 - 42G\source\repos\qlpt\qlpt\obj\Debug\qlpt.khachthue.resources
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\bin\Debug\qlpt.exe.config
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\bin\Debug\qlpt.exe
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\bin\Debug\qlpt.pdb
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\bin\Debug\System.ComponentModel.Annotations.dll
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\obj\Debug\qlpt.csproj.AssemblyReference.cache
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\obj\Debug\qlpt.exe.config
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\obj\Debug\qlpt.login.resources
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\obj\Debug\qlpt.main.resources
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\obj\Debug\qlpt.khachthue.resources
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\obj\Debug\qlpt.Properties.Resources.resources
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\obj\Debug\qlpt.csproj.GenerateResource.cache
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\obj\Debug\qlpt.csproj.CoreCompileInputs.cache
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\obj\Debug\qlpt.csproj.Up2Date
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\obj\Debug\qlpt.exe
+C:\Users\ASPIRE A715 - 42G\source\repos\rental-management-system---\qlpt\qlpt\obj\Debug\qlpt.pdb
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.csproj.AssemblyReference.cache
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.login.resources
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.main.resources
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.khachthue.resources
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.SignUp.resources
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.Properties.Resources.resources
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.csproj.GenerateResource.cache
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.csproj.CoreCompileInputs.cache
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\Form\login.resx
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\Form\login.cs
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\Form\login.Designer.cs
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\qlpt.exe.config
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\qlpt.exe
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\qlpt.pdb
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\qlpt_BLL.dll
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\qlpt_DTO.dll
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\System.ComponentModel.Annotations.dll
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\qlpt_DAL.dll
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\qlpt_BLL.pdb
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\qlpt_DTO.pdb
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\bin\Debug\qlpt_DAL.pdb
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.csproj.Up2Date
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.exe
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.pdb
+C:\GitHub Project\rental-management-system--Version test\rental-management-system----test\qlpt\qlpt\obj\Debug\qlpt.exe.config
