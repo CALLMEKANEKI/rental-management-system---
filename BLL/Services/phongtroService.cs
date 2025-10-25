@@ -23,7 +23,7 @@ namespace BLL.Services
                 try
                 {
                     bool isSuccess = PhongTroBLL.ThemPhongTro(objPhongTro, id_chutro);
-                    return isSuccess ? "Thêm phòng thành công." : "Lỗi: Không thể thêm vào cơ sở dữ liệu.";
+                    return isSuccess ? "Thêm phòng thành công." : "Không thể thêm phòng vào cơ sở dự liệu";
                 }
                 catch (Exception ex)
                 {
@@ -132,13 +132,10 @@ namespace BLL.Services
 
         // === TÌM PHÒNG TRỐNG ===
 
-
-
         public List<phongtro> TimPhongTrong(string id_chutro)
         {
             try
             {
-                // Chỉ gọi BLL với id_chutro
                 return PhongTroBLL.TimPhongTrong(id_chutro);
             }
             catch (Exception ex)
@@ -146,19 +143,15 @@ namespace BLL.Services
                 throw new Exception("Lỗi khi lấy danh sách phòng trống: " + ex.Message);
             }
         }
-        public string TraPhong(phongtro objPhongTro, string id_chutro)
+
+        // === TÌM PHÒNG THEO KEYWORD ===
+
+        public List<phongtro> TimKiemPhongTro(string keyword, string id_chutro)
         {
-            string mess = "";
-          
-            try
-            {
-                bool isSuccess = PhongTroBLL.TraPhong(objPhongTro.id_phong, id_chutro);
-                return isSuccess ? "Trả phòng thành công." : "Lỗi: Phòng không tồn tại hoặc không thuộc quyền quản lý.";
-            }
-            catch (Exception ex)
-            {
-                return "Lỗi hệ thống khi trả phòng: " + ex.Message;
-            }
+            // Thực hiện bất kỳ logic kiểm tra đầu vào nào ở đây (ví dụ: keyword có quá dài không)
+
+            // Gọi hàm logic từ BLL
+            return PhongTroBLL.TimKiemPhongTro(keyword, id_chutro);
         }
     }
 }

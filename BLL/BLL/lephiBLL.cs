@@ -11,35 +11,41 @@ namespace BLL.BLL
 {
     public class lephiBLL
     {
-        private ContextDB _dbContext;
-
-        public lephiBLL()
-        {
-            _dbContext = new ContextDB();
-        }
-
         //CUD không cần thêm vì đã được xử lý TransactionScope trong hoadonBLL
 
         // R - READ (ALL): Lấy tất cả Lệ phí
         public List<lephi> LayTatCaLePhi()
         {
-            return _dbContext.lephis.ToList();
+            using (var dbContext = new ContextDB())
+            {
+                return dbContext.lephis.ToList();
+            }
         }
 
         // R - READ (BY ID): Lấy Lệ phí theo ID
         public lephi LayLePhiTheoId(string id)
         {
-            return _dbContext.lephis.Find(id);
+            using (var dbContext = new ContextDB())
+            {
+                // Find() hoạt động hiệu quả khi tìm kiếm theo khóa chính
+                return dbContext.lephis.Find(id);
+            }
         }
 
         //R - READ (BY ID): Lấy Lệ phí theo ID của hóa đơn
         public lephi LayBanGhiLePhiTheoHoaDonId(string id_hoadon)
         {
-            // Tìm Hóa đơn, sau đó truy xuất chi tiết Lệ Phí
-            var hoadon = _dbContext.hoadons
-                                   .Include(hd => hd.lephi)
-                                   .FirstOrDefault(hd => hd.id_hoadon == id_hoadon);
-            return hoadon?.lephi;
+            using (var dbContext = new ContextDB())
+            {
+                // Tìm Hóa đơn, sau đó truy xuất chi tiết Lệ Phí
+                // Sử dụng Include(hd => hd.lephi) để tải chi tiết Lệ Phí
+                var hoadon = dbContext.hoadons
+                                       .Include(hd => hd.lephi)
+                                       .FirstOrDefault(hd => hd.id_hoadon == id_hoadon);
+
+                // Trả về chi tiết Lệ Phí từ Hóa đơn (có thể là null nếu không tìm thấy)
+                return hoadon?.lephi;
+            }
         }
     }
 }

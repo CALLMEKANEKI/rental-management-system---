@@ -1,7 +1,9 @@
 ﻿using BLL.BLL;
 using DAL.Model;
+using DAL.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -43,7 +45,7 @@ namespace BLL.Services
 
                 if (isSuccess)
                 {
-                    return "Thêm hóa đơn và các chi tiết thành công.";
+                    return "Thêm hóa đơn thành công";
                 }
                 else
                 {
@@ -56,6 +58,36 @@ namespace BLL.Services
                 // Lỗi hệ thống/DB (Ví dụ: Lỗi kết nối, Transaction thất bại)
                 return "Lỗi hệ thống khi thêm dữ liệu: " + ex.Message;
             }
+        }
+
+        public List<hoadon> LayTatCaHoaDon(string id_chutro)
+        {
+            return hoadonBLL.LayTatCaHoaDon(id_chutro);
+        }
+
+        public hoadon LayHoaDonTheoId(string id_chutro, string id)
+        {
+            return hoadonBLL.LayHoaDonTheoId(id_chutro, id);
+        }
+
+        public List<hoadonViewModel> LayTatCaHoaDonViewModel(string id_chutro)
+        {
+            return hoadonBLL.LayTatCaHoaDonViewModel(id_chutro);
+        }
+
+        public hoadonViewModel LayHoaDonViewModelTheoID(string id_hoadon, string id_chutro)
+        {
+            return hoadonBLL.LayHoaDonViewModelTheoID(id_hoadon, id_chutro);
+        }
+
+        public List<hoadonViewModel> LayTatCaHoaDonTheoKeywork(string keyword, string id_chutro)
+        {
+            return hoadonBLL.LayTatCaHoaDonViewModelTheoKeywork(keyword, id_chutro);
+        }
+
+        public List<hoadonViewModel> LayHoaDonChuaThanhToan(string id_chutro)
+        {
+            return hoadonBLL.LayHoaDonChuaThanhToan(id_chutro);
         }
 
         public string CapNhat(hoadon objHoaDon, dien objDien, nuoc objNuoc, lephi objLePhi, string id_chutro)

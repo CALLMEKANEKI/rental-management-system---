@@ -31,7 +31,7 @@ namespace BLL.Services
 
                     if (isSuccess)
                     {
-                        return "Thêm hợp đồng thành công thành công.";
+                        return "Thêm hợp đồng thành công.";
                     }
                     else
                     {
@@ -58,6 +58,12 @@ namespace BLL.Services
         {
             return hopdongBLL.LayTatCaHopDongViewModel(id_chutro);
         }
+
+        public List<hopdongViewModel> LayAllHopDongViewModelTheoKeyWork(string id_chutro, string keywork)
+        {
+            return hopdongBLL.LayTatCaHopDongTheoKeywork(keywork, id_chutro);
+        }
+
 
 
         public string CapNhat(hopdong objHopDong, string id_chutro)

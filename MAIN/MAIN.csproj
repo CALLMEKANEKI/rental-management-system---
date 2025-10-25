@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" />
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -37,10 +37,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="main\frmChiTietThanhToan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main\frmChiTietThanhToan.Designer.cs">
+      <DependentUpon>frmChiTietThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="main\LOGIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,12 +73,6 @@
     </Compile>
     <Compile Include="main\frmChuTro.Designer.cs">
       <DependentUpon>frmChuTro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="main\frmDien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="main\frmDien.Designer.cs">
-      <DependentUpon>frmDien.cs</DependentUpon>
     </Compile>
     <Compile Include="main\frmHoaDon.cs">
       <SubType>Form</SubType>
@@ -86,23 +86,11 @@
     <Compile Include="main\frmHopDong.Designer.cs">
       <DependentUpon>frmHopDong.cs</DependentUpon>
     </Compile>
-    <Compile Include="main\frmLePhi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="main\frmLePhi.Designer.cs">
-      <DependentUpon>frmLePhi.cs</DependentUpon>
-    </Compile>
     <Compile Include="main\frmNguoiThue.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="main\frmNguoiThue.Designer.cs">
       <DependentUpon>frmNguoiThue.cs</DependentUpon>
-    </Compile>
-    <Compile Include="main\frmNuoc.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="main\frmNuoc.Designer.cs">
-      <DependentUpon>frmNuoc.cs</DependentUpon>
     </Compile>
     <Compile Include="main\frmPhongTro.cs">
       <SubType>Form</SubType>
@@ -124,14 +112,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="main\frmChiTietThanhToan.resx">
+      <DependentUpon>frmChiTietThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="main\LOGIN.resx">
       <DependentUpon>LOGIN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main\frmChuTro.resx">
       <DependentUpon>frmChuTro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="main\frmDien.resx">
-      <DependentUpon>frmDien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main\frmHoaDon.resx">
       <DependentUpon>frmHoaDon.cs</DependentUpon>
@@ -139,14 +127,8 @@
     <EmbeddedResource Include="main\frmHopDong.resx">
       <DependentUpon>frmHopDong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="main\frmLePhi.resx">
-      <DependentUpon>frmLePhi.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="main\frmNguoiThue.resx">
       <DependentUpon>frmNguoiThue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="main\frmNuoc.resx">
-      <DependentUpon>frmNuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main\frmPhongTro.resx">
       <DependentUpon>frmPhongTro.cs</DependentUpon>
@@ -198,8 +180,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.5.1\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
-  <Import Project="..\packages\EntityFramework.6.5.1\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.5.1\build\EntityFramework.targets')" />
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
 </Project>

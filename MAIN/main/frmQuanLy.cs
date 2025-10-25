@@ -46,25 +46,7 @@ namespace MAIN.main
             frm.ShowDialog();
         }
 
-        private void thuêToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmDien frm = new frmDien();
-            frm.ShowDialog();
-        }
-
-        private void trảToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmNuoc frm = new frmNuoc();
-            frm.ShowDialog();
-        }
-
-        private void tiềnDịchVụToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmLePhi frm = new frmLePhi();
-            frm.ShowDialog();
-        }
-
-        private void thanhToánToolStripMenuItem_Click(object sender, EventArgs e)
+        private void chứcNăngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmThanhToan frm = new frmThanhToan();
             frm.ShowDialog();

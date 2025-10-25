@@ -19,7 +19,7 @@ namespace DAL.Model
         [Key]
         [StringLength(10)]
         public string id_chutro { get; set; }
-
+        [Column(TypeName = "nvarchar")]
         [StringLength(50)]
         public string hoten { get; set; }
 
@@ -29,6 +29,7 @@ namespace DAL.Model
         [StringLength(100)]
         public string email { get; set; }
 
+        [Column(TypeName = "nvarchar")]
         [StringLength(255)]
         public string diachi { get; set; }
 

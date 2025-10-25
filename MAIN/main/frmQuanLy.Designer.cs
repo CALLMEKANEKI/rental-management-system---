@@ -37,10 +37,6 @@
             this.quảnLýHợpĐồngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýHóaĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thuêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trảToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tiềnDịchVụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,42 +101,11 @@
             // 
             // chứcNăngToolStripMenuItem
             // 
-            this.chứcNăngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thuêToolStripMenuItem,
-            this.trảToolStripMenuItem,
-            this.tiềnDịchVụToolStripMenuItem,
-            this.thanhToánToolStripMenuItem});
+            this.chứcNăngToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
-            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
-            this.chứcNăngToolStripMenuItem.Text = "Lệ Phí";
-            // 
-            // thuêToolStripMenuItem
-            // 
-            this.thuêToolStripMenuItem.Name = "thuêToolStripMenuItem";
-            this.thuêToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.thuêToolStripMenuItem.Text = "Tiền điện";
-            this.thuêToolStripMenuItem.Click += new System.EventHandler(this.thuêToolStripMenuItem_Click);
-            // 
-            // trảToolStripMenuItem
-            // 
-            this.trảToolStripMenuItem.Name = "trảToolStripMenuItem";
-            this.trảToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.trảToolStripMenuItem.Text = "Tiền nước";
-            this.trảToolStripMenuItem.Click += new System.EventHandler(this.trảToolStripMenuItem_Click);
-            // 
-            // tiềnDịchVụToolStripMenuItem
-            // 
-            this.tiềnDịchVụToolStripMenuItem.Name = "tiềnDịchVụToolStripMenuItem";
-            this.tiềnDịchVụToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.tiềnDịchVụToolStripMenuItem.Text = "Tiền dịch vụ";
-            this.tiềnDịchVụToolStripMenuItem.Click += new System.EventHandler(this.tiềnDịchVụToolStripMenuItem_Click);
-            // 
-            // thanhToánToolStripMenuItem
-            // 
-            this.thanhToánToolStripMenuItem.Name = "thanhToánToolStripMenuItem";
-            this.thanhToánToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.thanhToánToolStripMenuItem.Text = "Thanh Toán";
-            this.thanhToánToolStripMenuItem.Click += new System.EventHandler(this.thanhToánToolStripMenuItem_Click);
+            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(143, 24);
+            this.chứcNăngToolStripMenuItem.Text = "Lịch sử thanh toán";
+            this.chứcNăngToolStripMenuItem.Click += new System.EventHandler(this.chứcNăngToolStripMenuItem_Click);
             // 
             // frmQuanLy
             // 
@@ -168,9 +133,5 @@
         private System.Windows.Forms.ToolStripMenuItem quảnLýHợpĐồngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýHóaĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chứcNăngToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thuêToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem trảToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tiềnDịchVụToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem thanhToánToolStripMenuItem;
     }
 }

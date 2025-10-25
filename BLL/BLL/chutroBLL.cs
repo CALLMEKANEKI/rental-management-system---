@@ -2,165 +2,171 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.Entity.Infrastructure; // Cần thiết để bắt lỗi DbUpdateException
 
 namespace BLL.BLL
 {
     public class chutroBLL
     {
-        // Khởi tạo ContextDB
-        private ContextDB _dbContext;
+        // LOẠI BỎ ContextDB FIELD để tránh lỗi Multiple Contexts và rò rỉ bộ nhớ.
+        // private ContextDB _dbContext = new ContextDB(); 
 
-        public chutroBLL()
-        {
-            _dbContext = new ContextDB(); // Tạo ContextDB instance
-        }
-
-        // C - CREATE: Thêm mới Chủ Trọ
-        //Hàm tự khởi taỌ ID
-        private string GenerateNewChuTroId()
+        // Hàm khởi tạo ID (Đã sửa để nhận Context)
+        private string GenerateNewChuTroId(ContextDB dbContext)
         {
             string prefix = "A";
             int numberLength = 9;
-            int newNumber = 1; // Mặc định là A000000001
+            int newNumber = 1;
 
-            // 1. Lấy tất cả ID thỏa mãn prefix và độ dài
-            var validIds = _dbContext.chutroes
-                                     // Chỉ chọn các ID đúng format "A" + 9 chữ số
-                                     .Where(ct => ct.id_chutro.StartsWith(prefix) && ct.id_chutro.Length == prefix.Length + numberLength)
-                                     .Select(ct => ct.id_chutro)
-                                     .ToList(); // Chuyển về List để xử lý trong C#
+            // 1. Tối ưu hóa truy vấn: Chỉ lấy ID lớn nhất
+            var lastId = dbContext.chutroes
+                                  // Chỉ chọn các ID đúng format "A" + 9 chữ số
+                                  .Where(ct => ct.id_chutro.StartsWith(prefix) && ct.id_chutro.Length == prefix.Length + numberLength)
+                                  .OrderByDescending(ct => ct.id_chutro) // Sắp xếp giảm dần theo chuỗi ID (hoạt động tốt nếu ID là chuỗi có độ dài cố định)
+                                  .Select(ct => ct.id_chutro)
+                                  .FirstOrDefault(); // Chỉ lấy một ID
 
-            // 2. Tìm số lớn nhất
-            int maxNumber = 0;
-            foreach (var id in validIds)
+            // 2. Phân tích và tạo ID mới
+            if (lastId != null)
             {
-                string numberPart = id.Substring(prefix.Length);
+                string numberPart = lastId.Substring(prefix.Length);
                 if (int.TryParse(numberPart, out int currentNumber))
                 {
-                    if (currentNumber > maxNumber)
+                    if (currentNumber < 999999999) // Giới hạn 9 chữ số (Max int 2,147,483,647)
                     {
-                        maxNumber = currentNumber;
+                        newNumber = currentNumber + 1;
+                    }
+                    else
+                    {
+                        throw new OverflowException("ID Chủ trọ đã đạt giới hạn tối đa (A999999999).");
                     }
                 }
             }
 
-            // 3. Tính toán ID mới
-            if (maxNumber > 0)
-            {
-                if (maxNumber < 999999999) // Giới hạn 9 chữ số
-                {
-                    newNumber = maxNumber + 1;
-                }
-                else
-                {
-                    throw new OverflowException("ID Chủ trọ đã đạt giới hạn tối đa (A999999999).");
-                }
-            }
-
-            // 4. Định dạng và trả về
+            // 3. Định dạng và trả về
             return prefix + newNumber.ToString($"D{numberLength}");
         }
+
+        // C - CREATE: Thêm mới Chủ Trọ
         public bool ThemChutro(chutro newChutro)
         {
-            if (newChutro == null)
-            {
-                return false;
-            }
+            if (newChutro == null) return false;
 
-            try
+            using (var dbContext = new ContextDB())
             {
-                // 1. TẠO VÀ GÁN ID MỚI TRƯỚC KHI LƯU
-                newChutro.id_chutro = GenerateNewChuTroId();
+                try
+                {
+                    // 1. TẠO VÀ GÁN ID MỚI
+                    newChutro.id_chutro = GenerateNewChuTroId(dbContext);
 
-                // 2. Thêm và lưu
-                _dbContext.chutroes.Add(newChutro); // Giả định tên DbSet là Chutros
-                _dbContext.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Không thể thêm chủ trọ mới. LỖi: " + ex.Message);
-                return false;
+                    // 2. Thêm và lưu
+                    dbContext.chutroes.Add(newChutro);
+                    dbContext.SaveChanges();
+                    return true;
+                }
+                catch (DbUpdateException dbEx)
+                {
+                    Console.WriteLine("Lỗi DB (Thêm Chủ trọ): " + dbEx.InnerException?.Message ?? dbEx.Message);
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Không thể thêm chủ trọ mới. Lỗi: " + ex.Message);
+                    return false;
+                }
             }
         }
+
         // R - READ (ALL): Lấy tất cả Chủ Trọ
         public List<chutro> LayTatCaChutro()
         {
-            return _dbContext.chutroes.ToList();
+            using (var dbContext = new ContextDB())
+            {
+                return dbContext.chutroes.ToList();
+            }
         }
 
         // R - READ (BY ID): Lấy Chủ Trọ theo ID
         public chutro LayChutroTheoId(string id)
         {
-            return _dbContext.chutroes.FirstOrDefault(ct => ct.id_chutro == id);
+            using (var dbContext = new ContextDB())
+            {
+                return dbContext.chutroes.FirstOrDefault(ct => ct.id_chutro == id);
+            }
         }
 
-        // R - READ (BY ID): Lấy Chủ Trọ theo tên tài khoản
+        // R - READ (BY USERNAME): Lấy Chủ Trọ theo tên tài khoản
         public chutro LayChutroTheoUserName(string username)
         {
-            return _dbContext.chutroes.FirstOrDefault(ct => ct.taikhoan == username);
+            using (var dbContext = new ContextDB())
+            {
+                return dbContext.chutroes.FirstOrDefault(ct => ct.taikhoan == username);
+            }
         }
 
         // U - UPDATE: Cập nhật thông tin Chủ Trọ
         public bool CapNhatChutro(chutro updatedChutro)
         {
-            if (updatedChutro == null || updatedChutro.id_chutro == "0")
-            {
-                return false;
-            }
+            if (updatedChutro == null || string.IsNullOrEmpty(updatedChutro.id_chutro)) return false;
 
-            try
+            using (var dbContext = new ContextDB())
             {
-                var existingChutro = _dbContext.chutroes.Find(updatedChutro.id_chutro);
-
-                if (existingChutro == null)
+                try
                 {
-                    return false; // Không tìm thấy để cập nhật
+                    // Lấy đối tượng hiện tại để Entity Framework theo dõi
+                    var existingChutro = dbContext.chutroes.Find(updatedChutro.id_chutro);
+
+                    if (existingChutro == null) return false;
+
+                    // Cập nhật các thuộc tính
+                    existingChutro.hoten = updatedChutro.hoten;
+                    existingChutro.sdt = updatedChutro.sdt;
+                    existingChutro.email = updatedChutro.email;
+                    existingChutro.diachi = updatedChutro.diachi;
+                    existingChutro.taikhoan = updatedChutro.taikhoan;
+                    existingChutro.avatar_url = updatedChutro.avatar_url;
+                    existingChutro.anh_cccd_truoc_url = updatedChutro.anh_cccd_truoc_url;
+                    existingChutro.anh_cccd_sau_url = updatedChutro.anh_cccd_sau_url;
+
+                    // Không nên cập nhật mật khẩu ở đây, nên có phương thức riêng.
+
+                    dbContext.SaveChanges();
+                    return true;
                 }
-
-                // Cập nhật các thuộc tính
-                existingChutro.hoten = updatedChutro.hoten;
-                existingChutro.sdt = updatedChutro.sdt;
-                existingChutro.email = updatedChutro.email;
-                existingChutro.diachi = updatedChutro.diachi;
-                existingChutro.taikhoan = updatedChutro.taikhoan;
-                // Không nên cập nhật mật khẩu ở đây, nên có phương thức riêng
-                existingChutro.avatar_url = updatedChutro.avatar_url;
-                existingChutro.anh_cccd_truoc_url = updatedChutro.anh_cccd_truoc_url;
-                existingChutro.anh_cccd_sau_url = updatedChutro.anh_cccd_sau_url;
-
-                _dbContext.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Không thể cập nhật chủ trọ. LỖi: " + ex.Message);
-                return false;
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Không thể cập nhật chủ trọ. Lỗi: " + ex.Message);
+                    return false;
+                }
             }
         }
 
         // D - DELETE: Xóa Chủ Trọ
         public bool XoaChutro(string id_chutro)
         {
-            try
+            using (var dbContext = new ContextDB())
             {
-                var chutroToDelete = _dbContext.chutroes.Find(id_chutro);
-
-                if (chutroToDelete == null)
+                try
                 {
-                    return false; // Không tìm thấy để xóa
-                }
+                    // Sử dụng Find để tìm nhanh dựa trên khóa chính
+                    var chutroToDelete = dbContext.chutroes.Find(id_chutro);
 
-                _dbContext.chutroes.Remove(chutroToDelete);
-                _dbContext.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Không thể xóa chủ trọ. LỖi: " + ex.Message);
-                return false;
+                    if (chutroToDelete == null) return false; // Không tìm thấy để xóa
+
+                    dbContext.chutroes.Remove(chutroToDelete);
+                    dbContext.SaveChanges();
+                    return true;
+                }
+                catch (DbUpdateException dbEx) // Bắt lỗi ràng buộc khóa ngoại (ví dụ: Chủ trọ này có phòng)
+                {
+                    Console.WriteLine("Lỗi DB (Xóa Chủ trọ): Không thể xóa do tồn tại ràng buộc dữ liệu. Chi tiết: " + dbEx.InnerException?.Message ?? dbEx.Message);
+                    return false;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Không thể xóa chủ trọ. Lỗi: " + ex.Message);
+                    return false;
+                }
             }
         }
     }

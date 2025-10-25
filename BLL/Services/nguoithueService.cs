@@ -31,7 +31,7 @@ namespace BLL.Services
                     }
                     else
                     {
-                        return "Lỗi: Không thể thêm vào cơ sở dữ liệu. (Có thể do ID đã tồn tại)";
+                        return "Lỗi: Không thể thêm vào cơ sở dữ liệu. ";
                     }
                 }
                 catch (Exception ex)
@@ -57,6 +57,16 @@ namespace BLL.Services
         public List<nguoithueViewModel> LayTatCaNguoiThueViewModel(string id_chutro)
         {
             return nguoithueBLL.LayTatCaNguoiThueViewModel(id_chutro);
+        }
+
+        public List<nguoithueViewModel> TimKiemNguoiThue(string keyword, string id_chutro)
+        {
+            return nguoithueBLL.TimKiemNguoiThue(keyword, id_chutro);
+        }
+
+        public List<nguoi_thue> LayTatCaNguoiThueTheoPhong(string id_chutro, string id_phong)
+        {
+            return nguoithueBLL.LayNguoiThueTheoPhong(id_chutro, id_phong);
         }
 
         public string CapNhat(nguoi_thue objNguoiThue, string id_chutro)

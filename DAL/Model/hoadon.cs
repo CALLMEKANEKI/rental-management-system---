@@ -23,9 +23,11 @@ namespace DAL.Model
         public DateTime ngay_tao { get; set; }
 
         [Required]
+        [Column(TypeName = "nvarchar")]
         [StringLength(50)]
         public string trang_thai { get; set; }
 
+        [Column(TypeName = "nvarchar")]
         [StringLength(255)]
         public string noi_dung { get; set; }
 

@@ -287,3 +287,33 @@ D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.csproj.
 D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.csproj.Up2Date
 D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.exe
 D:\LAP TRINH WIN\chieut4\rental-management-system---\MAIN\obj\Debug\MAIN.pdb
+C:\GitHub Project\nhattien-\nhattien-\MAIN\bin\Debug\MAIN.exe.config
+C:\GitHub Project\nhattien-\nhattien-\MAIN\bin\Debug\MAIN.exe
+C:\GitHub Project\nhattien-\nhattien-\MAIN\bin\Debug\MAIN.pdb
+C:\GitHub Project\nhattien-\nhattien-\MAIN\bin\Debug\BLL.dll
+C:\GitHub Project\nhattien-\nhattien-\MAIN\bin\Debug\DAL.dll
+C:\GitHub Project\nhattien-\nhattien-\MAIN\bin\Debug\EntityFramework.dll
+C:\GitHub Project\nhattien-\nhattien-\MAIN\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub Project\nhattien-\nhattien-\MAIN\bin\Debug\BLL.pdb
+C:\GitHub Project\nhattien-\nhattien-\MAIN\bin\Debug\BLL.dll.config
+C:\GitHub Project\nhattien-\nhattien-\MAIN\bin\Debug\DAL.pdb
+C:\GitHub Project\nhattien-\nhattien-\MAIN\bin\Debug\DAL.dll.config
+C:\GitHub Project\nhattien-\nhattien-\MAIN\bin\Debug\EntityFramework.xml
+C:\GitHub Project\nhattien-\nhattien-\MAIN\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.csproj.AssemblyReference.cache
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.main.frmChiTietThanhToan.resources
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.main.LOGIN.resources
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.main.frmChuTro.resources
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.main.frmHoaDon.resources
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.main.frmHopDong.resources
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.main.frmNguoiThue.resources
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.main.frmPhongTro.resources
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.main.frmQuanLy.resources
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.main.frmThanhToan.resources
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.Properties.Resources.resources
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.csproj.GenerateResource.cache
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.csproj.CoreCompileInputs.cache
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.csproj.Up2Date
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.exe
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.pdb
+C:\GitHub Project\nhattien-\nhattien-\MAIN\obj\Debug\MAIN.exe.config

@@ -21,16 +21,19 @@ namespace DAL.Model
         public string id_phong { get; set; }
 
         [Required]
+        [Column(TypeName = "nvarchar")]
         [StringLength(10)]
         public string id_chutro { get; set; }
 
         [Required]
+        [Column(TypeName = "nvarchar")]
         [StringLength(20)]
         public string tenphong { get; set; }
 
         public decimal giaphong { get; set; }
 
         [StringLength(50)]
+        [Column(TypeName = "nvarchar")]
         public string tinhtrang { get; set; }
 
         public virtual chutro chutro { get; set; }

@@ -16,8 +16,7 @@ namespace MAIN.main
         private phongtroService _phongtroService = new phongtroService();
         private string id_chutrohientai;
 
-     
-
+   
         public frmNguoiThue()
         {
             InitializeComponent();
@@ -60,6 +59,8 @@ namespace MAIN.main
 
             // Cho phép chọn toàn bộ hàng
             dgvNguoiThue.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+            dgvNguoiThue.Columns["IDPhong"].Visible = false;
         }
 
         private void DGVNguoiThue_CellCLick(object sender, DataGridViewCellEventArgs e)
@@ -70,8 +71,6 @@ namespace MAIN.main
             try
             {
                 DataGridViewRow row = dgvNguoiThue.Rows[e.RowIndex];
-
-
                
                 txtID.Text = row.Cells["IDNguoiThue"].Value?.ToString();
                 txtHoTen.Text = row.Cells["HoTenNguoiThue"].Value?.ToString();
@@ -94,6 +93,7 @@ namespace MAIN.main
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            
             Button btn = (Button)sender;
             if (btn.Text == "Thêm")
             {
@@ -112,8 +112,7 @@ namespace MAIN.main
                     cccd = txtCCCD.Text,
                     sdt = txtSDT.Text,
                     email = txtEmail.Text,
-                    id_phong = cboPhong.SelectedValue?.ToString()
-
+                    id_phong = cboPhong.SelectedValue?.ToString(),
                 };
                 string mess = _nguoithueSerVice.ThemNguoiThue(newNguoiThue, id_chutrohientai);
                 if (mess == "Thêm người thuê thành công.")
@@ -123,8 +122,6 @@ namespace MAIN.main
                     btn.Text = "Thêm";
                     LoadDGVNguoiThue();
                     LoadComboBoxPhong();    
-
-
                 }
                 MessageBox.Show(mess);
 
@@ -133,12 +130,11 @@ namespace MAIN.main
         }
         private void isNguoiThueEditing(bool mode)
         {
-            txtID.ReadOnly = !mode;
             txtHoTen.ReadOnly = !mode;
             txtCCCD.ReadOnly = !mode;
             txtSDT.ReadOnly = !mode;
             txtEmail.ReadOnly = !mode;
-
+            cboPhong.Enabled = mode;
         }
         private void clearNguoiThue()
         {
@@ -148,11 +144,6 @@ namespace MAIN.main
             txtSDT.Text = "";
             txtEmail.Text = "";
 
-        }
-        private void frmNguoiThue_Load(object sender, EventArgs e)
-        {
-            LoadComboBoxPhong();
-            LoadDGVNguoiThue();
         }
 
         private void LoadComboBoxPhong()
@@ -171,7 +162,6 @@ namespace MAIN.main
                 else
                 {
                     cboPhong.DataSource = null;
-                    MessageBox.Show("Không có phòng nào để hiển thị.");
                 }
             }
             catch (Exception ex)
@@ -240,6 +230,7 @@ namespace MAIN.main
                     cccd = txtCCCD.Text,
                     sdt = txtSDT.Text,
                     email = txtEmail.Text,
+                    id_phong = cboPhong.SelectedValue?.ToString(),
                 };
                 string mess = _nguoithueSerVice.CapNhat(updatedNguoiThue, id_chutrohientai);
                 if (mess == "Cập nhật người thuê thành công.")
@@ -250,18 +241,51 @@ namespace MAIN.main
                     LoadDGVNguoiThue();
                 }
                 MessageBox.Show(mess);
-
             }
         }
 
-        private void btnTimNT_Click(object sender, EventArgs e)
+        private void btnTimNguoiThue_Click(object sender, EventArgs e)
         {
+            string keyword = txtTimNT.Text.Trim();
 
+            // 1. Kiểm tra từ khóa
+            if (string.IsNullOrEmpty(keyword))
+            {
+                MessageBox.Show("Vui lòng nhập từ khóa (Tên, CCCD, SĐT, hoặc Tên phòng) để tìm kiếm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 2. Gọi Service để tìm kiếm
+            List<nguoithueViewModel> searchResults = _nguoithueSerVice.TimKiemNguoiThue(keyword, id_chutrohientai);
+
+            // 3. Xử lý kết quả tìm kiếm
+            if (searchResults == null || searchResults.Count == 0)
+            {
+                MessageBox.Show("Không tìm thấy người thuê nào phù hợp với từ khóa: " + keyword, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // 4. Load DataGridView với kết quả mới
+            dgvNguoiThue.DataSource = searchResults;
+            EditDGVNguoiThue(); // Đảm bảo hàm định dạng cột được gọi
         }
 
-        private void cboPhong_SelectedIndexChanged(object sender, EventArgs e)
+        private void txtTimNT_Enter(object sender, EventArgs e)
         {
+            if (txtTimNT.Text == "Nhập từ khóa để tìm kiếm")
+            {
+                txtTimNT.Text = "";
+                txtTimNT.ForeColor = System.Drawing.Color.Black;
+            }
+        }
 
+        private void txtTimNT_Leave(object sender, EventArgs e)
+        {
+            if (txtTimNT.Text == "")
+            {
+                txtTimNT.Text = "Nhập từ khóa để tìm kiếm";
+                txtTimNT.ForeColor = System.Drawing.Color.Gray;
+            }
         }
     }
 }

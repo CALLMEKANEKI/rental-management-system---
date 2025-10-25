@@ -18,7 +18,7 @@ namespace DAL.Model
         [StringLength(10)]
         public string id_hoadon { get; set; }
 
-        [Column(TypeName = "date")]
+        [Column(TypeName = "date")]        
         public DateTime ngay_thanh_toan { get; set; }
 
         public virtual hoadon hoadon { get; set; }

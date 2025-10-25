@@ -25,9 +25,9 @@ namespace MAIN.main
             string mess = _chutroService.SignIn(username, password, out id_chutrohientai);
 
             if (mess == "Đăng nhập thành công.") 
-            { 
+            {
+                this.Hide();
                 frmQuanLy frmQuanLy = new frmQuanLy();
-                
                 frmQuanLy.Show();
             }
                 

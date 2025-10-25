@@ -43,3 +43,18 @@ D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\obj\Debug\BLL.csproj.Co
 D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\obj\Debug\BLL.csproj.Up2Date
 D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\obj\Debug\BLL.dll
 D:\LAP TRINH WIN\chieut4\rental-management-system---\BLL\obj\Debug\BLL.pdb
+C:\GitHub Project\nhattien-\nhattien-\BLL\bin\Debug\BLL.dll.config
+C:\GitHub Project\nhattien-\nhattien-\BLL\bin\Debug\BLL.dll
+C:\GitHub Project\nhattien-\nhattien-\BLL\bin\Debug\BLL.pdb
+C:\GitHub Project\nhattien-\nhattien-\BLL\bin\Debug\DAL.dll
+C:\GitHub Project\nhattien-\nhattien-\BLL\bin\Debug\EntityFramework.dll
+C:\GitHub Project\nhattien-\nhattien-\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub Project\nhattien-\nhattien-\BLL\bin\Debug\DAL.pdb
+C:\GitHub Project\nhattien-\nhattien-\BLL\bin\Debug\DAL.dll.config
+C:\GitHub Project\nhattien-\nhattien-\BLL\bin\Debug\EntityFramework.xml
+C:\GitHub Project\nhattien-\nhattien-\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub Project\nhattien-\nhattien-\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\GitHub Project\nhattien-\nhattien-\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\GitHub Project\nhattien-\nhattien-\BLL\obj\Debug\BLL.csproj.Up2Date
+C:\GitHub Project\nhattien-\nhattien-\BLL\obj\Debug\BLL.dll
+C:\GitHub Project\nhattien-\nhattien-\BLL\obj\Debug\BLL.pdb

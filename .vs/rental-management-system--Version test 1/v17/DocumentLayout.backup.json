@@ -1,34 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\",
+  "WorkspaceRootPath": "C:\\GitHub Project\\nhattien-\\nhattien-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|d:\\lap trinh win\\chieut4\\rental-management-system---\\main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|d:\\lap trinh win\\chieut4\\rental-management-system---\\bll\\services\\phongtroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\services\\phongtroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\nhattien-\\nhattien-\\bll\\bll\\hoadonbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\bll\\hoadonbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|d:\\lap trinh win\\chieut4\\rental-management-system---\\main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmthanhtoan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmthanhtoan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|d:\\lap trinh win\\chieut4\\rental-management-system---\\bll\\bll\\phongtrobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\bll\\phongtrobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|d:\\lap trinh win\\chieut4\\rental-management-system---\\bll\\services\\validators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\services\\validators.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\nhattien-\\nhattien-\\bll\\services\\thanhtoanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\services\\thanhtoanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|d:\\lap trinh win\\chieut4\\rental-management-system---\\main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\nhattien-\\nhattien-\\bll\\bll\\thanhtoanbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\bll\\thanhtoanbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|d:\\lap trinh win\\chieut4\\rental-management-system---\\main\\main\\frmquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD765009-1C1B-40EC-A75F-C866A9C28304}|DAL\\DAL.csproj|c:\\github project\\nhattien-\\nhattien-\\dal\\viewmodel\\thanhtoanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD765009-1C1B-40EC-A75F-C866A9C28304}|DAL\\DAL.csproj|solutionrelative:dal\\viewmodel\\thanhtoanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,103 +38,105 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "thanhtoanBLL.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\thanhtoanBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL\\thanhtoanBLL.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\thanhtoanBLL.cs",
+              "RelativeToolTip": "BLL\\BLL\\thanhtoanBLL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwJgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T13:55:50.741Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Validators.cs",
-              "DocumentMoniker": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\BLL\\Services\\Validators.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\Validators.cs",
-              "ToolTip": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\BLL\\Services\\Validators.cs",
-              "RelativeToolTip": "BLL\\Services\\Validators.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAQwFkAAAAQAAAAAAAAAA==",
+              "Title": "thanhtoanService.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\Services\\thanhtoanService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\thanhtoanService.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\Services\\thanhtoanService.cs",
+              "RelativeToolTip": "BLL\\Services\\thanhtoanService.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAuwCsAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T14:00:41.869Z",
+              "WhenOpened": "2025-10-25T13:56:27.832Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "phongtroBLL.cs",
-              "DocumentMoniker": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\BLL\\BLL\\phongtroBLL.cs",
-              "RelativeDocumentMoniker": "BLL\\BLL\\phongtroBLL.cs",
-              "ToolTip": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\BLL\\BLL\\phongtroBLL.cs",
-              "RelativeToolTip": "BLL\\BLL\\phongtroBLL.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAuwLQAAAA2AAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "thanhtoanViewModel.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\DAL\\ViewModel\\thanhtoanViewModel.cs",
+              "RelativeDocumentMoniker": "DAL\\ViewModel\\thanhtoanViewModel.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\DAL\\ViewModel\\thanhtoanViewModel.cs",
+              "RelativeToolTip": "DAL\\ViewModel\\thanhtoanViewModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBoAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T11:22:47.989Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "phongtroService.cs",
-              "DocumentMoniker": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\BLL\\Services\\phongtroService.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\phongtroService.cs",
-              "ToolTip": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\BLL\\Services\\phongtroService.cs*",
-              "RelativeToolTip": "BLL\\Services\\phongtroService.cs*",
-              "ViewState": "AgIAAE0AAAAAAAAAAAAUwFwAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T11:22:33.476Z",
+              "WhenOpened": "2025-10-25T15:35:48.614Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmPhongTro.cs",
-              "DocumentMoniker": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmPhongTro.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmPhongTro.cs",
-              "ToolTip": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmPhongTro.cs*",
-              "RelativeToolTip": "MAIN\\main\\frmPhongTro.cs*",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAIwLgAAAAJAAAAAAAAAA==",
+              "Title": "frmThanhToan.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmThanhToan.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.cs",
+              "RelativeToolTip": "MAIN\\main\\frmThanhToan.cs",
+              "ViewState": "AgIAAPYBAAAAAAAAAAAAAPoBAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:55:18.519Z",
+              "WhenOpened": "2025-10-25T13:19:25.489Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmThanhToan.cs [Design]",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmThanhToan.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.cs [Design]",
+              "RelativeToolTip": "MAIN\\main\\frmThanhToan.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T13:12:08.861Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "frmPhongTro.cs [Design]",
-              "DocumentMoniker": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmPhongTro.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmPhongTro.cs",
-              "ToolTip": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmPhongTro.cs [Design]*",
-              "RelativeToolTip": "MAIN\\main\\frmPhongTro.cs [Design]*",
+              "Title": "frmThanhToan.Designer.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.Designer.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmThanhToan.Designer.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.Designer.cs",
+              "RelativeToolTip": "MAIN\\main\\frmThanhToan.Designer.cs",
+              "ViewState": "AgIAAHEBAAAAAAAAAAAhwGUBAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:55:03.589Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-10-25T18:48:06.531Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmNguoiThue.cs [Design]",
-              "DocumentMoniker": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmNguoiThue.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmNguoiThue.cs",
-              "ToolTip": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmNguoiThue.cs [Design]",
-              "RelativeToolTip": "MAIN\\main\\frmNguoiThue.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "hoadonBLL.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\hoadonBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL\\hoadonBLL.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\hoadonBLL.cs",
+              "RelativeToolTip": "BLL\\BLL\\hoadonBLL.cs",
+              "ViewState": "AgIAAJoAAAAAAAAAAAAqwKgAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:54:59.469Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmQuanLy.cs",
-              "DocumentMoniker": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmQuanLy.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmQuanLy.cs",
-              "ToolTip": "D:\\LAP TRINH WIN\\chieut4\\rental-management-system---\\MAIN\\main\\frmQuanLy.cs",
-              "RelativeToolTip": "MAIN\\main\\frmQuanLy.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAA/wEEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-23T10:46:40.715Z",
+              "WhenOpened": "2025-10-25T17:32:35.057Z",
               "EditorCaption": ""
             }
           ]

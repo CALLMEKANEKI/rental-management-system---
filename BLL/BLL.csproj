@@ -67,6 +67,7 @@
     <Compile Include="Services\hopdongService.cs" />
     <Compile Include="Services\nguoithueService.cs" />
     <Compile Include="Services\phongtroService.cs" />
+    <Compile Include="Services\thanhtoanService.cs" />
     <Compile Include="Services\Validators.cs" />
   </ItemGroup>
   <ItemGroup>

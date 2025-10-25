@@ -23,6 +23,7 @@ namespace DAL.Model
         [StringLength(10)]
         public string id_phong { get; set; }
 
+        [Column(TypeName = "nvarchar")]
         [StringLength(50)]
         public string hoten { get; set; }
 

@@ -22,3 +22,15 @@ D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\obj\Debug\DAL.csproj.Co
 D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\obj\Debug\DAL.csproj.Up2Date
 D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\obj\Debug\DAL.dll
 D:\LAP TRINH WIN\chieut4\rental-management-system---\DAL\obj\Debug\DAL.pdb
+C:\GitHub Project\nhattien-\nhattien-\DAL\bin\Debug\DAL.dll.config
+C:\GitHub Project\nhattien-\nhattien-\DAL\bin\Debug\DAL.dll
+C:\GitHub Project\nhattien-\nhattien-\DAL\bin\Debug\DAL.pdb
+C:\GitHub Project\nhattien-\nhattien-\DAL\bin\Debug\EntityFramework.dll
+C:\GitHub Project\nhattien-\nhattien-\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\GitHub Project\nhattien-\nhattien-\DAL\bin\Debug\EntityFramework.xml
+C:\GitHub Project\nhattien-\nhattien-\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\GitHub Project\nhattien-\nhattien-\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\GitHub Project\nhattien-\nhattien-\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\GitHub Project\nhattien-\nhattien-\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\GitHub Project\nhattien-\nhattien-\DAL\obj\Debug\DAL.dll
+C:\GitHub Project\nhattien-\nhattien-\DAL\obj\Debug\DAL.pdb
