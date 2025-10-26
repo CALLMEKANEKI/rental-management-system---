@@ -49,6 +49,7 @@
             this.txtTimNT = new System.Windows.Forms.TextBox();
             this.dgvNguoiThue = new System.Windows.Forms.DataGridView();
             this.btnTimNT = new System.Windows.Forms.Button();
+            this.btnXuat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiThue)).BeginInit();
             this.SuspendLayout();
@@ -184,7 +185,7 @@
             this.btnSua.BackColor = System.Drawing.Color.DarkGreen;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnSua.Location = new System.Drawing.Point(189, 201);
+            this.btnSua.Location = new System.Drawing.Point(206, 201);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 35);
             this.btnSua.TabIndex = 2;
@@ -210,7 +211,7 @@
             this.btnLamMoi.BackColor = System.Drawing.Color.DarkGreen;
             this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLamMoi.Location = new System.Drawing.Point(732, 201);
+            this.btnLamMoi.Location = new System.Drawing.Point(804, 201);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(100, 35);
             this.btnLamMoi.TabIndex = 0;
@@ -225,9 +226,9 @@
             this.groupBox1.Controls.Add(this.dgvNguoiThue);
             this.groupBox1.Controls.Add(this.btnTimNT);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(58, 257);
+            this.groupBox1.Location = new System.Drawing.Point(46, 259);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(782, 392);
+            this.groupBox1.Size = new System.Drawing.Size(864, 392);
             this.groupBox1.TabIndex = 45;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tìm kiếm";
@@ -260,7 +261,7 @@
             this.dgvNguoiThue.Name = "dgvNguoiThue";
             this.dgvNguoiThue.RowHeadersWidth = 51;
             this.dgvNguoiThue.RowTemplate.Height = 29;
-            this.dgvNguoiThue.Size = new System.Drawing.Size(762, 308);
+            this.dgvNguoiThue.Size = new System.Drawing.Size(846, 308);
             this.dgvNguoiThue.TabIndex = 42;
             this.dgvNguoiThue.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVNguoiThue_CellCLick);
             // 
@@ -278,9 +279,23 @@
             this.btnTimNT.UseVisualStyleBackColor = false;
             this.btnTimNT.Click += new System.EventHandler(this.btnTimNguoiThue_Click);
             // 
+            // btnXuat
+            // 
+            this.btnXuat.BackColor = System.Drawing.Color.DimGray;
+            this.btnXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuat.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnXuat.Location = new System.Drawing.Point(679, 201);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(100, 35);
+            this.btnXuat.TabIndex = 46;
+            this.btnXuat.Text = "Xuất file";
+            this.btnXuat.UseVisualStyleBackColor = false;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
+            // 
             // frmNguoiThue
             // 
             this.ClientSize = new System.Drawing.Size(954, 685);
+            this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.btnXoa);
@@ -299,7 +314,7 @@
             this.Controls.Add(this.txtHoTen);
             this.Controls.Add(this.txtID);
             this.Name = "frmNguoiThue";
-            this.Text = "Quản lý Người thuê trọ";
+            this.Text = "Quản lý người thuê trọ";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiThue)).EndInit();
@@ -332,5 +347,6 @@
         private System.Windows.Forms.TextBox txtTimNT;
         private System.Windows.Forms.DataGridView dgvNguoiThue;
         private System.Windows.Forms.Button btnTimNT;
+        private System.Windows.Forms.Button btnXuat;
     }
 }

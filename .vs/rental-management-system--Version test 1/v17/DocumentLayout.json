@@ -7,28 +7,44 @@
       "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\nhattien-\\nhattien-\\bll\\bll\\hoadonbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\bll\\hoadonbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmthanhtoan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmthanhtoan.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\nhattien-\\nhattien-\\bll\\services\\thanhtoanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\services\\thanhtoanservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\nhattien-\\nhattien-\\bll\\bll\\phongtrobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\bll\\phongtrobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\nhattien-\\nhattien-\\bll\\bll\\thanhtoanbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\bll\\thanhtoanbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD765009-1C1B-40EC-A75F-C866A9C28304}|DAL\\DAL.csproj|c:\\github project\\nhattien-\\nhattien-\\dal\\viewmodel\\thanhtoanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD765009-1C1B-40EC-A75F-C866A9C28304}|DAL\\DAL.csproj|solutionrelative:dal\\viewmodel\\thanhtoanviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmhopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmhopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmhopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmhopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,49 +54,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "thanhtoanBLL.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\thanhtoanBLL.cs",
-              "RelativeDocumentMoniker": "BLL\\BLL\\thanhtoanBLL.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\thanhtoanBLL.cs",
-              "RelativeToolTip": "BLL\\BLL\\thanhtoanBLL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAcwJgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T13:55:50.741Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "thanhtoanService.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\Services\\thanhtoanService.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\thanhtoanService.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\Services\\thanhtoanService.cs",
-              "RelativeToolTip": "BLL\\Services\\thanhtoanService.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAuwCsAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T13:56:27.832Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "thanhtoanViewModel.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\DAL\\ViewModel\\thanhtoanViewModel.cs",
-              "RelativeDocumentMoniker": "DAL\\ViewModel\\thanhtoanViewModel.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\DAL\\ViewModel\\thanhtoanViewModel.cs",
-              "RelativeToolTip": "DAL\\ViewModel\\thanhtoanViewModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwBoAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T15:35:48.614Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
@@ -90,53 +68,134 @@
               "RelativeDocumentMoniker": "MAIN\\main\\frmThanhToan.cs",
               "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.cs",
               "RelativeToolTip": "MAIN\\main\\frmThanhToan.cs",
-              "ViewState": "AgIAAPYBAAAAAAAAAAAAAPoBAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAKwCAAAAAAAAAAAAAAUDAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T13:19:25.489Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-10-26T06:36:30.557Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "phongtroBLL.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\phongtroBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL\\phongtroBLL.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\phongtroBLL.cs",
+              "RelativeToolTip": "BLL\\BLL\\phongtroBLL.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAIwH8AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T06:35:10.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmHoaDon.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHoaDon.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmHoaDon.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHoaDon.cs",
+              "RelativeToolTip": "MAIN\\main\\frmHoaDon.cs",
+              "ViewState": "AgIAABECAAAAAAAAAAAQwGwCAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T06:25:58.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "frmThanhToan.cs [Design]",
               "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.cs",
               "RelativeDocumentMoniker": "MAIN\\main\\frmThanhToan.cs",
               "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.cs [Design]",
               "RelativeToolTip": "MAIN\\main\\frmThanhToan.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T13:12:08.861Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-10-26T06:24:02.733Z",
               "EditorCaption": " [Design]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmThanhToan.Designer.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.Designer.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmThanhToan.Designer.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.Designer.cs",
-              "RelativeToolTip": "MAIN\\main\\frmThanhToan.Designer.cs",
-              "ViewState": "AgIAAHEBAAAAAAAAAAAhwGUBAAAYAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "frmHopDong.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHopDong.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmHopDong.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHopDong.cs",
+              "RelativeToolTip": "MAIN\\main\\frmHopDong.cs",
+              "ViewState": "AgIAAL4BAAAAAAAAAAAAANABAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T18:48:06.531Z",
+              "WhenOpened": "2025-10-26T06:22:15.067Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "hoadonBLL.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\hoadonBLL.cs",
-              "RelativeDocumentMoniker": "BLL\\BLL\\hoadonBLL.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\hoadonBLL.cs",
-              "RelativeToolTip": "BLL\\BLL\\hoadonBLL.cs",
-              "ViewState": "AgIAAJoAAAAAAAAAAAAqwKgAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "frmNguoiThue.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmNguoiThue.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmNguoiThue.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmNguoiThue.cs",
+              "RelativeToolTip": "MAIN\\main\\frmNguoiThue.cs",
+              "ViewState": "AgIAAF8BAAAAAAAAAAAYwH8BAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T17:32:35.057Z",
+              "WhenOpened": "2025-10-26T06:17:31.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmPhongTro.cs [Design]",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmPhongTro.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmPhongTro.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmPhongTro.cs [Design]",
+              "RelativeToolTip": "MAIN\\main\\frmPhongTro.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T06:17:03.642Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "frmHopDong.cs [Design]",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHopDong.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmHopDong.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHopDong.cs [Design]",
+              "RelativeToolTip": "MAIN\\main\\frmHopDong.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T06:16:08.848Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmHoaDon.cs [Design]",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHoaDon.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmHoaDon.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHoaDon.cs [Design]",
+              "RelativeToolTip": "MAIN\\main\\frmHoaDon.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T06:16:06.262Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "frmNguoiThue.cs [Design]",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmNguoiThue.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmNguoiThue.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmNguoiThue.cs [Design]",
+              "RelativeToolTip": "MAIN\\main\\frmNguoiThue.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T06:14:27.216Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmPhongTro.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmPhongTro.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmPhongTro.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmPhongTro.cs",
+              "RelativeToolTip": "MAIN\\main\\frmPhongTro.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAUwCEAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-26T06:02:01.96Z",
               "EditorCaption": ""
             }
           ]

@@ -115,7 +115,6 @@
             this.ClientSize = new System.Drawing.Size(800, 439);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmQuanLy";
-            this.Text = "frmQuanLy";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

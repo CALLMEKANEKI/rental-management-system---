@@ -1,9 +1,11 @@
 ﻿using BLL.Services;
 using DAL.Model;
 using DAL.ViewModel;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -57,11 +59,19 @@ namespace MAIN.main
             dgvThanhToan.Columns["TienNuoc"].DefaultCellStyle = currencyStyle;
             dgvThanhToan.Columns["ThanhTien"].DefaultCellStyle = currencyStyle;
 
+            dgvThanhToan.Columns["LePhi"].HeaderText = "Tổng lệ Phí";
+            dgvThanhToan.Columns["TienDien"].HeaderText = "Tiền điện";
+            dgvThanhToan.Columns["TienNuoc"].HeaderText = "Tiền nước";
+            dgvThanhToan.Columns["ThanhTien"].HeaderText = "Thành tiền";
+
             // Căn giữa ngày tháng
             var dateStyle = new DataGridViewCellStyle { Alignment = DataGridViewContentAlignment.MiddleCenter };
             dgvThanhToan.Columns["NgayTao"].DefaultCellStyle = dateStyle;
             dgvThanhToan.Columns["NgayThanhToan"].DefaultCellStyle = dateStyle;
 
+
+            dgvThanhToan.Columns["NgayTao"].HeaderText = "Ngày tạo";
+            dgvThanhToan.Columns["NgayThanhToan"].HeaderText = "Ngày thanh toán";
             // Thêm nút Chi tiết (Chỉ thêm 1 lần)
             if (dgvThanhToan.Columns.Cast<DataGridViewColumn>().All(c => c.Name != "btnChiTiet"))
             {
@@ -580,6 +590,187 @@ namespace MAIN.main
             // Load DataGridView với kết quả mới
             dgvThanhToan.DataSource = searchResults;
             // EditDGVThanhToan(); 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Kiểm tra có dữ liệu không
+                if (dgvThanhToan.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không có dữ liệu thanh toán để xuất!", "Thông báo",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                using (var package = new ExcelPackage())
+                {
+                    var worksheet = package.Workbook.Worksheets.Add("DanhSachThanhToan");
+
+                    // Tạo tiêu đề
+                    worksheet.Cells[1, 1].Value = "LỊCH SỬ THANH TOÁN";
+                    worksheet.Cells[1, 1, 1, 9].Merge = true;
+                    worksheet.Cells[1, 1].Style.Font.Bold = true;
+                    worksheet.Cells[1, 1].Style.Font.Size = 14;
+                    worksheet.Cells[1, 1].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+
+                    // Thông tin xuất file
+                    worksheet.Cells[2, 1].Value = "Ngày xuất:";
+                    worksheet.Cells[2, 2].Value = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                    worksheet.Cells[3, 1].Value = "Tổng số giao dịch:";
+                    worksheet.Cells[3, 2].Value = dgvThanhToan.Rows.Count;
+
+                    // Header - bắt đầu từ dòng 5
+                    int startRow = 5;
+
+                    worksheet.Cells[startRow, 1].Value = "Mã HĐ";
+                    worksheet.Cells[startRow, 2].Value = "Người Trả";
+                    worksheet.Cells[startRow, 3].Value = "Phòng";
+                    worksheet.Cells[startRow, 4].Value = "Nội dung";
+                    worksheet.Cells[startRow, 5].Value = "Tổng lệ Phí";
+                    worksheet.Cells[startRow, 6].Value = "Tiền điện";
+                    worksheet.Cells[startRow, 7].Value = "Tiền nước";
+                    worksheet.Cells[startRow, 8].Value = "Thành tiền";
+                    worksheet.Cells[startRow, 9].Value = "Ngày tạo";
+                    worksheet.Cells[startRow, 10].Value = "Ngày thanh toán";
+
+                    // Chỉ in đậm header, không màu nền
+                    using (var range = worksheet.Cells[startRow, 1, startRow, 10])
+                    {
+                        range.Style.Font.Bold = true;
+                    }
+
+                    // Đổ dữ liệu từ DataGridView (bỏ qua cột nút Chi tiết)
+                    for (int i = 0; i < dgvThanhToan.Rows.Count; i++)
+                    {
+                        int row = startRow + i + 1;
+
+                        worksheet.Cells[row, 1].Value = dgvThanhToan.Rows[i].Cells["MaHD"].Value?.ToString();
+                        worksheet.Cells[row, 2].Value = dgvThanhToan.Rows[i].Cells["TenNguoiThanhToan"].Value?.ToString();
+                        worksheet.Cells[row, 3].Value = dgvThanhToan.Rows[i].Cells["TenPhong"].Value?.ToString();
+                        worksheet.Cells[row, 4].Value = dgvThanhToan.Rows[i].Cells["NoiDung"].Value?.ToString();
+
+                        // Định dạng các cột tiền
+                        FormatCurrencyCell(worksheet, row, 5, dgvThanhToan.Rows[i].Cells["LePhi"].Value); // Tổng lệ Phí
+                        FormatCurrencyCell(worksheet, row, 6, dgvThanhToan.Rows[i].Cells["TienDien"].Value); // Tiền điện
+                        FormatCurrencyCell(worksheet, row, 7, dgvThanhToan.Rows[i].Cells["TienNuoc"].Value); // Tiền nước
+                        FormatCurrencyCell(worksheet, row, 8, dgvThanhToan.Rows[i].Cells["ThanhTien"].Value); // Thành tiền
+
+                        // Định dạng ngày tháng
+                        FormatDateCell(worksheet, row, 9, dgvThanhToan.Rows[i].Cells["NgayTao"].Value); // Ngày tạo
+                        FormatDateCell(worksheet, row, 10, dgvThanhToan.Rows[i].Cells["NgayThanhToan"].Value); // Ngày thanh toán
+                    }
+
+                    // Auto fit columns để hiển thị đẹp
+                    worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
+
+                    // Thêm border nhẹ cho toàn bộ bảng
+                    int endRow = startRow + dgvThanhToan.Rows.Count;
+                    using (var range = worksheet.Cells[startRow, 1, endRow, 10])
+                    {
+                        range.Style.Border.Top.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Bottom.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Right.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                    }
+
+                    // Thống kê tổng tiền
+                    int summaryRow = endRow + 2;
+                    worksheet.Cells[summaryRow, 1].Value = "TỔNG DOANH THU THANH TOÁN:";
+                    worksheet.Cells[summaryRow, 1].Style.Font.Bold = true;
+
+                    decimal tongThanhTien = 0;
+                    decimal tongLePhi = 0;
+                    decimal tongTienDien = 0;
+                    decimal tongTienNuoc = 0;
+
+                    for (int i = 0; i < dgvThanhToan.Rows.Count; i++)
+                    {
+                        tongThanhTien += GetDecimalValue(dgvThanhToan.Rows[i].Cells["ThanhTien"].Value);
+                        tongLePhi += GetDecimalValue(dgvThanhToan.Rows[i].Cells["LePhi"].Value);
+                        tongTienDien += GetDecimalValue(dgvThanhToan.Rows[i].Cells["TienDien"].Value);
+                        tongTienNuoc += GetDecimalValue(dgvThanhToan.Rows[i].Cells["TienNuoc"].Value);
+                    }
+
+                    worksheet.Cells[summaryRow, 8].Value = tongThanhTien;
+                    worksheet.Cells[summaryRow, 8].Style.Numberformat.Format = "#,##0";
+                    worksheet.Cells[summaryRow, 8].Style.Font.Bold = true;
+
+                    // Thống kê chi tiết
+                    int detailRow = summaryRow + 1;
+                    worksheet.Cells[detailRow, 1].Value = "Chi tiết:";
+                    worksheet.Cells[detailRow, 1].Style.Font.Bold = true;
+
+                    worksheet.Cells[detailRow + 1, 1].Value = "- Tổng lệ phí:";
+                    worksheet.Cells[detailRow + 1, 5].Value = tongLePhi;
+                    worksheet.Cells[detailRow + 1, 5].Style.Numberformat.Format = "#,##0";
+
+                    worksheet.Cells[detailRow + 2, 1].Value = "- Tổng tiền điện:";
+                    worksheet.Cells[detailRow + 2, 5].Value = tongTienDien;
+                    worksheet.Cells[detailRow + 2, 5].Style.Numberformat.Format = "#,##0";
+
+                    worksheet.Cells[detailRow + 3, 1].Value = "- Tổng tiền nước:";
+                    worksheet.Cells[detailRow + 3, 5].Value = tongTienNuoc;
+                    worksheet.Cells[detailRow + 3, 5].Style.Numberformat.Format = "#,##0";
+
+                    // Hiển thị dialog lưu file
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "Excel Files|*.xlsx";
+                    saveFileDialog.FileName = $"LichSuThanhToan_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        FileInfo excelFile = new FileInfo(saveFileDialog.FileName);
+                        package.SaveAs(excelFile);
+
+                        MessageBox.Show($"Xuất Excel thành công!\nTổng số giao dịch: {dgvThanhToan.Rows.Count}\nTổng doanh thu: {tongThanhTien:N0} VNĐ",
+                                      "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi xuất Excel: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Hàm hỗ trợ định dạng ô tiền tệ
+        private void FormatCurrencyCell(ExcelWorksheet worksheet, int row, int col, object value)
+        {
+            if (value != null && decimal.TryParse(value.ToString(), out decimal number))
+            {
+                worksheet.Cells[row, col].Value = number;
+                worksheet.Cells[row, col].Style.Numberformat.Format = "#,##0";
+            }
+            else
+            {
+                worksheet.Cells[row, col].Value = value?.ToString();
+            }
+        }
+
+        // Hàm hỗ trợ định dạng ô ngày tháng
+        private void FormatDateCell(ExcelWorksheet worksheet, int row, int col, object value)
+        {
+            if (value != null && DateTime.TryParse(value.ToString(), out DateTime dateValue))
+            {
+                worksheet.Cells[row, col].Value = dateValue;
+                worksheet.Cells[row, col].Style.Numberformat.Format = "dd/MM/yyyy";
+            }
+            else
+            {
+                worksheet.Cells[row, col].Value = value?.ToString();
+            }
+        }
+
+        // Hàm lấy giá trị decimal
+        private decimal GetDecimalValue(object value)
+        {
+            if (value != null && decimal.TryParse(value.ToString(), out decimal number))
+            {
+                return number;
+            }
+            return 0;
         }
     }
 }

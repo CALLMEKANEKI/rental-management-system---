@@ -1,9 +1,11 @@
 ﻿using BLL.Services;
 using DAL.Model;
 using DAL.ViewModel;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -287,41 +289,150 @@ namespace MAIN.main
             }
         }
 
-
-        /*
-        private void btnTraPhong_Click(object sender, EventArgs e)
+        private void btnXuat_Click(object sender, EventArgs e)
         {
-            Button btn = (Button)sender;
-            if (btn.Text == "Trả phòng")
+            try
             {
-                if (string.IsNullOrEmpty(txtMaPhong.Text))
+                // Kiểm tra có dữ liệu không
+                if (dgvPhongTro.Rows.Count == 0)
                 {
-                    MessageBox.Show("Vui lòng chọn phòng trọ để trả.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Không có dữ liệu phòng trọ để xuất!", "Thông báo",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                phongtro objPhong = new phongtro
-                {
-                    id_phong = txtMaPhong.Text,
-                    id_chutro = id_chutrohientai,
-                    tinhtrang = "Trống" // cập nhật trạng thái phòng sau khi trả
-                };
 
-                string mess = _phongtroService.TraPhong(objPhong, id_chutrohientai);
-                if (mess == "Trả phòng thành công.")
+                using (var package = new ExcelPackage())
                 {
-                    MessageBox.Show(mess, "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clearPhongTro();
-                    LoadDGVPhongTro();
-                }
-                else
-                {
-                    MessageBox.Show(mess, "Lỗi trả phòng", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    var worksheet = package.Workbook.Worksheets.Add("DanhSachPhongTro");
+
+                    // Tạo tiêu đề
+                    worksheet.Cells[1, 1].Value = "DANH SÁCH PHÒNG TRỌ";
+                    worksheet.Cells[1, 1, 1, 4].Merge = true;
+                    worksheet.Cells[1, 1].Style.Font.Bold = true;
+                    worksheet.Cells[1, 1].Style.Font.Size = 14;
+                    worksheet.Cells[1, 1].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+
+                    // Thông tin xuất file
+                    worksheet.Cells[2, 1].Value = "Ngày xuất:";
+                    worksheet.Cells[2, 2].Value = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                    worksheet.Cells[3, 1].Value = "Tổng số phòng:";
+                    worksheet.Cells[3, 2].Value = dgvPhongTro.Rows.Count;
+
+                    // Lấy thống kê từ form
+                    int tongphong = _phongtroService.LayTatCaPhongTro(id_chutrohientai).Count();
+                    int sophongtrong = _phongtroService.TimPhongTrong(id_chutrohientai).Count();
+                    int sophongdathue = tongphong - sophongtrong;
+
+                    worksheet.Cells[4, 1].Value = "Số phòng trống:";
+                    worksheet.Cells[4, 2].Value = sophongtrong;
+                    worksheet.Cells[5, 1].Value = "Số phòng đã thuê:";
+                    worksheet.Cells[5, 2].Value = sophongdathue;
+
+                    // Header - bắt đầu từ dòng 7
+                    int startRow = 7;
+
+                    worksheet.Cells[startRow, 1].Value = "ID Phòng";
+                    worksheet.Cells[startRow, 2].Value = "Tên phòng";
+                    worksheet.Cells[startRow, 3].Value = "Giá phòng";
+                    worksheet.Cells[startRow, 4].Value = "Tình trạng";
+
+                    // Chỉ in đậm header, không màu nền
+                    using (var range = worksheet.Cells[startRow, 1, startRow, 4])
+                    {
+                        range.Style.Font.Bold = true;
+                    }
+
+                    // Đổ dữ liệu từ DataGridView
+                    for (int i = 0; i < dgvPhongTro.Rows.Count; i++)
+                    {
+                        int row = startRow + i + 1;
+
+                        worksheet.Cells[row, 1].Value = dgvPhongTro.Rows[i].Cells["id_phong"].Value?.ToString();
+                        worksheet.Cells[row, 2].Value = dgvPhongTro.Rows[i].Cells["tenphong"].Value?.ToString();
+
+                        // Định dạng giá phòng
+                        var giaPhongValue = dgvPhongTro.Rows[i].Cells["giaphong"].Value;
+                        if (giaPhongValue != null && decimal.TryParse(giaPhongValue.ToString(), out decimal giaPhong))
+                        {
+                            worksheet.Cells[row, 3].Value = giaPhong;
+                            worksheet.Cells[row, 3].Style.Numberformat.Format = "#,##0";
+                        }
+                        else
+                        {
+                            worksheet.Cells[row, 3].Value = giaPhongValue?.ToString();
+                        }
+
+                        worksheet.Cells[row, 4].Value = dgvPhongTro.Rows[i].Cells["tinhtrang"].Value?.ToString();
+                    }
+
+                    // Auto fit columns để hiển thị đẹp
+                    worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
+
+                    // Thêm border nhẹ cho toàn bộ bảng
+                    int endRow = startRow + dgvPhongTro.Rows.Count;
+                    using (var range = worksheet.Cells[startRow, 1, endRow, 4])
+                    {
+                        range.Style.Border.Top.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Bottom.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Right.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                    }
+
+                    // Thống kê tổng giá trị phòng
+                    int summaryRow = endRow + 2;
+                    worksheet.Cells[summaryRow, 1].Value = "Tổng giá trị phòng (tiềm năng):";
+                    worksheet.Cells[summaryRow, 1].Style.Font.Bold = true;
+
+                    decimal tongGiaPhong = 0;
+                    for (int i = 0; i < dgvPhongTro.Rows.Count; i++)
+                    {
+                        var giaPhongValue = dgvPhongTro.Rows[i].Cells["giaphong"].Value;
+                        if (giaPhongValue != null && decimal.TryParse(giaPhongValue.ToString(), out decimal giaPhong))
+                        {
+                            tongGiaPhong += giaPhong;
+                        }
+                    }
+                    worksheet.Cells[summaryRow, 3].Value = tongGiaPhong;
+                    worksheet.Cells[summaryRow, 3].Style.Numberformat.Format = "#,##0";
+                    worksheet.Cells[summaryRow, 3].Style.Font.Bold = true;
+
+                    // Thống kê tình trạng phòng
+                    int statsRow = summaryRow + 1;
+                    worksheet.Cells[statsRow, 1].Value = "THỐNG KÊ TÌNH TRẠNG:";
+                    worksheet.Cells[statsRow, 1].Style.Font.Bold = true;
+
+                    var thongKeTinhTrang = dgvPhongTro.Rows.Cast<DataGridViewRow>()
+                        .GroupBy(r => r.Cells["tinhtrang"].Value?.ToString() ?? "Không xác định")
+                        .Select(g => new { TinhTrang = g.Key, SoLuong = g.Count() });
+
+                    int statDetailRow = statsRow + 1;
+                    foreach (var stat in thongKeTinhTrang)
+                    {
+                        worksheet.Cells[statDetailRow, 1].Value = $"- {stat.TinhTrang}:";
+                        worksheet.Cells[statDetailRow, 2].Value = stat.SoLuong;
+                        statDetailRow++;
+                    }
+
+                    // Hiển thị dialog lưu file
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "Excel Files|*.xlsx";
+                    saveFileDialog.FileName = $"DanhSachPhongTro_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        FileInfo excelFile = new FileInfo(saveFileDialog.FileName);
+                        package.SaveAs(excelFile);
+
+                        MessageBox.Show($"Xuất Excel thành công!\nTổng số phòng: {dgvPhongTro.Rows.Count}\nPhòng trống: {sophongtrong}\nPhòng đã thuê: {sophongdathue}",
+                                      "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi xuất Excel: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-        */
-
-
     }
 }
 

@@ -127,8 +127,7 @@ namespace BLL.BLL
                     existingChutro.avatar_url = updatedChutro.avatar_url;
                     existingChutro.anh_cccd_truoc_url = updatedChutro.anh_cccd_truoc_url;
                     existingChutro.anh_cccd_sau_url = updatedChutro.anh_cccd_sau_url;
-
-                    // Không nên cập nhật mật khẩu ở đây, nên có phương thức riêng.
+                    existingChutro.matkhau = updatedChutro.matkhau;
 
                     dbContext.SaveChanges();
                     return true;

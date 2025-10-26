@@ -282,7 +282,7 @@
             this.picCCCDTruoc.Size = new System.Drawing.Size(204, 114);
             this.picCCCDTruoc.TabIndex = 36;
             this.picCCCDTruoc.TabStop = false;
-            this.picCCCDTruoc.Tag = "CCCD_Front";
+            this.picCCCDTruoc.Tag = "CCCD_Truoc";
             // 
             // picCCCDSau
             // 
@@ -292,7 +292,7 @@
             this.picCCCDSau.Size = new System.Drawing.Size(202, 118);
             this.picCCCDSau.TabIndex = 37;
             this.picCCCDSau.TabStop = false;
-            this.picCCCDSau.Tag = "CCCD_Back";
+            this.picCCCDSau.Tag = "CCCD_Sau";
             // 
             // btnChonAvatar
             // 
@@ -312,7 +312,7 @@
             this.btnCCCDTruoc.Name = "btnCCCDTruoc";
             this.btnCCCDTruoc.Size = new System.Drawing.Size(86, 32);
             this.btnCCCDTruoc.TabIndex = 39;
-            this.btnCCCDTruoc.Tag = "CCCD_Front";
+            this.btnCCCDTruoc.Tag = "CCCD_Truoc";
             this.btnCCCDTruoc.Text = "Upload";
             this.btnCCCDTruoc.Click += new System.EventHandler(this.btnUpload_Click);
             // 
@@ -323,7 +323,7 @@
             this.btnCCCDAfter.Name = "btnCCCDAfter";
             this.btnCCCDAfter.Size = new System.Drawing.Size(84, 32);
             this.btnCCCDAfter.TabIndex = 40;
-            this.btnCCCDAfter.Tag = "CCCD_Back";
+            this.btnCCCDAfter.Tag = "CCCD_Sau";
             this.btnCCCDAfter.Text = "Upload";
             this.btnCCCDAfter.Click += new System.EventHandler(this.btnUpload_Click);
             // 
@@ -347,7 +347,8 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnLamMoi);
             this.Name = "frmChuTro";
-            this.Text = "Quản lý Chủ trọ";
+            this.Text = "Thông tin cá nhân";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmChuTro_FormClosing);
             this.Load += new System.EventHandler(this.frmChuTro_Load);
             this.grbPic.ResumeLayout(false);
             this.grbPic.PerformLayout();

@@ -1,11 +1,13 @@
 ﻿using BLL.Services;
 using DAL.Model;
 using DAL.ViewModel;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -452,6 +454,170 @@ namespace MAIN.main
         {
             LoadDGVHoaDon();
             clearHoaDon();
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Kiểm tra có dữ liệu không
+                if (dgvHoaDon.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không có dữ liệu hóa đơn để xuất!", "Thông báo",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                using (var package = new ExcelPackage())
+                {
+                    var worksheet = package.Workbook.Worksheets.Add("DanhSachHoaDon");
+
+                    // Tạo tiêu đề
+                    worksheet.Cells[1, 1].Value = "DANH SÁCH HÓA ĐƠN";
+                    worksheet.Cells[1, 1, 1, 10].Merge = true;
+                    worksheet.Cells[1, 1].Style.Font.Bold = true;
+                    worksheet.Cells[1, 1].Style.Font.Size = 14;
+                    worksheet.Cells[1, 1].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+
+                    // Thông tin xuất file
+                    worksheet.Cells[2, 1].Value = "Ngày xuất:";
+                    worksheet.Cells[2, 2].Value = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                    worksheet.Cells[3, 1].Value = "Tổng số hóa đơn:";
+                    worksheet.Cells[3, 2].Value = dgvHoaDon.Rows.Count;
+
+                    // Header - bắt đầu từ dòng 5
+                    int startRow = 5;
+
+                    worksheet.Cells[startRow, 1].Value = "ID Hóa Đơn";
+                    worksheet.Cells[startRow, 2].Value = "Ngày Tạo";
+                    worksheet.Cells[startRow, 3].Value = "Phòng";
+                    worksheet.Cells[startRow, 4].Value = "Trạng Thái";
+                    worksheet.Cells[startRow, 5].Value = "Tiền Phòng";
+                    worksheet.Cells[startRow, 6].Value = "Tiền Điện";
+                    worksheet.Cells[startRow, 7].Value = "Tiền Nước";
+                    worksheet.Cells[startRow, 8].Value = "Dịch Vụ";
+                    worksheet.Cells[startRow, 9].Value = "TỔNG TIỀN";
+                    worksheet.Cells[startRow, 10].Value = "Nội dung";
+
+                    // Chỉ in đậm header, không màu nền
+                    using (var range = worksheet.Cells[startRow, 1, startRow, 10])
+                    {
+                        range.Style.Font.Bold = true;
+                    }
+
+                    // Đổ dữ liệu từ DataGridView
+                    for (int i = 0; i < dgvHoaDon.Rows.Count; i++)
+                    {
+                        int row = startRow + i + 1;
+
+                        worksheet.Cells[row, 1].Value = dgvHoaDon.Rows[i].Cells["IDHoaDon"].Value?.ToString();
+
+                        // Định dạng ngày tháng
+                        var ngayTao = dgvHoaDon.Rows[i].Cells["NgayTao"].Value;
+                        if (ngayTao != null && DateTime.TryParse(ngayTao.ToString(), out DateTime ngayTaoValue))
+                        {
+                            worksheet.Cells[row, 2].Value = ngayTaoValue;
+                            worksheet.Cells[row, 2].Style.Numberformat.Format = "dd/MM/yyyy";
+                        }
+                        else
+                        {
+                            worksheet.Cells[row, 2].Value = ngayTao?.ToString();
+                        }
+
+                        worksheet.Cells[row, 3].Value = dgvHoaDon.Rows[i].Cells["TenPhong"].Value?.ToString();
+                        worksheet.Cells[row, 4].Value = dgvHoaDon.Rows[i].Cells["TrangThai"].Value?.ToString();
+
+                        // Định dạng các cột tiền
+                        FormatCurrencyCell(worksheet, row, 5, dgvHoaDon.Rows[i].Cells["Tien_Phong"].Value); // Tiền Phòng
+                        FormatCurrencyCell(worksheet, row, 6, dgvHoaDon.Rows[i].Cells["ThanhTien_Dien"].Value); // Tiền Điện
+                        FormatCurrencyCell(worksheet, row, 7, dgvHoaDon.Rows[i].Cells["ThanhTien_Nuoc"].Value); // Tiền Nước
+                        FormatCurrencyCell(worksheet, row, 8, dgvHoaDon.Rows[i].Cells["Tien_dv"].Value); // Dịch Vụ
+                        FormatCurrencyCell(worksheet, row, 9, dgvHoaDon.Rows[i].Cells["ThanhTien"].Value); // TỔNG TIỀN
+
+                        worksheet.Cells[row, 10].Value = dgvHoaDon.Rows[i].Cells["NoiDung"].Value?.ToString();
+                    }
+
+                    // Auto fit columns để hiển thị đẹp
+                    worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
+
+                    // Thêm border nhẹ cho toàn bộ bảng
+                    int endRow = startRow + dgvHoaDon.Rows.Count;
+                    using (var range = worksheet.Cells[startRow, 1, endRow, 10])
+                    {
+                        range.Style.Border.Top.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Bottom.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Right.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                    }
+
+                    // Thống kê tổng tiền
+                    int summaryRow = endRow + 2;
+                    worksheet.Cells[summaryRow, 1].Value = "TỔNG DOANH THU:";
+                    worksheet.Cells[summaryRow, 1].Style.Font.Bold = true;
+
+                    decimal tongTien = 0;
+                    for (int i = 0; i < dgvHoaDon.Rows.Count; i++)
+                    {
+                        var thanhTienValue = dgvHoaDon.Rows[i].Cells["ThanhTien"].Value;
+                        if (thanhTienValue != null && decimal.TryParse(thanhTienValue.ToString(), out decimal thanhTien))
+                        {
+                            tongTien += thanhTien;
+                        }
+                    }
+                    worksheet.Cells[summaryRow, 9].Value = tongTien;
+                    worksheet.Cells[summaryRow, 9].Style.Numberformat.Format = "#,##0";
+                    worksheet.Cells[summaryRow, 9].Style.Font.Bold = true;
+
+                    // Thống kê trạng thái
+                    int statsRow = summaryRow + 1;
+                    worksheet.Cells[statsRow, 1].Value = "THỐNG KÊ TRẠNG THÁI:";
+                    worksheet.Cells[statsRow, 1].Style.Font.Bold = true;
+
+                    var thongKeTrangThai = dgvHoaDon.Rows.Cast<DataGridViewRow>()
+                        .GroupBy(r => r.Cells["TrangThai"].Value?.ToString() ?? "Không xác định")
+                        .Select(g => new { TrangThai = g.Key, SoLuong = g.Count() });
+
+                    int statDetailRow = statsRow + 1;
+                    foreach (var stat in thongKeTrangThai)
+                    {
+                        worksheet.Cells[statDetailRow, 1].Value = $"- {stat.TrangThai}:";
+                        worksheet.Cells[statDetailRow, 2].Value = stat.SoLuong;
+                        statDetailRow++;
+                    }
+
+                    // Hiển thị dialog lưu file
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "Excel Files|*.xlsx";
+                    saveFileDialog.FileName = $"DanhSachHoaDon_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        FileInfo excelFile = new FileInfo(saveFileDialog.FileName);
+                        package.SaveAs(excelFile);
+
+                        MessageBox.Show($"Xuất Excel thành công!\nTổng số hóa đơn: {dgvHoaDon.Rows.Count}\nTổng doanh thu: {tongTien:N0} VNĐ",
+                                      "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi xuất Excel: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Hàm hỗ trợ định dạng ô tiền tệ
+        private void FormatCurrencyCell(ExcelWorksheet worksheet, int row, int col, object value)
+        {
+            if (value != null && decimal.TryParse(value.ToString(), out decimal number))
+            {
+                worksheet.Cells[row, col].Value = number;
+                worksheet.Cells[row, col].Style.Numberformat.Format = "#,##0";
+            }
+            else
+            {
+                worksheet.Cells[row, col].Value = value?.ToString();
+            }
         }
     }
 }

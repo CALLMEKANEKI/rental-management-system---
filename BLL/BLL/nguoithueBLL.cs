@@ -224,30 +224,77 @@ namespace BLL.BLL
         {
             using (var dbContext = new ContextDB())
             {
-                try
+                using (var transaction = dbContext.Database.BeginTransaction())
                 {
-                    // Lấy đối tượng để xóa, đồng thời xác minh quyền sở hữu
-                    var nguoiThueToDelete = dbContext.nguoithues
-                                                     .Include(nt => nt.phongtro)
-                                                     .FirstOrDefault(nt => nt.phongtro.id_chutro == id_chutro
-                                                                    && nt.id_nguoi_thue == id_nguoithue);
-                    if (nguoiThueToDelete == null) return false;
+                    try
+                    {
+                        // Lấy đối tượng để xóa, đồng thời xác minh quyền sở hữu
+                        var nguoiThueToDelete = dbContext.nguoithues
+                                                         .Include(nt => nt.phongtro)
+                                                         .Include(nt => nt.hopdongs)
+                                                         .Include(nt => nt.thanh_toan)// THÊM INCLUDE CÁC QUAN HỆ
+                                                         .FirstOrDefault(nt => nt.phongtro.id_chutro == id_chutro
+                                                                        && nt.id_nguoi_thue == id_nguoithue);
 
-                    dbContext.nguoithues.Remove(nguoiThueToDelete);
-                    dbContext.SaveChanges();
-                    return true;
-                }
-                catch (DbUpdateException dbEx)
-                {
-                    Console.WriteLine("Lỗi DB (Xóa Người thuê): Không thể xóa do tồn tại ràng buộc dữ liệu. Chi tiết: " + dbEx.InnerException?.Message ?? dbEx.Message);
-                    return false;
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("Không thể xóa người thuê. Lỗi: " + ex.Message);
-                    return false;
+                        if (nguoiThueToDelete == null) return false;
+
+                        // 1. XÓA CÁC BẢN GHI LIÊN QUAN TRƯỚC
+
+                        // Xóa hợp đồng
+                        if (nguoiThueToDelete.hopdongs != null && nguoiThueToDelete.hopdongs.Any())
+                        {
+                            dbContext.hopdongs.RemoveRange(nguoiThueToDelete.hopdongs);
+                        }
+
+                        // Xóa thanh toán (nếu có)
+                        var thanhToanList = dbContext.thanh_toan.Where(tt => tt.id_nguoi_thue == id_nguoithue);
+                        if (thanhToanList.Any())
+                        {
+                            dbContext.thanh_toan.RemoveRange(thanhToanList);
+                        }
+
+                        // 2. XÓA NGƯỜI THUÊ
+                        dbContext.nguoithues.Remove(nguoiThueToDelete);
+
+                        // 3. LƯU THAY ĐỔI VÀ COMMIT TRANSACTION
+                        dbContext.SaveChanges();
+                        transaction.Commit();
+
+                        return true;
+                    }
+                    catch (DbUpdateException dbEx)
+                    {
+                        transaction.Rollback();
+                        // HIỂN THỊ CHI TIẾT LỖI
+                        var innerMessage = GetInnerExceptionMessage(dbEx);
+                        Console.WriteLine($"Lỗi DB (Xóa Người thuê): {innerMessage}");
+                        return false;
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        Console.WriteLine($"Không thể xóa người thuê. Lỗi: {ex.Message}");
+                        return false;
+                    }
                 }
             }
+        }
+
+        // Hàm lấy thông tin lỗi chi tiết
+        private string GetInnerExceptionMessage(Exception ex)
+        {
+            if (ex == null) return string.Empty;
+
+            var message = ex.Message;
+            var inner = ex.InnerException;
+
+            while (inner != null)
+            {
+                message += $" -> {inner.Message}";
+                inner = inner.InnerException;
+            }
+
+            return message;
         }
     }
 }

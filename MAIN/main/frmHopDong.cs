@@ -1,11 +1,13 @@
 ﻿using BLL.Services;
 using DAL.Model;
 using DAL.ViewModel;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -318,6 +320,148 @@ namespace MAIN.main
             // 4. Load DataGridView với kết quả mới
             dgvHopDong.DataSource = searchResults;
             EditDGVHopDong(); 
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Kiểm tra có dữ liệu không
+                if (dgvHopDong.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không có dữ liệu hợp đồng để xuất!", "Thông báo",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                using (var package = new ExcelPackage())
+                {
+                    var worksheet = package.Workbook.Worksheets.Add("DanhSachHopDong");
+
+                    // Tạo tiêu đề
+                    worksheet.Cells[1, 1].Value = "DANH SÁCH HỢP ĐỒNG";
+                    worksheet.Cells[1, 1, 1, 6].Merge = true;
+                    worksheet.Cells[1, 1].Style.Font.Bold = true;
+                    worksheet.Cells[1, 1].Style.Font.Size = 14;
+                    worksheet.Cells[1, 1].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+
+                    // Thông tin xuất file
+                    worksheet.Cells[2, 1].Value = "Ngày xuất:";
+                    worksheet.Cells[2, 2].Value = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                    worksheet.Cells[3, 1].Value = "Tổng số hợp đồng:";
+                    worksheet.Cells[3, 2].Value = dgvHopDong.Rows.Count;
+
+                    // Header - bắt đầu từ dòng 5
+                    int startRow = 5;
+
+                    worksheet.Cells[startRow, 1].Value = "Mã hợp đồng";
+                    worksheet.Cells[startRow, 2].Value = "Người thuê";
+                    worksheet.Cells[startRow, 3].Value = "Phòng thuê";
+                    worksheet.Cells[startRow, 4].Value = "Ngày bắt đầu";
+                    worksheet.Cells[startRow, 5].Value = "Ngày kết thúc";
+                    worksheet.Cells[startRow, 6].Value = "Tiền cọc";
+
+                    // Chỉ in đậm header, không màu nền
+                    using (var range = worksheet.Cells[startRow, 1, startRow, 6])
+                    {
+                        range.Style.Font.Bold = true;
+                    }
+
+                    // Đổ dữ liệu từ DataGridView
+                    for (int i = 0; i < dgvHopDong.Rows.Count; i++)
+                    {
+                        int row = startRow + i + 1;
+
+                        worksheet.Cells[row, 1].Value = dgvHopDong.Rows[i].Cells["IDHopDong"].Value?.ToString();
+                        worksheet.Cells[row, 2].Value = dgvHopDong.Rows[i].Cells["TenNguoiThue"].Value?.ToString();
+                        worksheet.Cells[row, 3].Value = dgvHopDong.Rows[i].Cells["TenPhong"].Value?.ToString();
+
+                        // Định dạng ngày tháng
+                        var ngayBatDau = dgvHopDong.Rows[i].Cells["NgayBatDau"].Value;
+                        if (ngayBatDau != null && DateTime.TryParse(ngayBatDau.ToString(), out DateTime ngayBD))
+                        {
+                            worksheet.Cells[row, 4].Value = ngayBD;
+                            worksheet.Cells[row, 4].Style.Numberformat.Format = "dd/MM/yyyy";
+                        }
+                        else
+                        {
+                            worksheet.Cells[row, 4].Value = ngayBatDau?.ToString();
+                        }
+
+                        var ngayKetThuc = dgvHopDong.Rows[i].Cells["NgayKetThuc"].Value;
+                        if (ngayKetThuc != null && DateTime.TryParse(ngayKetThuc.ToString(), out DateTime ngayKT))
+                        {
+                            worksheet.Cells[row, 5].Value = ngayKT;
+                            worksheet.Cells[row, 5].Style.Numberformat.Format = "dd/MM/yyyy";
+                        }
+                        else
+                        {
+                            worksheet.Cells[row, 5].Value = ngayKetThuc?.ToString();
+                        }
+
+                        // Định dạng tiền cọc
+                        var tienCoc = dgvHopDong.Rows[i].Cells["Tiencoc"].Value;
+                        if (tienCoc != null && decimal.TryParse(tienCoc.ToString(), out decimal tienCocValue))
+                        {
+                            worksheet.Cells[row, 6].Value = tienCocValue;
+                            worksheet.Cells[row, 6].Style.Numberformat.Format = "#,##0";
+                        }
+                        else
+                        {
+                            worksheet.Cells[row, 6].Value = tienCoc?.ToString();
+                        }
+                    }
+
+                    // Auto fit columns để hiển thị đẹp
+                    worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
+
+                    // Thêm border nhẹ cho toàn bộ bảng
+                    int endRow = startRow + dgvHopDong.Rows.Count;
+                    using (var range = worksheet.Cells[startRow, 1, endRow, 6])
+                    {
+                        range.Style.Border.Top.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Bottom.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Right.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                    }
+
+                    // Thống kê tổng tiền cọc
+                    int summaryRow = endRow + 2;
+                    worksheet.Cells[summaryRow, 1].Value = "Tổng tiền cọc:";
+                    worksheet.Cells[summaryRow, 1].Style.Font.Bold = true;
+
+                    decimal tongTienCoc = 0;
+                    for (int i = 0; i < dgvHopDong.Rows.Count; i++)
+                    {
+                        var tienCocValue = dgvHopDong.Rows[i].Cells["Tiencoc"].Value;
+                        if (tienCocValue != null && decimal.TryParse(tienCocValue.ToString(), out decimal tienCoc))
+                        {
+                            tongTienCoc += tienCoc;
+                        }
+                    }
+                    worksheet.Cells[summaryRow, 6].Value = tongTienCoc;
+                    worksheet.Cells[summaryRow, 6].Style.Numberformat.Format = "#,##0";
+                    worksheet.Cells[summaryRow, 6].Style.Font.Bold = true;
+
+                    // Hiển thị dialog lưu file
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "Excel Files|*.xlsx";
+                    saveFileDialog.FileName = $"DanhSachHopDong_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        FileInfo excelFile = new FileInfo(saveFileDialog.FileName);
+                        package.SaveAs(excelFile);
+
+                        MessageBox.Show($"Xuất Excel thành công!\nTổng số hợp đồng: {dgvHopDong.Rows.Count}",
+                                      "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi xuất Excel: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -51,6 +51,7 @@
             this.txtTienCoc = new System.Windows.Forms.TextBox();
             this.lblPhong = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.btnXuat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHopDong)).BeginInit();
             this.grbHopDong.SuspendLayout();
@@ -61,7 +62,7 @@
             this.btnLamMoi.BackColor = System.Drawing.Color.DarkGreen;
             this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLamMoi.Location = new System.Drawing.Point(762, 226);
+            this.btnLamMoi.Location = new System.Drawing.Point(932, 226);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(100, 35);
             this.btnLamMoi.TabIndex = 25;
@@ -304,9 +305,23 @@
             this.lblPhong.TabIndex = 53;
             this.lblPhong.Text = "Phòng trọ:";
             // 
+            // btnXuat
+            // 
+            this.btnXuat.BackColor = System.Drawing.Color.DimGray;
+            this.btnXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuat.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnXuat.Location = new System.Drawing.Point(778, 226);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(100, 35);
+            this.btnXuat.TabIndex = 49;
+            this.btnXuat.Text = "Xuất file";
+            this.btnXuat.UseVisualStyleBackColor = false;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
+            // 
             // frmHopDong
             // 
             this.ClientSize = new System.Drawing.Size(1161, 759);
+            this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.grbHopDong);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnLamMoi);
@@ -314,7 +329,7 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Name = "frmHopDong";
-            this.Text = "Quản lý Hợp đồng thuê phòng";
+            this.Text = "Quản lý hợp đồng thuê phòng";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHopDong)).EndInit();
@@ -348,5 +363,6 @@
         private System.Windows.Forms.Label lblPhong;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.DateTimePicker dtpNgayKT;
+        private System.Windows.Forms.Button btnXuat;
     }
 }

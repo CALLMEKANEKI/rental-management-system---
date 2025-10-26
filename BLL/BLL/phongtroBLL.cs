@@ -125,7 +125,7 @@ namespace BLL.BLL
             using (var dbContext = new ContextDB())
             {
                 return dbContext.phongtroes
-                    .Where(p => p.tinhtrang.ToLower().Contains("trong") && p.id_chutro == id_chutro)
+                    .Where(p => p.tinhtrang.ToLower().Contains("trống") && p.id_chutro == id_chutro)
                     .ToList();
             }
         }

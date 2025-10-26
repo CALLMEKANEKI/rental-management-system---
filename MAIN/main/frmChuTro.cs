@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,89 +21,249 @@ namespace MAIN.main
         private chutroService _chutroSerVice = new chutroService();
         private string id_chutrohientai;
         private chutro currentChuTro;
+        private ContextDB contextDB = new ContextDB();
 
         public frmChuTro()
         {
+            InitializeComponent();
+
             this.id_chutrohientai = main.LOGIN.id_chutrohientai;
             this.currentChuTro = _chutroSerVice.LayChuTroById(id_chutrohientai);
-            InitializeComponent();
-            LoadDataChuTro();
 
+            // ĐĂNG KÝ SỰ KIỆN FORM CLOSING
+            this.FormClosing += frmChuTro_FormClosing;
+
+            LoadDataChuTro();
+            LoadImages();
         }
 
-        // Hàm chọn ảnh chung
+        private void frmChuTro_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DisposeAllImages();
+        }
+
+        private void LoadImages()
+        {
+            if (currentChuTro == null) return;
+
+            string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            // Load Avatar
+            if (!string.IsNullOrEmpty(currentChuTro.avatar_url))
+            {
+                string avatarPath = Path.Combine(appDirectory, currentChuTro.avatar_url);
+                LoadSingleImage(picAvatar, avatarPath);
+            }
+
+            // Load CCCD Mặt trước
+            if (!string.IsNullOrEmpty(currentChuTro.anh_cccd_truoc_url))
+            {
+                string cccdTruocPath = Path.Combine(appDirectory, currentChuTro.anh_cccd_truoc_url);
+                LoadSingleImage(picCCCDTruoc, cccdTruocPath);
+            }
+
+            // Load CCCD Mặt sau
+            if (!string.IsNullOrEmpty(currentChuTro.anh_cccd_sau_url))
+            {
+                string cccdSauPath = Path.Combine(appDirectory, currentChuTro.anh_cccd_sau_url);
+                LoadSingleImage(picCCCDSau, cccdSauPath);
+            }
+        }
+
+        private void LoadSingleImage(PictureBox picBox, string imagePath)
+        {
+            try
+            {
+                if (File.Exists(imagePath))
+                {
+                    // Giải phóng ảnh cũ trước
+                    picBox.Image?.Dispose();
+
+                    using (var tempImage = Image.FromFile(imagePath))
+                    {
+                        picBox.Image = new Bitmap(tempImage);
+                        picBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error loading image: {ex.Message}");
+            }
+        }
+
         private void btnUpload_Click(object sender, EventArgs e)
         {
             Button btn = sender as Button;
-            if (btn == null || btn.Tag == null)
-                return;
-
+            if (btn == null || btn.Tag == null) return;
 
             string tagValue = btn.Tag.ToString();
-
-            // Tìm PictureBox có cùng Tag
             PictureBox targetPicBox = null;
-            foreach (Control ctrl in grbPic.Controls)
+            string currentImagePath = null;
+
+            switch (tagValue)
             {
-                if (ctrl is PictureBox pic && pic.Tag?.ToString() == tagValue)
-                {
-                    targetPicBox = pic;
+                case "Avatar":
+                    targetPicBox = picAvatar;
+                    currentImagePath = currentChuTro?.avatar_url;
                     break;
-                }
+                case "CCCD_Truoc":
+                    targetPicBox = picCCCDTruoc;
+                    currentImagePath = currentChuTro?.anh_cccd_truoc_url;
+                    break;
+                case "CCCD_Sau":
+                    targetPicBox = picCCCDSau;
+                    currentImagePath = currentChuTro?.anh_cccd_sau_url;
+                    break;
             }
 
-            //Tiến hành upload ảnh
-            // Tiến hành upload ảnh và Copy
-            if (targetPicBox != null)
+            if (targetPicBox == null) return;
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
                 openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif";
 
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
-                    string sourceFilePath = openFileDialog.FileName; // Đường dẫn file gốc người dùng chọn
-                    string newFileName = Path.GetFileName(sourceFilePath); 
+                    UploadAndSaveImage(tagValue, targetPicBox, currentImagePath, openFileDialog.FileName);
+                }
+            }
+        }
 
-                    // TẠO THƯ MỤC NẾU CHƯA CÓ
-                    string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
-                    string targetDirectory = Path.Combine(appDirectory, IMAGES_FOLDER_NAME);
+        private void UploadAndSaveImage(string tagValue, PictureBox targetPicBox, string currentImagePath, string sourceFilePath)
+        {
+            try
+            {
+                Console.WriteLine($"Starting upload for: {tagValue}");
 
-                    if (!Directory.Exists(targetDirectory))
+                string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                string targetDirectory = Path.Combine(appDirectory, IMAGES_FOLDER_NAME);
+
+                Console.WriteLine($"Target directory: {targetDirectory}");
+
+                if (!Directory.Exists(targetDirectory))
+                {
+                    Directory.CreateDirectory(targetDirectory);
+                    Console.WriteLine("Created directory");
+                }
+
+                string fileExtension = Path.GetExtension(sourceFilePath);
+                string newFileName = $"{tagValue}_{Guid.NewGuid():N}{fileExtension}";
+                string targetFilePath = Path.Combine(targetDirectory, newFileName);
+
+                Console.WriteLine($"New file: {newFileName}");
+
+                // Xóa ảnh cũ
+                if (!string.IsNullOrEmpty(currentImagePath))
+                {
+                    string oldImageFullPath = Path.Combine(appDirectory, currentImagePath);
+                    Console.WriteLine($"Old image to delete: {oldImageFullPath}");
+
+                    if (File.Exists(oldImageFullPath))
                     {
-                        Directory.CreateDirectory(targetDirectory);
-                    }
-
-                    // XÂY DỰNG ĐƯỜNG DẪN ĐÍCH VÀ ĐẢM BẢO TÊN FILE DUY NHẤT
-                    // Thêm mã thời gian hoặc GUID vào tên file để tránh trùng lặp nếu người dùng upload nhiều ảnh trùng tên
-                    string uniqueFileName = Guid.NewGuid().ToString() + "_" + newFileName;
-                    string targetFilePath = Path.Combine(targetDirectory, uniqueFileName);
-
-                    try
-                    {
-                        // 1. THỰC HIỆN COPY FILE
-                        File.Copy(sourceFilePath, targetFilePath, true); // true: cho phép ghi đè nếu trùng tên
-
-                        // 2. HIỂN THỊ ẢNH MỚI
-                        targetPicBox.Image = Image.FromFile(targetFilePath);
-                        targetPicBox.SizeMode = PictureBoxSizeMode.StretchImage;
-
-                        // 3. LƯU ĐƯỜNG DẪN VÀO ĐỐI TƯỢNG CHUTRO
-                        // Chỉ lưu tên file tương đối (uniqueFileName) hoặc đường dẫn tương đối (Images/uniqueFileName)
-                        string relativePath = IMAGES_FOLDER_NAME + "/" + uniqueFileName;
-
-                        // Gán đường dẫn vào thuộc tính tương ứng của đối tượng currentChuTro
-                        switch (tagValue)
-                        {
-                            case "Avatar": currentChuTro.avatar_url = relativePath; break;
-                            case "CCCD_Truoc": currentChuTro.anh_cccd_truoc_url = relativePath; break;
-                            case "CCCD_Sau": currentChuTro.anh_cccd_sau_url = relativePath; break;
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Lỗi khi sao chép file: " + ex.Message, "Lỗi File", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        File.Delete(oldImageFullPath);
+                        Console.WriteLine("Old image deleted");
                     }
                 }
+
+                // Copy ảnh mới
+                File.Copy(sourceFilePath, targetFilePath, false);
+                Console.WriteLine("File copied successfully");
+
+                // Cập nhật đường dẫn
+                string relativePath = Path.Combine(IMAGES_FOLDER_NAME, newFileName).Replace("\\", "/");
+                Console.WriteLine($"Relative path: {relativePath}");
+
+                UpdateImagePath(tagValue, relativePath);
+                Console.WriteLine("Image path updated in object");
+
+                // Hiển thị ảnh mới
+                LoadSingleImage(targetPicBox, targetFilePath);
+                Console.WriteLine("Image loaded to PictureBox");
+
+                // Lưu database - KHÔNG HIỂN THỊ MESSAGE Ở ĐÂY NỮA
+                SaveToDatabase(); // Message sẽ được hiển thị trong SaveToDatabase
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Upload error: {ex.Message}");
+                MessageBox.Show($"Lỗi khi upload ảnh: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void UpdateImagePath(string tagValue, string relativePath)
+        {
+            if (currentChuTro == null) return;
+
+            switch (tagValue)
+            {
+                case "Avatar":
+                    currentChuTro.avatar_url = relativePath;
+                    break;
+                case "CCCD_Truoc":
+                    currentChuTro.anh_cccd_truoc_url = relativePath;
+                    break;
+                case "CCCD_Sau":
+                    currentChuTro.anh_cccd_sau_url = relativePath;
+                    break;
+            }
+        }
+
+        private void SaveToDatabase()
+        {
+            try
+            {
+                // KIỂM TRA PHƯƠNG THỨC NÀY CÓ THỰC SỰ ĐƯỢC GỌI KHÔNG
+                Console.WriteLine("SaveToDatabase called");
+
+                if (currentChuTro == null)
+                {
+                    Console.WriteLine("currentChuTro is null");
+                    MessageBox.Show("Lỗi: Không có thông tin chủ trọ để lưu", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // KIỂM TRA GIÁ TRỊ TRƯỚC KHI LƯU
+                Console.WriteLine($"Avatar URL: {currentChuTro.avatar_url}");
+                Console.WriteLine($"CCCD Truoc URL: {currentChuTro.anh_cccd_truoc_url}");
+                Console.WriteLine($"CCCD Sau URL: {currentChuTro.anh_cccd_sau_url}");
+
+                string result = _chutroSerVice.CapNhat(currentChuTro, id_chutrohientai.ToString());
+
+                Console.WriteLine($"Update result: {result}");
+
+                if (result.Contains("thành công"))
+                {
+                    MessageBox.Show("Lưu thông tin thành công!", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show($"Lỗi khi lưu: {result}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Database save error: {ex.Message}");
+                MessageBox.Show($"Lỗi hệ thống: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DisposeAllImages()
+        {
+            try
+            {
+                picAvatar.Image?.Dispose();
+                picCCCDTruoc.Image?.Dispose();
+                picCCCDSau.Image?.Dispose();
+
+                picAvatar.Image = null;
+                picCCCDTruoc.Image = null;
+                picCCCDSau.Image = null;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error disposing images: {ex.Message}");
             }
         }
 

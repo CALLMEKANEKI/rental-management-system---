@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grbHoaDon = new System.Windows.Forms.GroupBox();
+            this.txtTrangThai = new System.Windows.Forms.TextBox();
             this.txtTenPhong = new System.Windows.Forms.TextBox();
             this.dtpNgayTao = new System.Windows.Forms.DateTimePicker();
             this.lblTenPhong = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.txtTienDien = new System.Windows.Forms.TextBox();
             this.txtNoiDung = new System.Windows.Forms.TextBox();
             this.txtMaHoaDon = new System.Windows.Forms.TextBox();
-            this.txtTrangThai = new System.Windows.Forms.TextBox();
             this.grbHoaDon.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -95,6 +95,14 @@
             this.grbHoaDon.Size = new System.Drawing.Size(974, 372);
             this.grbHoaDon.TabIndex = 48;
             this.grbHoaDon.TabStop = false;
+            // 
+            // txtTrangThai
+            // 
+            this.txtTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTrangThai.Location = new System.Drawing.Point(247, 68);
+            this.txtTrangThai.Name = "txtTrangThai";
+            this.txtTrangThai.Size = new System.Drawing.Size(200, 38);
+            this.txtTrangThai.TabIndex = 71;
             // 
             // txtTenPhong
             // 
@@ -358,14 +366,6 @@
             this.txtMaHoaDon.Size = new System.Drawing.Size(200, 38);
             this.txtMaHoaDon.TabIndex = 56;
             // 
-            // txtTrangThai
-            // 
-            this.txtTrangThai.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTrangThai.Location = new System.Drawing.Point(247, 68);
-            this.txtTrangThai.Name = "txtTrangThai";
-            this.txtTrangThai.Size = new System.Drawing.Size(200, 38);
-            this.txtTrangThai.TabIndex = 71;
-            // 
             // frmChiTietThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -373,7 +373,7 @@
             this.ClientSize = new System.Drawing.Size(983, 388);
             this.Controls.Add(this.grbHoaDon);
             this.Name = "frmChiTietThanhToan";
-            this.Text = "frmChiTietThanhToan";
+            this.Text = "Chi tiết hóa đơn";
             this.grbHoaDon.ResumeLayout(false);
             this.grbHoaDon.PerformLayout();
             this.ResumeLayout(false);

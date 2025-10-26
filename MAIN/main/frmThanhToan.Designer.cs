@@ -58,6 +58,7 @@
             this.lblNgayThanhToan = new System.Windows.Forms.Label();
             this.lblIdHoaDon = new System.Windows.Forms.Label();
             this.lblNguoiThue = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.grbLSthanhToan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhToan)).BeginInit();
             this.grbThanhToan.SuspendLayout();
@@ -68,7 +69,7 @@
             this.btnLamMoi.BackColor = System.Drawing.Color.DarkGreen;
             this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLamMoi.Location = new System.Drawing.Point(555, 32);
+            this.btnLamMoi.Location = new System.Drawing.Point(906, 34);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(100, 35);
             this.btnLamMoi.TabIndex = 25;
@@ -117,6 +118,7 @@
             // 
             // grbLSthanhToan
             // 
+            this.grbLSthanhToan.Controls.Add(this.button2);
             this.grbLSthanhToan.Controls.Add(this.label1);
             this.grbLSthanhToan.Controls.Add(this.txtTimThanhToan);
             this.grbLSthanhToan.Controls.Add(this.btnLamMoi);
@@ -402,13 +404,26 @@
             this.lblNguoiThue.TabIndex = 34;
             this.lblNguoiThue.Text = "Người thuê";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DimGray;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Location = new System.Drawing.Point(772, 32);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 35);
+            this.button2.TabIndex = 50;
+            this.button2.Text = "Xuất file";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmThanhToan
             // 
-            this.ClientSize = new System.Drawing.Size(1378, 1055);
+            this.ClientSize = new System.Drawing.Size(1378, 989);
             this.Controls.Add(this.grbThanhToan);
             this.Controls.Add(this.grbLSthanhToan);
             this.Name = "frmThanhToan";
-            this.Text = "Quản lý thanh toán hóa đơn";
+            this.Text = "Lịch sử thanh toán";
             this.grbLSthanhToan.ResumeLayout(false);
             this.grbLSthanhToan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhToan)).EndInit();
@@ -449,5 +464,6 @@
         private System.Windows.Forms.TextBox txtTienDien;
         private System.Windows.Forms.Label lblTongTien;
         private System.Windows.Forms.TextBox txtTongTien;
+        private System.Windows.Forms.Button button2;
     }
 }

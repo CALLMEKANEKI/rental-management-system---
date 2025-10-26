@@ -275,7 +275,6 @@ namespace MAIN.main
             this.Controls.Add(this.panelSignIn);
             this.Controls.Add(this.panelSignUp);
             this.Name = "LOGIN";
-            this.Text = "DANGNHAP";
             this.panelSignIn.ResumeLayout(false);
             this.panelSignIn.PerformLayout();
             this.panelSignUp.ResumeLayout(false);

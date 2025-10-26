@@ -1,9 +1,11 @@
 ﻿using BLL.Services;
 using DAL.Model;
 using DAL.ViewModel;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Windows.Forms;
@@ -175,7 +177,7 @@ namespace MAIN.main
         private void btnXoa_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show(
-               "LƯU Ý: HÀNH ĐỘNG SAU ĐÂY KHÔNG THỂ HOÀN TÁC!!!\n BẠN CHẮC CHẮN MUỐN XÓA?",
+               "LƯU Ý: HÀNH ĐỘNG SAU ĐÂY KHÔNG THỂ HOÀN TÁC!!!\n Nếu xóa người thuê nyaf, bạn đồng thời cũng xóa đi hợp đồng và lịch sử thanh toán của người thuê này luôn\n BẠN CHẮC CHẮN MUỐN XÓA?",
                "Xác nhận",
                MessageBoxButtons.YesNo,
                MessageBoxIcon.Question
@@ -193,6 +195,7 @@ namespace MAIN.main
                 {
                     clearNguoiThue();
                     LoadDGVNguoiThue();
+                    MessageBox.Show(mess, "Thông báo");
                 }
                 else
                 {
@@ -285,6 +288,98 @@ namespace MAIN.main
             {
                 txtTimNT.Text = "Nhập từ khóa để tìm kiếm";
                 txtTimNT.ForeColor = System.Drawing.Color.Gray;
+            }
+        }
+
+        private void btnXuat_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Kiểm tra có dữ liệu không
+                if (dgvNguoiThue.Rows.Count == 0)
+                {
+                    MessageBox.Show("Không có dữ liệu người thuê để xuất!", "Thông báo",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                using (var package = new ExcelPackage())
+                {
+                    var worksheet = package.Workbook.Worksheets.Add("DanhSachNguoiThue");
+
+                    // Tạo tiêu đề
+                    worksheet.Cells[1, 1].Value = "DANH SÁCH NGƯỜI THUÊ";
+                    worksheet.Cells[1, 1, 1, 6].Merge = true;
+                    worksheet.Cells[1, 1].Style.Font.Bold = true;
+                    worksheet.Cells[1, 1].Style.Font.Size = 14;
+                    worksheet.Cells[1, 1].Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+
+                    // Thông tin xuất file
+                    worksheet.Cells[2, 1].Value = "Ngày xuất:";
+                    worksheet.Cells[2, 2].Value = DateTime.Now.ToString("dd/MM/yyyy HH:mm");
+                    worksheet.Cells[3, 1].Value = "Tổng số người thuê:";
+                    worksheet.Cells[3, 2].Value = dgvNguoiThue.Rows.Count;
+
+                    // Header - bắt đầu từ dòng 5
+                    int startRow = 5;
+
+                    worksheet.Cells[startRow, 1].Value = "ID Người Thuê";
+                    worksheet.Cells[startRow, 2].Value = "Họ tên";
+                    worksheet.Cells[startRow, 3].Value = "Số điện thoại";
+                    worksheet.Cells[startRow, 4].Value = "CCCD";
+                    worksheet.Cells[startRow, 5].Value = "Email";
+                    worksheet.Cells[startRow, 6].Value = "Phòng";
+
+                    // Chỉ in đậm header, không màu nền
+                    using (var range = worksheet.Cells[startRow, 1, startRow, 6])
+                    {
+                        range.Style.Font.Bold = true;
+                    }
+
+                    // Đổ dữ liệu từ DataGridView
+                    for (int i = 0; i < dgvNguoiThue.Rows.Count; i++)
+                    {
+                        int row = startRow + i + 1;
+
+                        worksheet.Cells[row, 1].Value = dgvNguoiThue.Rows[i].Cells["IDNguoiThue"].Value?.ToString();
+                        worksheet.Cells[row, 2].Value = dgvNguoiThue.Rows[i].Cells["HoTenNguoiThue"].Value?.ToString();
+                        worksheet.Cells[row, 3].Value = dgvNguoiThue.Rows[i].Cells["SoDienThoai"].Value?.ToString();
+                        worksheet.Cells[row, 4].Value = dgvNguoiThue.Rows[i].Cells["CCCD"].Value?.ToString();
+                        worksheet.Cells[row, 5].Value = dgvNguoiThue.Rows[i].Cells["Email"].Value?.ToString();
+                        worksheet.Cells[row, 6].Value = dgvNguoiThue.Rows[i].Cells["TenPhong"].Value?.ToString();
+                    }
+
+                    // Auto fit columns để hiển thị đẹp
+                    worksheet.Cells[worksheet.Dimension.Address].AutoFitColumns();
+
+                    // Thêm border nhẹ cho toàn bộ bảng
+                    int endRow = startRow + dgvNguoiThue.Rows.Count;
+                    using (var range = worksheet.Cells[startRow, 1, endRow, 6])
+                    {
+                        range.Style.Border.Top.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Bottom.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Left.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                        range.Style.Border.Right.Style = OfficeOpenXml.Style.ExcelBorderStyle.Thin;
+                    }
+
+                    // Hiển thị dialog lưu file
+                    SaveFileDialog saveFileDialog = new SaveFileDialog();
+                    saveFileDialog.Filter = "Excel Files|*.xlsx";
+                    saveFileDialog.FileName = $"DanhSachNguoiThue_{DateTime.Now:yyyyMMdd_HHmmss}.xlsx";
+
+                    if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        FileInfo excelFile = new FileInfo(saveFileDialog.FileName);
+                        package.SaveAs(excelFile);
+
+                        MessageBox.Show($"Xuất Excel thành công!\nTổng số người thuê: {dgvNguoiThue.Rows.Count}",
+                                      "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi xuất Excel: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -69,6 +69,7 @@
             this.txtNoiDung = new System.Windows.Forms.TextBox();
             this.cboTrangThai = new System.Windows.Forms.ComboBox();
             this.txtMaHoaDon = new System.Windows.Forms.TextBox();
+            this.btnXuat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
             this.grbHoaDon.SuspendLayout();
@@ -79,7 +80,7 @@
             this.btnLamMoi.BackColor = System.Drawing.Color.DarkGreen;
             this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnLamMoi.Location = new System.Drawing.Point(837, 402);
+            this.btnLamMoi.Location = new System.Drawing.Point(883, 402);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(103, 35);
             this.btnLamMoi.TabIndex = 21;
@@ -136,7 +137,7 @@
             this.groupBox1.Controls.Add(this.dgvHoaDon);
             this.groupBox1.Controls.Add(this.btnTimHoaDon);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 461);
+            this.groupBox1.Location = new System.Drawing.Point(12, 448);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1109, 489);
             this.groupBox1.TabIndex = 46;
@@ -526,9 +527,23 @@
             this.txtMaHoaDon.Size = new System.Drawing.Size(200, 38);
             this.txtMaHoaDon.TabIndex = 56;
             // 
+            // btnXuat
+            // 
+            this.btnXuat.BackColor = System.Drawing.Color.DimGray;
+            this.btnXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXuat.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnXuat.Location = new System.Drawing.Point(740, 402);
+            this.btnXuat.Name = "btnXuat";
+            this.btnXuat.Size = new System.Drawing.Size(100, 35);
+            this.btnXuat.TabIndex = 50;
+            this.btnXuat.Text = "Xuất file";
+            this.btnXuat.UseVisualStyleBackColor = false;
+            this.btnXuat.Click += new System.EventHandler(this.btnXuat_Click);
+            // 
             // frmHoaDon
             // 
             this.ClientSize = new System.Drawing.Size(1145, 962);
+            this.Controls.Add(this.btnXuat);
             this.Controls.Add(this.grbHoaDon);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnLamMoi);
@@ -536,7 +551,7 @@
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnThem);
             this.Name = "frmHoaDon";
-            this.Text = "Quản lý hóa đơn phòng trọ";
+            this.Text = "Quản lý hóa đơn ";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).EndInit();
@@ -588,5 +603,6 @@
         private System.Windows.Forms.Label lblHDChuaThanhToan;
         private System.Windows.Forms.Label lblHDThanhToan;
         private System.Windows.Forms.Label lblTongHoaDon;
+        private System.Windows.Forms.Button btnXuat;
     }
 }
