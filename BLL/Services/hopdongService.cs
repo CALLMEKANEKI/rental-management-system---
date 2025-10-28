@@ -105,32 +105,23 @@ namespace BLL.Services
             if (objHopDong == null)
             {
                 return "Không tồn tại hợp đồng";
-            }    
-            //Kiểm tra xem người thuê trên hợp đồng này có tồn tại hay không
-            var NguoiThueHienTai = (nguoithueBLL.LayTatCaNguoiThue(id_chutro)).
-                                        Where(nt => nt.id_nguoi_thue == objHopDong.id_nguoi_thue).
-                                        ToList(); 
-            if (NguoiThueHienTai != null && NguoiThueHienTai.Count > 0 )
-                return "Không thể xóa hợp đồng này khi vẫn còn người thuê";
-            else //Nếu không, tức là đã không có người thuê đang còn hiệu lực với hợp đông -> hợp đồng không có hiệu lực, có thể xóa
+            }
+            try
             {
-                try
+                // Thực hiện xóa hợp đồng trong DB (gọi BLL)
+                bool isSuccess = hopdongBLL.XoaHopDong(id_HopDong, id_chutro);
+                if (isSuccess)
                 {
-                    // Thực hiện xóa hợp đồng trong DB (gọi BLL)
-                    bool isSuccess = hopdongBLL.XoaHopDong(id_HopDong, id_chutro);
-                    if (isSuccess)
-                    {
-                        return "Xóa hợp đồng thành công.";
-                    }
-                    else
-                    {
-                        return "Lỗi: Không thể xóa vào cơ sở dữ liệu.";
-                    }
+                    return "Xóa hợp đồng thành công.";
                 }
-                catch (Exception ex)
+                else
                 {
-                    return "Lỗi hệ thống khi xóa dữ liệu: " + ex.Message;
+                    return "Lỗi: Không thể xóa vào cơ sở dữ liệu.";
                 }
+            }
+            catch (Exception ex)
+            {
+                return "Lỗi hệ thống khi xóa dữ liệu: " + ex.Message;
             }
         }
     }

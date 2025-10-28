@@ -3,48 +3,56 @@
   "WorkspaceRootPath": "C:\\GitHub Project\\nhattien-\\nhattien-\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmthanhtoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\nhattien-\\nhattien-\\bll\\bll\\phongtrobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\bll\\phongtrobll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmphongtro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmnguoithue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmhopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmhopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmhopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmhopdong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|C:\\GitHub Project\\nhattien-\\nhattien-\\main\\main\\frmhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmhoadon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmlephi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmlephi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmnuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmnuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmdien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmdien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD765009-1C1B-40EC-A75F-C866A9C28304}|DAL\\DAL.csproj|c:\\github project\\nhattien-\\nhattien-\\dal\\viewmodel\\lephiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD765009-1C1B-40EC-A75F-C866A9C28304}|DAL\\DAL.csproj|solutionrelative:dal\\viewmodel\\lephiviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmlephi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmlephi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\nhattien-\\nhattien-\\bll\\bll\\lephibll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\bll\\lephibll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmnuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmnuoc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmdien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmdien.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|c:\\github project\\nhattien-\\nhattien-\\main\\main\\frmquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{48676C22-56CC-475C-8837-F72388EA869D}|MAIN\\MAIN.csproj|solutionrelative:main\\main\\frmquanly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\nhattien-\\nhattien-\\bll\\services\\lephiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\services\\lephiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|c:\\github project\\nhattien-\\nhattien-\\bll\\bll\\nuocbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{36FF7211-22A7-4561-BFFF-4E848A7A8525}|BLL\\BLL.csproj|solutionrelative:bll\\bll\\nuocbll.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,141 +70,168 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmDien.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmDien.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmDien.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmDien.cs",
+              "RelativeToolTip": "MAIN\\main\\frmDien.cs",
+              "ViewState": "AgIAANcAAAAAAAAAAAAAAO8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T07:03:50.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmThanhToan.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmThanhToan.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.cs",
-              "RelativeToolTip": "MAIN\\main\\frmThanhToan.cs",
-              "ViewState": "AgIAAKwCAAAAAAAAAAAAAAUDAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T06:36:30.557Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "phongtroBLL.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\phongtroBLL.cs",
-              "RelativeDocumentMoniker": "BLL\\BLL\\phongtroBLL.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\phongtroBLL.cs",
-              "RelativeToolTip": "BLL\\BLL\\phongtroBLL.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAIwH8AAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T06:35:10.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
               "Title": "frmHoaDon.cs",
               "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHoaDon.cs",
               "RelativeDocumentMoniker": "MAIN\\main\\frmHoaDon.cs",
               "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHoaDon.cs",
               "RelativeToolTip": "MAIN\\main\\frmHoaDon.cs",
-              "ViewState": "AgIAABECAAAAAAAAAAAQwGwCAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAC8CAAAAAAAAAAD4v0ICAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T06:25:58.707Z",
+              "WhenOpened": "2025-10-27T15:15:38.763Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmThanhToan.cs [Design]",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmThanhToan.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmThanhToan.cs [Design]",
-              "RelativeToolTip": "MAIN\\main\\frmThanhToan.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T06:24:02.733Z",
-              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "frmHopDong.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHopDong.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmHopDong.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHopDong.cs",
-              "RelativeToolTip": "MAIN\\main\\frmHopDong.cs",
-              "ViewState": "AgIAAL4BAAAAAAAAAAAAANABAAAJAAAAAAAAAA==",
+              "Title": "frmDien.cs [Design]",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmDien.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmDien.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmDien.cs [Design]",
+              "RelativeToolTip": "MAIN\\main\\frmDien.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T06:22:15.067Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "frmNguoiThue.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmNguoiThue.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmNguoiThue.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmNguoiThue.cs",
-              "RelativeToolTip": "MAIN\\main\\frmNguoiThue.cs",
-              "ViewState": "AgIAAF8BAAAAAAAAAAAYwH8BAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T06:17:31.601Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "frmPhongTro.cs [Design]",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmPhongTro.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmPhongTro.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmPhongTro.cs [Design]",
-              "RelativeToolTip": "MAIN\\main\\frmPhongTro.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T06:17:03.642Z",
+              "WhenOpened": "2025-10-28T06:47:46.827Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "frmHopDong.cs [Design]",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHopDong.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmHopDong.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHopDong.cs [Design]",
-              "RelativeToolTip": "MAIN\\main\\frmHopDong.cs [Design]",
+              "Title": "frmQuanLy.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmQuanLy.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmQuanLy.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmQuanLy.cs",
+              "RelativeToolTip": "MAIN\\main\\frmQuanLy.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAADwv0UAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T06:16:08.848Z",
+              "WhenOpened": "2025-10-28T06:45:46.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "frmQuanLy.cs [Design]",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmQuanLy.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmQuanLy.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmQuanLy.cs [Design]",
+              "RelativeToolTip": "MAIN\\main\\frmQuanLy.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T06:45:44.139Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "nuocBLL.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\nuocBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL\\nuocBLL.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\nuocBLL.cs",
+              "RelativeToolTip": "BLL\\BLL\\nuocBLL.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAowGkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T06:27:19.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "lephiService.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\Services\\lephiService.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\lephiService.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\Services\\lephiService.cs",
+              "RelativeToolTip": "BLL\\Services\\lephiService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T06:27:03.944Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "lephiBLL.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\lephiBLL.cs",
+              "RelativeDocumentMoniker": "BLL\\BLL\\lephiBLL.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\BLL\\BLL\\lephiBLL.cs",
+              "RelativeToolTip": "BLL\\BLL\\lephiBLL.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAArwEcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T06:27:01.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "lephiViewModel.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\DAL\\ViewModel\\lephiViewModel.cs",
+              "RelativeDocumentMoniker": "DAL\\ViewModel\\lephiViewModel.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\DAL\\ViewModel\\lephiViewModel.cs",
+              "RelativeToolTip": "DAL\\ViewModel\\lephiViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T06:26:52.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmNuoc.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmNuoc.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmNuoc.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmNuoc.cs",
+              "RelativeToolTip": "MAIN\\main\\frmNuoc.cs",
+              "ViewState": "AgIAABIBAAAAAAAAAAD4vxkBAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T06:26:21.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmLePhi.cs",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmLePhi.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmLePhi.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmLePhi.cs",
+              "RelativeToolTip": "MAIN\\main\\frmLePhi.cs",
+              "ViewState": "AgIAABABAAAAAAAAAAD4vyABAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T06:26:13.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "frmNuoc.cs [Design]",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmNuoc.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmNuoc.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmNuoc.cs [Design]",
+              "RelativeToolTip": "MAIN\\main\\frmNuoc.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T06:18:56.365Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "frmHoaDon.cs [Design]",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHoaDon.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmHoaDon.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmHoaDon.cs [Design]",
-              "RelativeToolTip": "MAIN\\main\\frmHoaDon.cs [Design]",
+              "Title": "frmLePhi.cs [Design]",
+              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmLePhi.cs",
+              "RelativeDocumentMoniker": "MAIN\\main\\frmLePhi.cs",
+              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmLePhi.cs [Design]",
+              "RelativeToolTip": "MAIN\\main\\frmLePhi.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T06:16:06.262Z",
+              "WhenOpened": "2025-10-28T06:18:41.243Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmNguoiThue.cs [Design]",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmNguoiThue.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmNguoiThue.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmNguoiThue.cs [Design]",
-              "RelativeToolTip": "MAIN\\main\\frmNguoiThue.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T06:14:27.216Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmPhongTro.cs",
-              "DocumentMoniker": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmPhongTro.cs",
-              "RelativeDocumentMoniker": "MAIN\\main\\frmPhongTro.cs",
-              "ToolTip": "C:\\GitHub Project\\nhattien-\\nhattien-\\MAIN\\main\\frmPhongTro.cs",
-              "RelativeToolTip": "MAIN\\main\\frmPhongTro.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAUwCEAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T06:02:01.96Z",
-              "EditorCaption": ""
             }
           ]
         },

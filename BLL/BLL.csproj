@@ -95,9 +95,12 @@
     <Compile Include="BLL\thanhtoanBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\chutroService.cs" />
+    <Compile Include="Services\dienService.cs" />
     <Compile Include="Services\hoadonService.cs" />
     <Compile Include="Services\hopdongService.cs" />
+    <Compile Include="Services\lephiService.cs" />
     <Compile Include="Services\nguoithueService.cs" />
+    <Compile Include="Services\nuocService.cs" />
     <Compile Include="Services\phongtroService.cs" />
     <Compile Include="Services\thanhtoanService.cs" />
     <Compile Include="Services\Validators.cs" />

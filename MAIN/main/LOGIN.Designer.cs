@@ -37,12 +37,10 @@ namespace MAIN.main
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblPass = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.chkRemember = new System.Windows.Forms.CheckBox();
             this.lblNewUser = new System.Windows.Forms.Label();
             this.txtNewUser = new System.Windows.Forms.TextBox();
             this.lblNewPass = new System.Windows.Forms.Label();
             this.btnSignIn = new System.Windows.Forms.Button();
-            this.lnkForgot = new System.Windows.Forms.LinkLabel();
             this.txtConfirm = new System.Windows.Forms.TextBox();
             this.btnSwitchSignIn = new System.Windows.Forms.Button();
             this.btnSwitchSignUp = new System.Windows.Forms.Button();
@@ -126,17 +124,6 @@ namespace MAIN.main
             this.txtPassword.TabIndex = 3;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
-            // chkRemember
-            // 
-            this.chkRemember.AutoSize = true;
-            this.chkRemember.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.chkRemember.ForeColor = System.Drawing.Color.Gray;
-            this.chkRemember.Location = new System.Drawing.Point(30, 180);
-            this.chkRemember.Name = "chkRemember";
-            this.chkRemember.Size = new System.Drawing.Size(129, 24);
-            this.chkRemember.TabIndex = 4;
-            this.chkRemember.Text = "Remember me";
-            // 
             // lblNewUser
             // 
             this.lblNewUser.AutoSize = true;
@@ -180,18 +167,6 @@ namespace MAIN.main
             this.btnSignIn.Text = "SIGN IN";
             this.btnSignIn.UseVisualStyleBackColor = false;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
-            // 
-            // lnkForgot
-            // 
-            this.lnkForgot.AutoSize = true;
-            this.lnkForgot.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lnkForgot.LinkColor = System.Drawing.Color.DodgerBlue;
-            this.lnkForgot.Location = new System.Drawing.Point(130, 280);
-            this.lnkForgot.Name = "lnkForgot";
-            this.lnkForgot.Size = new System.Drawing.Size(125, 20);
-            this.lnkForgot.TabIndex = 6;
-            this.lnkForgot.TabStop = true;
-            this.lnkForgot.Text = "Forgot Password?";
             // 
             // txtConfirm
             // 
@@ -240,9 +215,7 @@ namespace MAIN.main
             this.panelSignIn.Controls.Add(this.txtUsername);
             this.panelSignIn.Controls.Add(this.lblPass);
             this.panelSignIn.Controls.Add(this.txtPassword);
-            this.panelSignIn.Controls.Add(this.chkRemember);
             this.panelSignIn.Controls.Add(this.btnSignIn);
-            this.panelSignIn.Controls.Add(this.lnkForgot);
             this.panelSignIn.Location = new System.Drawing.Point(200, 84);
             this.panelSignIn.Name = "panelSignIn";
             this.panelSignIn.Size = new System.Drawing.Size(400, 350);
@@ -296,12 +269,10 @@ namespace MAIN.main
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblPass;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.CheckBox chkRemember;
         private System.Windows.Forms.Label lblNewUser;
         private System.Windows.Forms.TextBox txtNewUser;
         private System.Windows.Forms.Label lblNewPass;
         private System.Windows.Forms.Button btnSignIn;
-        private System.Windows.Forms.LinkLabel lnkForgot;
         private System.Windows.Forms.TextBox txtConfirm;
         private System.Windows.Forms.Button btnSwitchSignIn;
         private System.Windows.Forms.Button btnSwitchSignUp;

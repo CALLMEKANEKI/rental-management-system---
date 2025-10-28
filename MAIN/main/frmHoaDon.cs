@@ -248,7 +248,7 @@ namespace MAIN.main
             }
         }
 
-        private void txtHoaDon_Leave(object sender, EventArgs e)
+        private void txtTimHoaDon_Leave(object sender, EventArgs e)
         {
             if (txtTimHoaDon.Text == "")
             {
@@ -558,7 +558,7 @@ namespace MAIN.main
                     decimal tongTien = 0;
                     for (int i = 0; i < dgvHoaDon.Rows.Count; i++)
                     {
-                        var thanhTienValue = dgvHoaDon.Rows[i].Cells["ThanhTien"].Value;
+                        var thanhTienValue = dgvHoaDon.Rows[i].Cells["TienDien"].Value;
                         if (thanhTienValue != null && decimal.TryParse(thanhTienValue.ToString(), out decimal thanhTien))
                         {
                             tongTien += thanhTien;
@@ -568,13 +568,40 @@ namespace MAIN.main
                     worksheet.Cells[summaryRow, 9].Style.Numberformat.Format = "#,##0";
                     worksheet.Cells[summaryRow, 9].Style.Font.Bold = true;
 
+                    //Thực nhận
+                    worksheet.Cells[summaryRow + 1, 1].Value = "THỰC NHẬN";
+                    worksheet.Cells[summaryRow + 1, 1].Style.Font.Bold = true;
+
+                    decimal thucNhan = 0;
+                    for (int i = 0; i < dgvHoaDon.Rows.Count; i++)
+                    {
+                        var thanhTienValue = dgvHoaDon.Rows[i].Cells["TienDien"].Value;
+                        var trangthai = dgvHoaDon.Rows[i].Cells["TrangThai"].Value?.ToString();
+                        if (thanhTienValue != null && decimal.TryParse(thanhTienValue.ToString(), out decimal thanhTien) && trangthai == "Đã thanh toán")
+                        {
+                            thucNhan += thanhTien;
+                        }
+                    }
+                    worksheet.Cells[summaryRow + 1, 9].Value = thucNhan;
+                    worksheet.Cells[summaryRow + 1, 9].Style.Numberformat.Format = "#,##0";
+                    worksheet.Cells[summaryRow + 1, 9].Style.Font.Bold = true;
+
+
+                    //Còn thiếu
+                    worksheet.Cells[summaryRow + 2, 1].Value = "CÒN THIẾU";
+                    worksheet.Cells[summaryRow + 2, 1].Style.Font.Bold = true;
+
+                    worksheet.Cells[summaryRow + 2, 9].Value = tongTien - thucNhan;
+                    worksheet.Cells[summaryRow + 2, 9].Style.Numberformat.Format = "#,##0";
+                    worksheet.Cells[summaryRow + 2, 9].Style.Font.Bold = true;
+
                     // Thống kê trạng thái
-                    int statsRow = summaryRow + 1;
+                    int statsRow = summaryRow + 3;
                     worksheet.Cells[statsRow, 1].Value = "THỐNG KÊ TRẠNG THÁI:";
                     worksheet.Cells[statsRow, 1].Style.Font.Bold = true;
 
                     var thongKeTrangThai = dgvHoaDon.Rows.Cast<DataGridViewRow>()
-                        .GroupBy(r => r.Cells["TrangThai"].Value?.ToString() ?? "Không xác định")
+                          .GroupBy(r => r.Cells["TrangThai"].Value?.ToString() ?? "Không xác định")
                         .Select(g => new { TrangThai = g.Key, SoLuong = g.Count() });
 
                     int statDetailRow = statsRow + 1;

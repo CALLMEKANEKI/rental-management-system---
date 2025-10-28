@@ -51,5 +51,23 @@ namespace MAIN.main
             frmThanhToan frm = new frmThanhToan();
             frm.ShowDialog();
         }
+
+        private void điệnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDien frm = new frmDien();
+            frm.ShowDialog();
+        }
+
+        private void nướcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNuoc frm = new frmNuoc();
+            frm.ShowDialog();
+        }
+
+        private void lệPhíToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmLePhi frm = new frmLePhi();
+            frm.ShowDialog();
+        }
     }
 }

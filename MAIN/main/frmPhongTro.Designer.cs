@@ -288,6 +288,7 @@
             this.dgvPhongTro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhongTro.Location = new System.Drawing.Point(12, 84);
             this.dgvPhongTro.Name = "dgvPhongTro";
+            this.dgvPhongTro.ReadOnly = true;
             this.dgvPhongTro.RowHeadersWidth = 51;
             this.dgvPhongTro.RowTemplate.Height = 29;
             this.dgvPhongTro.Size = new System.Drawing.Size(735, 308);

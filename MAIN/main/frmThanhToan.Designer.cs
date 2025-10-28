@@ -33,6 +33,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.grbLSthanhToan = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtTimThanhToan = new System.Windows.Forms.TextBox();
             this.dgvThanhToan = new System.Windows.Forms.DataGridView();
@@ -58,7 +59,6 @@
             this.lblNgayThanhToan = new System.Windows.Forms.Label();
             this.lblIdHoaDon = new System.Windows.Forms.Label();
             this.lblNguoiThue = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.grbLSthanhToan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThanhToan)).BeginInit();
             this.grbThanhToan.SuspendLayout();
@@ -132,6 +132,19 @@
             this.grbLSthanhToan.TabStop = false;
             this.grbLSthanhToan.Text = "Lịch sử thanh toán";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DimGray;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Location = new System.Drawing.Point(772, 32);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 35);
+            this.button2.TabIndex = 50;
+            this.button2.Text = "Xuất file";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -158,6 +171,7 @@
             this.dgvThanhToan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThanhToan.Location = new System.Drawing.Point(12, 84);
             this.dgvThanhToan.Name = "dgvThanhToan";
+            this.dgvThanhToan.ReadOnly = true;
             this.dgvThanhToan.RowHeadersWidth = 51;
             this.dgvThanhToan.RowTemplate.Height = 29;
             this.dgvThanhToan.Size = new System.Drawing.Size(1336, 522);
@@ -403,19 +417,6 @@
             this.lblNguoiThue.Size = new System.Drawing.Size(152, 32);
             this.lblNguoiThue.TabIndex = 34;
             this.lblNguoiThue.Text = "Người thuê";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.DimGray;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(772, 32);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 35);
-            this.button2.TabIndex = 50;
-            this.button2.Text = "Xuất file";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // frmThanhToan
             // 

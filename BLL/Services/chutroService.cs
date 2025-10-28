@@ -125,7 +125,7 @@ namespace BLL.Services
                 }
                 else
                 {
-                    return "Lỗi: Không thể xóa vào cơ sở dữ liệu.";
+                    return "Lỗi: Không thể xóa vào cơ sở dữ liệu nếu như tài khoản này vẫn còn dữ liệu.\n Vui lòng kiểm tra lại dữ liệu của phòng, người thuê, hợp đồng, hóa đơn, lịch sử thanh toán !!!";
                 }
             }
             catch (Exception ex)

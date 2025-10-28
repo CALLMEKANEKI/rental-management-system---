@@ -163,19 +163,8 @@ namespace MAIN.main
                     int selectedIndex = -1;
                     for (int i = 0; i < cboHoaDon.Items.Count; i++)
                     {
-                        // So sánh ValueMember (id_hoadon) với giá trị từ lưới
-                        // LƯU Ý: Phải truy cập ValueMember, không phải DisplayMember
                         if (cboHoaDon.GetItemText(cboHoaDon.Items[i]).Contains(maHDTuGrid))
                         {
-                            // Lỗi: GetItemText lấy DisplayMember (Tên hiển thị), thường không phải MaHD duy nhất.
-                            // CÁCH KHẮC PHỤC: Giả định DisplayMember là "MaHD - Tên khác"
-                            // hoặc bạn phải truy cập DataSource của cboHoaDon để tìm theo ID.
-
-                            // Nếu bạn dùng cboHoaDon.Text = maHDTuGrid (như code cũ), bạn phải chuyển sang SelectedIndex/SelectedValue
-                            // Tạm thời dùng code cũ của bạn, nhưng KHÔNG NÊN DÙNG .Text:
-                            // cboHoaDon.Text = maHDTuGrid; // Lỗi: Không kích hoạt SelectedIndexChanged
-
-                            // SỬA: Thay thế bằng SelectedIndex (Ưu tiên)
                             selectedIndex = i;
                             break;
                         }
@@ -202,7 +191,6 @@ namespace MAIN.main
 
 
                 // 3. TÌM ID NGƯỜI THUÊ GỐC VÀ GÁN (CHỈ THỰC HIỆN SAU KHI CBO NGƯỜI THUÊ ĐƯỢC LOAD)
-                // Vì cboHoaDon.SelectedIndex đã chạy và tải cboNguoiThue, ta có thể dùng hàm GetValueFromDisplay
                 if (!string.IsNullOrEmpty(tenNguoiThueTuGrid) && cboNguoiThue.DataSource != null)
                 {
                     // TÌM VALUE MEMBER (id_nguoi_thue) TỪ DISPLAY MEMBER (hoten)
@@ -210,13 +198,11 @@ namespace MAIN.main
 
                     if (!string.IsNullOrEmpty(idNguoiThueGocTimDuoc))
                     {
-                        // Gán SelectedValue để ComboBox hiển thị đúng và lưu ID Gốc
                         cboNguoiThue.SelectedValue = idNguoiThueGocTimDuoc;
                         _idNguoiThueDangChon = idNguoiThueGocTimDuoc;
                     }
                     else
                     {
-                        // Xử lý nếu không tìm thấy ID Người Thuê (ví dụ: người thuê đã bị xóa)
                         cboNguoiThue.SelectedIndex = -1;
                         _idNguoiThueDangChon = null;
                     }
@@ -410,7 +396,7 @@ namespace MAIN.main
                     if (success)
                     {
                         MessageBox.Show("Thêm thanh toán mới thành công.", "Thành Công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LoadDataThanhToan(); // Tải lại lưới
+                        LoadDataThanhToan(); 
                         ClearThanhToan();
                     }
                     else
@@ -436,7 +422,6 @@ namespace MAIN.main
 
             if (btn.Text == "Sửa")
             {
-                // Kiểm tra cặp khóa chính cũ đã được chọn chưa
                 if (string.IsNullOrEmpty(_idHoaDonDangChon) || string.IsNullOrEmpty(_idNguoiThueDangChon))
                 {
                     MessageBox.Show("Vui lòng chọn một lịch sử thanh toán để sửa thông tin.", "Thông báo",
@@ -445,7 +430,6 @@ namespace MAIN.main
                 }
 
                 MessageBox.Show("Bây giờ bạn đã có thể chỉnh sửa Người Thanh Toán và Ngày Thanh Toán. \nNhấn vào nút Lưu để lưu thông tin.");
-                // isThanhToanEditting(true); // Bật chỉnh sửa controls
                 ((Button)sender).Text = "Lưu";
             }
 
@@ -487,12 +471,10 @@ namespace MAIN.main
                     {
                         MessageBox.Show("Cập nhật thanh toán thành công.", "Thành Công",
                                         MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // ClearHoaDonDetails();
-                        // isThanhToanEditting(false);
+                        isThanhToanEditting(false);
                         btn.Text = "Sửa";
                         LoadDataThanhToan();
                         ClearThanhToan();
-                        // Reset cặp khóa chính sau khi hoàn tất
                         _idHoaDonDangChon = null;
                         _idNguoiThueDangChon = null;
                     }
@@ -545,7 +527,6 @@ namespace MAIN.main
                         // ClearHoaDonDetails();
                         LoadDataThanhToan();
 
-                        // Reset cặp khóa chính
                         _idHoaDonDangChon = null;
                         _idNguoiThueDangChon = null;
                         ClearThanhToan();

@@ -149,6 +149,7 @@
             this.dgvHopDong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHopDong.Location = new System.Drawing.Point(12, 78);
             this.dgvHopDong.Name = "dgvHopDong";
+            this.dgvHopDong.ReadOnly = true;
             this.dgvHopDong.RowHeadersWidth = 51;
             this.dgvHopDong.RowTemplate.Height = 29;
             this.dgvHopDong.Size = new System.Drawing.Size(1091, 379);

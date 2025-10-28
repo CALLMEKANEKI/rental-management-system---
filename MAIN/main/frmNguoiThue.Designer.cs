@@ -259,6 +259,7 @@
             this.dgvNguoiThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNguoiThue.Location = new System.Drawing.Point(12, 84);
             this.dgvNguoiThue.Name = "dgvNguoiThue";
+            this.dgvNguoiThue.ReadOnly = true;
             this.dgvNguoiThue.RowHeadersWidth = 51;
             this.dgvNguoiThue.RowTemplate.Height = 29;
             this.dgvNguoiThue.Size = new System.Drawing.Size(846, 308);
